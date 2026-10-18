@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Fuzzer Manual — Catalogador de oleadas</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">F<span class="slash">/</span>M</span><div><b>Fuzzer Manual</b><small>Catalogador visual · DEMO</small></div></div>
+    <div class="top-stats"><span><b id="stat-games">0</b> juegos</span><span><b id="stat-ready">0</b> capturas listas</span><span><b id="stat-marks">0</b> clics guardados</span><span><b id="stat-workers">0</b> workers</span><span><b id="stat-live">0</b> sesiones vivas</span></div>
+    <div class="head-actions"><button id="import-open" class="primary">+ Importar URLs</button><button id="pause-btn">Iniciar workers</button><button id="settings-open" title="Atajos configurables">⚙ Configurar</button></div>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="section-head"><div><h2>Cola de capturas</h2><small id="queue-counter">0 pendientes</small></div><button id="refresh-btn" title="Actualizar cola">↻</button></div>
+      <div class="queue-list" id="queue-list"></div>
+      <div class="side-footer"><b>Incidencias recientes</b><div id="problems" class="problems">Sin incidencias</div></div>
+    </aside>
+    <section class="workspace">
+      <div class="photo-head"><div class="title-wrap"><div id="game-title">Sin fotografía seleccionada</div><div id="game-subtitle">Importá URLs e iniciá los workers para generar la cola</div></div><div id="photo-status" class="pill">COLA VACÍA</div></div>
+      <div class="photo-viewport" id="viewport">
+        <div id="empty" class="empty-state"><span class="big-icon">▧</span><h2>Capturas listas para catalogar</h2><p>Los navegadores trabajan por separado. Una vez preparada, cada fotografía aparece aquí sin esperas de carga.</p></div>
+        <div id="image-wrap" class="image-wrap" hidden><img id="shot" alt="Captura del juego DEMO" draggable="false"><div id="pins" class="pins"></div></div>
+      </div>
+      <div class="photo-footer"><span id="cursor">x: — / y: —</span><span id="marks-count">0 puntos marcados</span><span id="hint">Clic para marcar · Espacio para guardar y avanzar</span></div>
+      <div class="bottom-bar"><button id="previous-btn">← Anterior</button><button id="undo-btn">Deshacer <kbd>Z</kbd></button><button id="skip-btn">Omitir <kbd>S</kbd></button><button id="save-btn" class="primary large">Guardar marcas y siguiente <kbd>Espacio</kbd> →</button></div>
+    </section>
+    <aside class="inspector">
+      <h2>Tipo de selección</h2><p class="muted">Elegí una categoría y hacé todos los clics necesarios sobre la misma fotografía.</p>
+      <div class="modes" id="modes">
+        <button class="selected" data-mode="navigate"><span>1</span> Navegar</button>
+        <button data-mode="buy"><span>2</span> Compra DEMO</button>
+        <button data-mode="confirm"><span>3</span> Confirmación</button>
+        <button data-mode="pick"><span>4</span> Selección bonus</button>
+        <button data-mode="continue"><span>5</span> Continuar</button>
+        <button data-mode="other"><span>6</span> Otro</button>
+      </div>
+      <div class="annotations"><div class="section-head"><h2>Marcas de esta foto</h2><button id="clear-btn">Limpiar</button></div><div id="mark-list" class="mark-list"><div class="muted small">Todavía no hay marcas.</div></div></div>
+      <div class="explanation"><b>Modo multirrama</b><p>Si seleccionás cuatro compras, se guardan cuatro rutas independientes. Cada una se ejecutará en una sesión DEMO separada; no se reutilizan resultados aleatorios.</p></div>
+      <div class="live-note" id="live-note" hidden>Esta pantalla tiene un estado de bonus vivo. Para conservar el mismo resultado aleatorio solo puede continuar una acción por sesión.</div>
+    </aside>
+  </main>
+  <dialog id="import-dialog">
+    <form method="dialog"><div class="dialog-head"><h2>Importar juegos DEMO</h2><button class="close" value="cancel">✕</button></div><p>Pegá una URL oficial de Pragmatic por línea. Se omiten duplicados. El catálogo inicial admite hasta 20.000 enlaces por importación.</p><textarea id="import-text" spellcheck="false" placeholder="https://www.pragmaticplay.fun/en/slots/candy-rush/&#10;https://www.pragmaticplay.fun/en/slots/death-dominion/"></textarea><div class="dialog-actions"><button value="cancel">Cancelar</button><button type="button" class="primary" id="import-submit">Importar</button></div></form>
+  </dialog>
+  <dialog id="settings-dialog">
+    <form method="dialog"><div class="dialog-head"><h2>Atajos de teclado</h2><button class="close" value="cancel">✕</button></div><p>Usá la combinación que quieras. La preferencia se guarda localmente en el servidor.</p><div id="key-fields" class="key-fields"></div><div class="dialog-actions"><button type="button" id="reset-keys">Restablecer</button><button type="button" class="primary" id="save-keys">Guardar atajos</button></div></form>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
