@@ -14,7 +14,9 @@ cd Fuzzer-Manual
 npm install
 npx playwright install chromium
 $env:DATA_DIR="D:\FuzzerManual"  # carpeta de un SSD NVMe local
-$env:WORKERS="3"
+$env:DISCOVERY_WORKERS="2"
+$env:BRANCH_WORKERS="4"
+$env:ADAPTIVE_WORKERS="1" # con GUI activa prioriza ramas (1+5)
 $env:MAX_LIVE="4"
 $env:IMAGE_CACHE_MB="1024"
 $env:SQLITE_CACHE_MB="256"
@@ -42,15 +44,36 @@ Las teclas se pueden cambiar en la GUI. Cada clic coloca una cruz numerada y gua
 
 ## Diseño y rendimiento
 
-- **Chromium compartido, contextos aislados** (`WORKERS=1..12`). No instala ni relanza Chromium por juego; cada tarea de navegación usa contexto limpio. Se intenta aceptar cookies/aviso de edad y entrar al iframe DEMO antes de fotografiar. Si se reconoce un único control `FeaturePurchase/MainButton`, intenta abrir el menú y valida el nuevo estado.
+- **Chromium compartido, contextos aislados** (`DISCOVERY_WORKERS=2`, `BRANCH_WORKERS=4`, `ADAPTIVE_WORKERS=1` por defecto; presupuesto total hasta 12). No instala ni relanza Chromium por juego; cada tarea de navegación usa contexto limpio. Se intenta aceptar cookies/aviso de edad y entrar al iframe DEMO antes de fotografiar. Si se reconoce un único control `FeaturePurchase/MainButton`, intenta abrir el menú y valida el nuevo estado.
 - **Capturas JPEG en NVMe** (`DATA_DIR/shots`) y **LRU de imágenes en RAM** (`IMAGE_CACHE_MB`). El servidor carga previamente capturas listas; el frontend conserva otras 40 precargadas para que la tecla siguiente no dependa del worker.
 - **SQLite WAL**, índice de estados, almacenamiento de metadatos y marcas en transacciones ACID; `SQLITE_CACHE_MB` controla el caché SQL. Se recuperan trabajos interrumpidos al reiniciar, sin dar por completadas las ramas incompletas.
 - **GPU:** la aceleración de canvas/WebGL queda en manos de Chromium/ANGLE; `GPU_MODE=d3d11` permite comparar la ruta de Direct3D 11 en Windows. Se registra el renderizador cuando el navegador lo reporta. No hay OCR, LLM ni inferencia GPU forzada en el bucle principal. La lectura, la navegación y los servidores siguen siendo fuentes de latencia; aumentar VRAM no acelera automáticamente Internet.
 - **Verificación antes de cada clic de replay:** intenta usar el estado y los controles del runtime Pragmatic; si no se identifica un control, compara una huella visual de 32×18 calculada con libvips/SIMD (`sharp`). Un desajuste bloquea la rama y deja evidencia, en lugar de pulsar coordenadas obsoletas.
 - **Ramas vivas:** comprar, confirmar o elegir se considera potencialmente irreversible. `MAX_LIVE` limita las sesiones DEMO retenidas. Solo se puede continuar la **misma** sesión RNG con una acción; no es posible clonar un resultado aleatorio en otras sesiones. Si se pierde una sesión viva tras reinicio, se bloquea el replay inseguro.
+- **Dos colas independientes:** 2 workers abren juegos sin catalogar y 4 reproducen ramas; con catalogador activo se redistribuyen a 1+5; los slots ociosos se prestan sin detener el progreso. La interfaz y las peticiones HTTP no esperan a Chromium.
 - **Batches en segundo plano:** preparación y replay no bloquean la GUI. La aplicación guarda fotos y acciones automáticamente y expone incidencia por rama.
 
 No se introdujo Rust en el bucle de navegador porque Playwright/Chromium, red, pintado y JPEG dominan el costo y el planificador Node es I/O asíncrono. La comparación y el redimensionado de imágenes se ejecutan con `sharp`/libvips nativo. **El uso de Rust está reservado para kernels medidos como cuello de botella**, para no sumar una compilación nativa sin una mejora comprobada.
+
+## Persistencia y trazabilidad por operación
+
+Todo se guarda debajo de `DATA_DIR` (idealmente un SSD local):
+
+- `games`: ID interno estable, URL original, proveedor (`pragmatic`) y `game_symbol` detectado en el iframe DEMO cuando existe.
+- `tasks`: ID de fotografía/rama, `game_id`, padre, marca de entrada, profundidad, estado y captura asociada. No se pierde el árbol al cerrar la GUI.
+- `marks`: varias coordenadas normalizadas por fotografía, orden y categoría. Una marca se transforma en un **trabajo hijo independiente**.
+- `network_events`: ID del evento, `game_id`, `task_id`, `session_id`, proveedor, símbolo, fase, endpoint sin query, método HTTP, acción, estado HTTP y subconjuntos **permitidos** de payload de petición y respuesta. No almacena tokens de sesión, cookies ni HAR sin sanitizar.
+- `shots/task-ID.jpg`: fotografías JPEG; `capture_json` contiene `sessionId`, estado visual, controles detectados, ruta del frame **sin parámetros URL**, metadatos y observaciones recientes.
+
+Consultá `GET /api/tasks/{id}/trace` para eventos de la fotografía y `GET /api/games/{game_id}/export` para el árbol y la evidencia estructurada del juego. Ambos enlaces también se acceden desde la interfaz. Los informes de grandes juegos indican `truncated:true` cuando el número de nodos o eventos supera el límite de exportación; no se interpretan como cobertura completa.
+
+**La captura de payloads es selectiva:** registra campos de protocolo DEMO conocidos (`action`, `pur`, `ind`, `bl`, `c`, `l`, `na`, etc.) y endpoints de Pragmatic permitidos. No captura claves desconocidas, cuerpos completos ni tráfico de otros proveedores. Si se requiere más cobertura, debe ampliarse la lista permitida tras examinar datos sanitizados. No se atribuye el resultado aleatorio a una causa determinista.
+
+### Cola con política adaptable
+
+Configuración predeterminada: `DISCOVERY_WORKERS=2`, `BRANCH_WORKERS=4`, `MAX_LIVE=4`, `ADAPTIVE_WORKERS=1`. Si mantenés la GUI activa, el frontend envía una señal al planificador y prioriza ramas (1 descubrimiento + 5 ramas). Al dejar de catalogar vuelve a 2+4; si una cola está vacía, la otra toma los slots libres. Los cuatro slots `MAX_LIVE` son **sesiones conservadas**, no el máximo de ramas acumuladas en disco. Si se llenan las sesiones vivas, el sistema continúa descubriendo juegos independientes.
+
+No equipares un `HTTP 200` o una captura de premio con un bonus completado. El prototipo aún precisa validación con múltiples juegos reales, especialmente en transiciones con RNG y cierre de Free Spins.
 
 ## Benchmarks y pruebas
 
