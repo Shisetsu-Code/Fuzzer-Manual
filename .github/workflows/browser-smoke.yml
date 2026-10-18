@@ -18,9 +18,16 @@ jobs:
           HEADLESS: '1'
           DATA_DIR: ${{ runner.temp }}/fuzzer-manual-smoke
         run: node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
+      - name: Reproduce three observed purchase options in separate DEMO sessions
+        env:
+          HEADLESS: '1'
+          DATA_DIR: ${{ runner.temp }}/fuzzer-manual-branches
+        run: node scripts/smoke-branches.js https://www.pragmaticplay.fun/en/slots/candy-rush/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: demo-screenshot
-          path: ${{ runner.temp }}/fuzzer-manual-smoke/shots/*.jpg
+          path: |
+            ${{ runner.temp }}/fuzzer-manual-smoke/shots/*.jpg
+            ${{ runner.temp }}/fuzzer-manual-branches/shots/*.jpg
           if-no-files-found: ignore

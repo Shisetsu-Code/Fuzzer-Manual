@@ -8,11 +8,19 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 export class ReplayError extends Error {constructor(code,detail=''){super(`${code}${detail?': '+detail:''}`);this.code=code;}}
 
 export class BrowserEngine {
-  constructor(config,db){this.config=config;this.db=db;this.browser=null;this.live=new Map();this.metrics={sessionsOpened:0,screenshots:0,bytes:0,clicks:0,started:null,lastRenderer:'unknown',failures:0};}
+  constructor(config,db,{chromiumLoader=async()=>({chromium:(await import('playwright')).chromium})}={}){
+    this.config=config;this.db=db;this.browser=null;this.launchPromise=null;this.chromiumLoader=chromiumLoader;
+    this.live=new Map();this.metrics={sessionsOpened:0,screenshots:0,bytes:0,clicks:0,started:null,lastRenderer:'unknown',failures:0};
+  }
   async start(){
     if(this.browser)return;
+    if(this.launchPromise)return this.launchPromise;
+    this.launchPromise=this.launchOne();
+    try{await this.launchPromise;}finally{this.launchPromise=null;}
+  }
+  async launchOne(){
     let chromium;
-    try{({chromium}=await import('playwright'));}catch{throw Error('Install dependencies first: npm install && npx playwright install chromium');}
+    try{({chromium}=await this.chromiumLoader());}catch{throw Error('Install dependencies first: npm install && npx playwright install chromium');}
     const args=[];
     if(this.config.gpuMode==='d3d11'){
       if(process.platform!=='win32')throw Error('GPU_MODE=d3d11 requires Windows');
