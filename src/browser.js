@@ -56,19 +56,39 @@ export class BrowserEngine {
     catch(e){await this.dispose(session);throw e;}
   }
   async dispose(session){if(session?.context)await session.context.close().catch(()=>{});}
+  async dismissConsent(session){
+    // Late consent overlays are common even after the DEMO iframe exists.
+    // Reject only catalogue/CMP consent. Never use DOM click for game controls.
+    let rejected=0;
+    for(const frame of session.page.frames()){
+      const buttons=[
+        frame.locator('#onetrust-reject-all-handler'),
+        frame.locator('button[data-cookie-action="reject"]'),
+        frame.getByRole('button',{name:/^reject all$|^rechazar todo$|^refuser tout$/i})
+      ];
+      for(const button of buttons){
+        try{
+          if(!await button.count()||!await button.first().isVisible())continue;
+          await button.first().evaluate(el=>el.click());
+          rejected++;this.metrics.consentRejects=(this.metrics.consentRejects||0)+1;
+          break;
+        }catch{/* A stale or cross-origin CMP frame must not block DEMO cataloging. */}
+      }
+    }
+    return rejected;
+  }
   async enter(session){
     const page=session.page;
     await page.goto(session.url,{waitUntil:'domcontentloaded',timeout:35000});
     // Only catalog-site controls; never bypass authentication or click inside a real-money account.
     const age=page.locator('button[data-age-gate-confirm="true"]');
-    const consent=page.locator('#onetrust-reject-all-handler,button[data-cookie-action="reject"]');
     const demo=page.locator('iframe[src*="demogamesfree.pragmaticplay.net"]');
     const buttons=[page.getByRole('button',{name:/play demo|jugar demo|probar demo/i}),page.locator('[data-play-demo-open]')];
     let launchedDemo=false;
     const entryDeadline=Date.now()+13000;
     while(Date.now()<entryDeadline){
       if(await age.count())await age.first().evaluate(el=>el.click()).catch(()=>{});
-      if(await consent.count())await consent.first().click({timeout:700}).catch(()=>{});
+      await this.dismissConsent(session);
       if(await demo.count())break;
       if(!launchedDemo){
         for(const button of buttons){if(await button.count()){
@@ -79,6 +99,10 @@ export class BrowserEngine {
       await sleep(220);
     }
     // If the demo never attached, capture the catalog page for manual review.
+    for(let attempt=0;attempt<4;attempt++){
+      await this.dismissConsent(session);
+      if(attempt<3)await sleep(250);
+    }
     // Do not wait a fixed 7 seconds when controls are already ready.
     const start=Date.now();while(Date.now()-start<6000){const view=await this.observe(session);if(view.scan?.supported&&view.scan?.controls.length)break;await sleep(230);}
     // Best-effort only: a visually blocked runtime is still handed to the user for cataloging.
@@ -126,6 +150,7 @@ export class BrowserEngine {
     return last||await this.observe(session);
   }
   async openKnownIntro(session){
+    await this.dismissConsent(session);
     const view=await this.observe(session);
     if(view.state!=='INTRO')return {opened:false,view};
     const candidates=view.controls.filter(c=>c.hit &&
@@ -140,6 +165,7 @@ export class BrowserEngine {
     return {opened:result.state!=='INTRO',view:result};
   }
   async openKnownBuyMenu(session){
+    await this.dismissConsent(session);
     const view=await this.observe(session);
     if(view.state!=='BASE')return {opened:false,view};
     const buys=view.controls.filter(c=>c.hit&&/FeaturePurchase\/MainButton|BuyFeature\/MainButton/i.test(c.path));
@@ -155,6 +181,7 @@ export class BrowserEngine {
   }
   inClip(clip,x,y){return x>=clip.x&&y>=clip.y&&x<clip.x+clip.width&&y<clip.y+clip.height;}
   async clickMark(session,parentCapture,mark){
+    await this.dismissConsent(session);
     const current=await this.observe(session);
     const expected=parentCapture;
     if(current.scan?.supported && expected?.state && expected.state!=='UNKNOWN' && current.state!==expected.state)
@@ -189,6 +216,7 @@ export class BrowserEngine {
     await this.settle(session,current.signature);
   }
   async screenshot(session,taskId,{rootMode='base'}={}){
+    await this.dismissConsent(session);
     const view=await this.observe(session);
     const dir=path.join(this.config.dataDir,'shots');await fs.mkdir(dir,{recursive:true});
     const target=path.join(dir,`task-${taskId}.jpg`),tmp=target+'.tmp';

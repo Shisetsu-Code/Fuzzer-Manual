@@ -9,6 +9,6 @@ try{
   db.importUrls([url]);const task=db.db.prepare("SELECT t.*,g.url,g.slug FROM tasks t JOIN games g ON t.game_id=g.id WHERE t.depth=0 LIMIT 1").get();
   const result=await browser.prepare(task);
   console.log(JSON.stringify({image:result.file,state:result.capture.state,controls:result.capture.controls.length,controlPaths:result.capture.controls.filter(c=>c.hit).slice(0,15).map(c=>c.path),
-    gpuRenderer:browser.metrics.lastRenderer,clicks:browser.metrics.clicks,bytes:result.capture.bytes},null,2));
+    gpuRenderer:browser.metrics.lastRenderer,clicks:browser.metrics.clicks,consentRejects:browser.metrics.consentRejects||0,bytes:result.capture.bytes},null,2));
   if(result.capture.controls.length<1)throw Error('DEMO_RUNTIME_NOT_OBSERVED: screenshot was saved but no active runtime controls were found');
 }finally{await browser.stop();db.close();}
