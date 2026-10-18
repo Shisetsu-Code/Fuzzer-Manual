@@ -11,7 +11,7 @@
 <body>
   <header class="topbar">
     <div class="brand"><span class="logo">F<span class="slash">/</span>M</span><div><b>Fuzzer Manual</b><small>Catalogador visual · DEMO</small></div></div>
-    <div class="top-stats"><span><b id="stat-games">0</b> juegos</span><span><b id="stat-ready">0</b> capturas listas</span><span><b id="stat-marks">0</b> clics guardados</span><span><b id="stat-workers">0</b> workers</span><span><b id="stat-live">0</b> sesiones vivas</span></div>
+    <div class="top-stats"><span><b id="stat-games">0</b> juegos</span><span><b id="stat-ready">0</b> capturas listas</span><span><b id="stat-marks">0</b> clics guardados</span><span><b id="stat-workers">0</b> workers</span><span id="worker-allocation" title="Descubrimiento / ramas">D — · R —</span><span><b id="stat-live">0</b> sesiones vivas</span></div>
     <div class="head-actions"><button id="import-open" class="primary">+ Importar URLs</button><button id="pause-btn">Iniciar workers</button><button id="settings-open" title="Atajos configurables">⚙ Configurar</button></div>
   </header>
   <main class="layout">
@@ -39,6 +39,8 @@
         <button data-mode="continue"><span>5</span> Continuar</button>
         <button data-mode="other"><span>6</span> Otro</button>
       </div>
+      <div class="trace-section"><div class="section-head"><h2>Juego y tráfico</h2><a id="export-game" href="#" download="catalog-game.json" class="export" hidden>Exportar JSON</a></div>
+        <div id="game-trace-info" class="muted small">Seleccioná una fotografía.</div><div id="trace-list" class="trace-list">Sin operaciones registradas.</div></div>
       <div class="annotations"><div class="section-head"><h2>Marcas de esta foto</h2><button id="clear-btn">Limpiar</button></div><div id="mark-list" class="mark-list"><div class="muted small">Todavía no hay marcas.</div></div></div>
       <div class="explanation"><b>Modo multirrama</b><p>Si seleccionás cuatro compras, se guardan cuatro rutas independientes. Cada una se ejecutará en una sesión DEMO separada; no se reutilizan resultados aleatorios.</p></div>
       <div class="live-note" id="live-note" hidden>Esta pantalla tiene un estado de bonus vivo. Para conservar el mismo resultado aleatorio solo puede continuar una acción por sesión.</div>
