@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {randomUUID} from 'node:crypto';
 import {inspectPragmatic} from './pragmatic-scan.js';
 import {isIrreversible} from './config.js';
 import {imageSignature,signatureDiff} from './visual.js';
+import {sanitizeRequest,sanitizedResponseText,safeEndpoint,extractSymbol} from './trace.js';
 
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 export class ReplayError extends Error {constructor(code,detail=''){super(`${code}${detail?': '+detail:''}`);this.code=code;}}
@@ -49,21 +51,54 @@ export class BrowserEngine {
     }
     return !mark||!isIrreversible(mark.kind)||this.live.size<this.config.maxLive;
   }
-  async fresh(url){
+  async fresh(url,task){
     await this.start();
     const ctxOptions={viewport:{width:this.config.viewportWidth,height:this.config.viewportHeight},deviceScaleFactor:1,serviceWorkers:'allow',acceptDownloads:false};
     const context=await this.browser.newContext(ctxOptions);
     const page=await context.newPage();this.metrics.sessionsOpened++;
-    const session={context,page,events:[],created:Date.now(),url};
+    const session={context,page,id:randomUUID(),events:[],pendingEvents:new Set(),
+      created:Date.now(),url,taskId:task.id,gameId:task.game_id,
+      gameSymbol:task.game_symbol||null,phase:task.depth===0?'discovery':'branch'};
+    const requestSource=new WeakMap();
+    page.on('request',request=>{
+      const meta=sanitizeRequest(request);
+      if(meta)requestSource.set(request,{...meta,taskId:session.taskId,phase:session.phase});
+    });
     page.on('response',response=>{
-      const u=(()=>{try{const v=new URL(response.url());return `${v.origin}${v.pathname}`;}catch{return ''}})();
-      if(session.events.length>=160)session.events.shift();
-      session.events.push({url:u,status:response.status(),at:Date.now()});
+      const request=response.request();
+      const meta=requestSource.get(request)||sanitizeRequest(request);
+      if(!meta)return;
+      const observedAt=new Date().toISOString();
+      const work=(async()=>{
+        let payload={};
+        const len=Number(response.headers()['content-length']||0);
+        const type=response.headers()['content-type']||'';
+        if((!len||len<=128*1024)&&/json|text|x-www-form-urlencoded/i.test(type)){
+          const body=await response.text().catch(()=>null);
+          if(body)payload=sanitizedResponseText(body);
+        }
+        const event={provider:'pragmatic',gameSymbol:session.gameSymbol,
+          phase:meta.phase,endpoint:meta.endpoint,method:meta.method,action:meta.action,
+          status:response.status(),request:meta.payload,response:payload,observedAt};
+        // Persist a sanitized observation, never cookies, query tokens or raw HAR.
+        this.db.recordNetworkEvent(session.gameId,meta.taskId,session.id,event);
+        session.events.push({endpoint:event.endpoint,method:event.method,action:event.action,
+          status:event.status,request:event.request,response:event.response,at:observedAt});
+        if(session.events.length>160)session.events.shift();
+      })().catch(()=>{});
+      session.pendingEvents.add(work);
+      work.finally(()=>session.pendingEvents.delete(work));
     });
     try{await this.enter(session);return session;}
     catch(e){await this.dispose(session);throw e;}
   }
-  async dispose(session){if(session?.context)await session.context.close().catch(()=>{});}
+  async flushEvents(session,timeoutMs=2500){
+    if(!session?.pendingEvents?.size)return;
+    await Promise.race([Promise.allSettled([...session.pendingEvents]),
+      new Promise(resolve=>setTimeout(resolve,timeoutMs))]);
+  }
+  async dispose(session){if(session?.context){await this.flushEvents(session);await session.context.close().catch(()=>{});}}
+
   async dismissConsent(session){
     // Late consent overlays are common even after the DEMO iframe exists.
     // Reject only catalogue/CMP consent. Never use DOM click for game controls.
@@ -133,6 +168,8 @@ export class BrowserEngine {
     const clip=bounds&&bounds.width>=200&&bounds.height>=150
       ?this.clipForBounds(bounds)
       :{x:0,y:0,width:this.config.viewportWidth,height:this.config.viewportHeight};
+    const symbol=frame?extractSymbol(frame.url()):null;
+    if(symbol){session.gameSymbol=symbol;this.db.setGameSymbol(session.gameId,symbol);}
     const controls=(scan.controls||[]).map(c=>{
       const sx=bounds&&scan.viewport?.width?bounds.width/scan.viewport.width:1;
       const sy=bounds&&scan.viewport?.height?bounds.height/scan.viewport.height:1;
@@ -142,7 +179,7 @@ export class BrowserEngine {
       return {path:c.path,name:c.name,texts:c.texts,handlers:c.handlers,hit};
     });
     const signature=scan.supported?`${scan.state}|${controls.filter(c=>c.hit).map(c=>c.path).sort().join('|')}`:null;
-    return {clip,controls,state:scan.state,signature,frameUrl:frame?.url()||null,scan};
+    return {clip,controls,state:scan.state,signature,frameUrl:frame?.url()?safeEndpoint(frame.url()):null,scan};
   }
   clipForBounds(rect){const W=this.config.viewportWidth,H=this.config.viewportHeight;
     const x=Math.max(0,Math.min(W-1,Math.floor(rect.x))),y=Math.max(0,Math.min(H-1,Math.floor(rect.y)));
@@ -232,7 +269,8 @@ export class BrowserEngine {
     await fs.writeFile(tmp,bytes);await fs.rename(tmp,target);
     this.metrics.screenshots++;this.metrics.bytes+=bytes.length;
     const visualKey=await imageSignature(bytes);
-    return {file:target,capture:{visualKey,clip:view.clip,width:view.clip.width,height:view.clip.height,
+    await this.flushEvents(session);
+    return {file:target,capture:{sessionId:session.id,provider:'pragmatic',gameSymbol:session.gameSymbol,visualKey,clip:view.clip,width:view.clip.width,height:view.clip.height,
       rootMode,state:view.state,signature:view.signature,controls:view.controls,
       frameUrl:view.frameUrl,network:session.events.slice(-25),capturedAt:new Date().toISOString(),bytes:bytes.length}};
   }
@@ -246,7 +284,9 @@ export class BrowserEngine {
       throw new ReplayError('LIVE_SESSION_LOST','a prior nonreplayable state cannot be reconstructed');
     if(requiresLive && !inherited && this.live.size>=this.config.maxLive)
       throw new ReplayError('LIVE_SLOTS_FULL');
-    if(!session)session=await this.fresh(task.url);
+    if(!session)session=await this.fresh(task.url,task);
+    session.taskId=task.id;session.gameId=task.game_id;
+    session.phase=task.depth===0?'discovery':'branch';
     let ownershipMoved=false,success=false;
     try{
       let mode='base';
