@@ -1,7 +1,7 @@
 import path from 'node:path';
 
 export const DEFAULTS = Object.freeze({
-  port: 4177, workers: 3, maxLive: 4, imageCacheMb: 512,
+  port: 4177, discoveryWorkers: 2, branchWorkers: 4, maxLive: 4, imageCacheMb: 512,
   sqliteCacheMb: 256, previewCount: 50, jpegQuality: 65,
   viewportWidth: 1280, viewportHeight: 720,
 });
@@ -14,11 +14,16 @@ export function numberEnv(name, fallback, min, max) {
 }
 export function loadConfig() {
   const dataDir = path.resolve(process.env.DATA_DIR || './data');
+  const discoveryWorkers=numberEnv('DISCOVERY_WORKERS',DEFAULTS.discoveryWorkers,0,12);
+  const branchWorkers=numberEnv('BRANCH_WORKERS',DEFAULTS.branchWorkers,0,12);
+  const workers=process.env.WORKERS?numberEnv('WORKERS',discoveryWorkers+branchWorkers,1,12):discoveryWorkers+branchWorkers;
+  if(!workers||workers>12)throw Error('Total workers must be 1..12');
   return {
+    discoveryWorkers,branchWorkers,adaptiveWorkers:process.env.ADAPTIVE_WORKERS!=='0',
     host: '127.0.0.1',
     port: numberEnv('PORT',DEFAULTS.port,1024,65535),
     dataDir,
-    workers: numberEnv('WORKERS',DEFAULTS.workers,1,12),
+    workers,
     maxLive: numberEnv('MAX_LIVE',DEFAULTS.maxLive,1,12),
     imageCacheMb: numberEnv('IMAGE_CACHE_MB',DEFAULTS.imageCacheMb,16,16384),
     sqliteCacheMb: numberEnv('SQLITE_CACHE_MB',DEFAULTS.sqliteCacheMb,8,8192),
