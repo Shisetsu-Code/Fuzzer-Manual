@@ -1,0 +1,89 @@
+# Fuzzer Manual
+
+**Catalogador visual por oleadas para demos públicas.** Prepará muchos juegos, marcá **varios puntos sobre una sola fotografía**, presioná la tecla configurable de siguiente y dejá que los workers reconstruyan cada rama de forma independiente. Los clics y las decisiones se guardan localmente; no hace falta Qwen.
+
+![Estado: MVP](https://img.shields.io/badge/Estado-MVP%20experimental-777)
+
+> **Alcance actual:** páginas públicas `https://www.pragmaticplay.fun/<idioma>/slots/<juego>/` y su iframe DEMO. No utiliza credenciales, cuentas de casino ni apuestas con dinero real. El motor NO está certificado todavía con una prueba completa de un bonus hasta su cierre real; necesita pruebas locales con Playwright y juegos variados. Otros proveedores requieren adaptadores DEMO específicos.
+
+## Instalación (Windows 10/11, Node 22.13+; recomendado Node 24/26)
+
+```powershell
+git clone https://github.com/Shisetsu-Code/Fuzzer-Manual.git
+cd Fuzzer-Manual
+npm install
+npx playwright install chromium
+$env:DATA_DIR="D:\FuzzerManual"  # carpeta de un SSD NVMe local
+$env:WORKERS="3"
+$env:MAX_LIVE="4"
+$env:IMAGE_CACHE_MB="1024"
+$env:SQLITE_CACHE_MB="256"
+$env:GPU_MODE="auto"           # o "d3d11" en Windows para probar ANGLE/D3D11
+$env:HEADLESS="0"              # headed para usar la GPU del Chromium local
+npm start
+```
+
+Abrí **http://127.0.0.1:4177** en Firefox, Edge o Chrome. El navegador de trabajo se controla por Playwright/Chromium; la GUI puede abrirse en cualquier navegador local.
+
+El programa inicia **pausado** para que puedas importar URLs y elegir cuándo cargar los juegos. Pegá hasta 20.000 enlaces por importación, presioná **Iniciar workers**, y catalogá las fotos ya preparadas sin esperar por la siguiente pestaña. No se requieren servicios externos.
+
+### Teclas y marcas
+
+| Acción | Tecla inicial |
+|---|---|
+| Guardar todas las marcas de una foto y avanzar | `Espacio` |
+| Revisar la foto anterior (solo lectura) | `Shift+Espacio` |
+| Deshacer última marca | `Z` |
+| Omitir foto | `S` |
+| Pausar/iniciar workers | `P` |
+| Tipo de marca: navegar / compra DEMO / confirmación / selección / continuar / otro | `1` ... `6` |
+
+Las teclas se pueden cambiar en la GUI. Cada clic coloca una cruz numerada y guarda coordenadas relativas al área de captura. **Cuatro compras marcadas en el mismo menú producen cuatro nuevos trabajos** para la siguiente oleada, no cuatro clics secuenciales sobre el mismo cliente.
+
+## Diseño y rendimiento
+
+- **Chromium compartido, contextos aislados** (`WORKERS=1..12`). No instala ni relanza Chromium por juego; cada tarea de navegación usa contexto limpio. Se intenta aceptar cookies/aviso de edad y entrar al iframe DEMO antes de fotografiar. Si se reconoce un único control `FeaturePurchase/MainButton`, intenta abrir el menú y valida el nuevo estado.
+- **Capturas JPEG en NVMe** (`DATA_DIR/shots`) y **LRU de imágenes en RAM** (`IMAGE_CACHE_MB`). El servidor carga previamente capturas listas; el frontend conserva otras 40 precargadas para que la tecla siguiente no dependa del worker.
+- **SQLite WAL**, índice de estados, almacenamiento de metadatos y marcas en transacciones ACID; `SQLITE_CACHE_MB` controla el caché SQL. Se recuperan trabajos interrumpidos al reiniciar, sin dar por completadas las ramas incompletas.
+- **GPU:** la aceleración de canvas/WebGL queda en manos de Chromium/ANGLE; `GPU_MODE=d3d11` permite comparar la ruta de Direct3D 11 en Windows. Se registra el renderizador cuando el navegador lo reporta. No hay OCR, LLM ni inferencia GPU forzada en el bucle principal. La lectura, la navegación y los servidores siguen siendo fuentes de latencia; aumentar VRAM no acelera automáticamente Internet.
+- **Verificación antes de cada clic de replay:** intenta usar el estado y los controles del runtime Pragmatic; si no se identifica un control, compara una huella visual de 32×18 calculada con libvips/SIMD (`sharp`). Un desajuste bloquea la rama y deja evidencia, en lugar de pulsar coordenadas obsoletas.
+- **Ramas vivas:** comprar, confirmar o elegir se considera potencialmente irreversible. `MAX_LIVE` limita las sesiones DEMO retenidas. Solo se puede continuar la **misma** sesión RNG con una acción; no es posible clonar un resultado aleatorio en otras sesiones. Si se pierde una sesión viva tras reinicio, se bloquea el replay inseguro.
+- **Batches en segundo plano:** preparación y replay no bloquean la GUI. La aplicación guarda fotos y acciones automáticamente y expone incidencia por rama.
+
+No se introdujo Rust en el bucle de navegador porque Playwright/Chromium, red, pintado y JPEG dominan el costo y el planificador Node es I/O asíncrono. La comparación y el redimensionado de imágenes se ejecutan con `sharp`/libvips nativo. **El uso de Rust está reservado para kernels medidos como cuello de botella**, para no sumar una compilación nativa sin una mejora comprobada.
+
+## Benchmarks y pruebas
+
+```powershell
+npm run check
+npm test
+npm run benchmark
+# Con navegador instalado y acceso a Internet, smoke real de solo preparación:
+node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
+```
+
+El benchmark sintético genera 1.000 juegos, anota 4 opciones en cada uno (4.000 ramas) y prueba el caché en memoria, **sin afirmar que haya cargado ni completado 1.000 juegos**. Para rendimiento de preparación y de bonus hay que medirlo en la PC de destino con el smoke y tareas reales. El pipeline CI prueba estructura, persistencia, selección múltiple y planificador usando adaptadores simulados.
+
+## Flujo de una oleada
+
+1. Importar enlaces DEMO → se crean tareas raíz.
+2. Los workers abren la demo, inspeccionan el estado y guardan una fotografía en `shots/`.
+3. La GUI muestra fotos precargadas. Seleccionar tipo `Compra DEMO`, marcar las cuatro opciones y pulsar `Espacio` → se guardan cuatro marcas y se encolan cuatro hijos.
+4. Cada hijo crea una sesión aislada, reproduce las transiciones conocidas, ejecuta **una** marca y entrega otra fotografía.
+5. Las nuevas capturas aparecen en la siguiente oleada; las ramas que requieran una sesión aleatoria viva se conservan bajo `MAX_LIVE` y se prioriza catalogarlas antes de liberarlas.
+
+Los estados del juego aleatorios no son reproducibles como si fueran menús deterministas. El sistema no reenviará ciegamente una compra si la confirmación o la ruta anterior no se pueden verificar.
+
+## Archivos
+
+`src/browser.js`: Chromium/Playwright, inspector Pragmatic, capturas, replay y sesiones vivas. `src/db.js`: tareas, marcas y SQLite. `src/scheduler.js`: trabajadores y precarga RAM. `src/server.js`: servidor HTTP local. `src/visual.js`: verificación de imagen con libvips. `public/`: GUI. `scripts/benchmark-store.js`: benchmark sintético.
+
+### Límites conocidos del MVP
+
+- No se ha ejecutado aún un smoke con demos reales en esta versión; el test sin navegador valida **solo** el almacenamiento y la planificación.
+- Los estados de canvases con controles ocultos o animaciones pueden dar falsos negativos de huella visual. En ese caso la rama queda bloqueada para revisión; no se inventan clics.
+- Las operaciones de Free Spins, picks aleatorios y cierres precisan pruebas end-to-end con Chromium local. Una captura y un HTTP 200 no equivalen a una rama completada.
+- Cada compra DEMO retiene un contexto, que consume RAM/GPU. `MAX_LIVE` tiene límites reales de capacidad; no se pueden dejar miles de bonus activos simultáneamente.
+- La versión inicial se restringe a Pragmatic y no importa directamente módulos ni credenciales del HardFire previo. Más proveedores y la integración MCP se podrán agregar como adaptadores manteniendo la GUI y el planificador.
+
+Datos locales: `DATA_DIR/catalog.sqlite`, WAL, `shots/`. No subas HAR, cookies o capturas potencialmente sensibles al repositorio; `data/` se ignora en Git.
