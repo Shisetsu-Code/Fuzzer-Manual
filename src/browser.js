@@ -122,6 +122,20 @@ export class BrowserEngine {
     }
     return last||await this.observe(session);
   }
+  async openKnownIntro(session){
+    const view=await this.observe(session);
+    if(view.state!=='INTRO')return {opened:false,view};
+    const candidates=view.controls.filter(c=>c.hit &&
+      /PlayButtonIntro|IntroScreen\/.*(?:Play|Start)Button/i.test(c.path));
+    if(candidates.length!==1)return {opened:false,view};
+    const h=candidates[0].hit;
+    const x=view.clip.x+(h.x+h.w/2)*view.clip.width;
+    const y=view.clip.y+(h.y+h.h/2)*view.clip.height;
+    if(!this.inClip(view.clip,x,y))return {opened:false,view};
+    await session.page.mouse.click(x,y);this.metrics.clicks++;
+    const result=await this.settle(session,view.signature);
+    return {opened:result.state!=='INTRO',view:result};
+  }
   async openKnownBuyMenu(session){
     const view=await this.observe(session);
     if(view.state!=='BASE')return {opened:false,view};
@@ -198,10 +212,12 @@ export class BrowserEngine {
     try{
       let mode='base';
       if(!lineage.length){
+        await this.openKnownIntro(session);
         const opened=await this.openKnownBuyMenu(session);
         mode=opened.opened?'menu':'base';
       }else{
         if(!inherited){
+          await this.openKnownIntro(session);
           const root=lineage[0].parent;
           const rootInfo=root.capture_json?JSON.parse(root.capture_json):{};
           if(rootInfo.rootMode==='menu'){
