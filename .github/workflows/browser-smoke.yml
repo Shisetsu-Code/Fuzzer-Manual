@@ -1,0 +1,26 @@
+name: Browser DEMO smoke
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Open one public DEMO and capture real runtime
+        env:
+          HEADLESS: '1'
+          DATA_DIR: ${{ runner.temp }}/fuzzer-manual-smoke
+        run: node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: demo-screenshot
+          path: ${{ runner.temp }}/fuzzer-manual-smoke/shots/*.jpg
+          if-no-files-found: ignore
