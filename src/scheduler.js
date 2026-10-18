@@ -12,7 +12,9 @@ export class Scheduler {
     if(this.closed||this.paused)return;
     while(this.active.size<this.workers){
       const candidates=this.db.queuedBatch(250);
-      const task=candidates.find(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
+      // A full LIVE lease budget must not starve thousands of independent root games.
+      const task=candidates.find(x=>!this.active.has(x.id)&&this.browser.canPrepare(x))
+        ||this.db.queuedRoots(20).find(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
       if(!task||!this.db.claim(task.id))break;
       this.active.add(task.id);
       this.execute(task).finally(()=>{this.active.delete(task.id);this.pump();});

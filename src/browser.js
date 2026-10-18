@@ -102,8 +102,11 @@ export class BrowserEngine {
       ?this.clipForBounds(bounds)
       :{x:0,y:0,width:this.config.viewportWidth,height:this.config.viewportHeight};
     const controls=(scan.controls||[]).map(c=>{
-      const hit=c.hit?{x:(c.hit.x+(bounds?.x||0)-clip.x)/clip.width,y:(c.hit.y+(bounds?.y||0)-clip.y)/clip.height,
-        w:c.hit.w/clip.width,h:c.hit.h/clip.height}:null;
+      const sx=bounds&&scan.viewport?.width?bounds.width/scan.viewport.width:1;
+      const sy=bounds&&scan.viewport?.height?bounds.height/scan.viewport.height:1;
+      const hit=c.hit?{x:(c.hit.x*sx+(bounds?.x||0)-clip.x)/clip.width,
+        y:(c.hit.y*sy+(bounds?.y||0)-clip.y)/clip.height,
+        w:c.hit.w*sx/clip.width,h:c.hit.h*sy/clip.height}:null;
       return {path:c.path,name:c.name,texts:c.texts,handlers:c.handlers,hit};
     });
     const signature=scan.supported?`${scan.state}|${controls.filter(c=>c.hit).map(c=>c.path).sort().join('|')}`:null;

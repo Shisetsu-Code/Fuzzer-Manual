@@ -8,6 +8,9 @@ export function inspectPragmatic() {
   const rw=globalThis.UHTScreen?.width||canvas.width;
   const rh=globalThis.UHTScreen?.height||canvas.height;
   const drawn=[];const seen=new Set();
+  const cameraCtor=globalThis.Camera;
+  const cameras=cameraCtor?roots.flatMap(r=>safe(()=>r.GetComponentsInChildren(cameraCtor,true))||[])
+    .filter(c=>c.enabled!==false).sort((a,b)=>(b.depth||0)-(a.depth||0)):[];
   for(const root of roots)for(const type of ['XTButton','CATButton','UIButton']){
     const ctor=globalThis[type];if(!ctor)continue;
     for(const component of safe(()=>root.GetComponentsInChildren(ctor,true))||[]){
@@ -34,8 +37,7 @@ export function inspectPragmatic() {
       const centerAndSize=safe(()=>go.collider.GetTransformedCenterAndSize());
       let hit=null;
       if(centerAndSize?.center && centerAndSize?.size){
-        const camera=roots.flatMap(r=>safe(()=>r.GetComponentsInChildren(globalThis.Camera,true))||[])
-          .find(c=>c.enabled!==false&&((Number(c.cullingMask)||0)&(1<<go.layer))!==0);
+        const camera=cameras.find(c=>((Number(c.cullingMask)||0)&(1<<go.layer))!==0);
         if(camera){
           const c=centerAndSize.center,s=centerAndSize.size;
           const pts=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([x,y])=>safe(()=>camera.WorldToScreenPoint({x:c.x+x*s.x/2,y:c.y+y*s.y/2,z:c.z})));
@@ -59,5 +61,5 @@ export function inspectPragmatic() {
   else if(paths.some(p=>/IntroScreen/i.test(p)))state='INTRO';
   else if(paths.some(p=>/FreeSpins\/Content|StageResultFreeSpin/i.test(p)))state='BONUS';
   else if(paths.some(p=>/FeaturePurchase|GameFeatures|AnteBet|StartSpin_Button/i.test(p)))state='BASE';
-  return {supported:true,state,controls:drawn.slice(0,250)};
+  return {supported:true,state,viewport:{width:innerWidth,height:innerHeight},controls:drawn.slice(0,250)};
 }
