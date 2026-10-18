@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id);
 const DEFAULT_KEYS={next:'Space',previous:'Shift+Space',undo:'KeyZ',skip:'KeyS',pause:'KeyP',navigate:'Digit1',buy:'Digit2',confirm:'Digit3',pick:'Digit4',continue:'Digit5',other:'Digit6'};
 const KEY_LABELS={next:'Guardar y siguiente',previous:'Ver anterior',undo:'Deshacer',skip:'Omitir',pause:'Pausar workers',navigate:'Navegar',buy:'Compra DEMO',confirm:'Confirmación',pick:'Elegir bonus',continue:'Continuar',other:'Otro'};
-const store={items:[],selectedId:null,marks:[],mode:'navigate',history:[],review:null,optimistic:new Set(),imageKeep:new Map(),hotkeys:{...DEFAULT_KEYS},running:false,pollBusy:false};
+const store={items:[],selectedId:null,marks:[],mode:'navigate',history:[],review:null,optimistic:new Set(),imageKeep:new Map(),hotkeys:{...DEFAULT_KEYS},running:false,pollBusy:false,lastActivityAt:Date.now(),traceFor:null};
 let toastTimer;
 function toast(text,isError=false){const node=$('toast');node.textContent=text;node.className=isError?'error':'';node.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>node.style.display='none',3000);}
 async function api(url,method='GET',body){const res=await fetch(url,{method,headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});let data;
@@ -27,10 +27,13 @@ function display(){
   if(!item){$('game-title').textContent='Sin fotografía seleccionada';$('game-subtitle').textContent='El navegador prepara imágenes mientras catalogás otras';$('photo-status').textContent='COLA VACÍA';$('shot').removeAttribute('src');}
   else{
     $('game-title').textContent=item.slug.replaceAll('-',' ').replace(/\b\w/g,x=>x.toUpperCase());
-    $('game-subtitle').textContent=`#${item.id} · Profundidad ${item.depth} · ${item.url}`;
+    $('game-subtitle').textContent=`Foto #${item.id} · Juego #${item.game_id} · ${item.provider||'pragmatic'} · ${item.game_symbol||item.slug} · Oleada ${item.depth+1}`;
     $('photo-status').textContent=review?'REVISIÓN':`${String(item.capture?.state||'CAPTURA').toUpperCase()} · OLEADA ${item.depth+1}`;
     const url=imageUrl(item);if($('shot').getAttribute('src')!==url)$('shot').src=url;
+    if(store.traceFor!==item.id){store.traceFor=item.id;loadTrace(item);}
   }
+  if(!item){store.traceFor=null;$('game-trace-info').textContent='Seleccioná una fotografía.';
+    $('trace-list').textContent='Sin operaciones registradas.';$('export-game').hidden=true;}
   $('viewport').classList.toggle('readonly',review);$('hint').textContent=review?'Fotografía anterior (solo lectura) · Espacio para volver':'Clic para marcar · Espacio para guardar y avanzar';
   $('live-note').hidden=!item||!item.live;
   renderPins();renderQueue();
@@ -54,7 +57,7 @@ function renderQueue(){
     const el=document.createElement('div');el.className='queue-item'+(!store.review&&item.id===store.selectedId?' active':'');
     const name=document.createElement('div');name.className='name';name.textContent=item.slug;
     const line=document.createElement('div');line.className='detail';
-    const first=document.createElement('span');first.textContent=`#${item.id} · Oleada ${item.depth+1}`;
+    const first=document.createElement('span');first.textContent=`Juego #${item.game_id} · Foto #${item.id} · Oleada ${item.depth+1}`;
     const last=document.createElement('span');last.textContent=item.capture?.state||'FOTO';
     line.append(first,last);el.append(name,line);
     el.addEventListener('click',()=>{if(store.marks.length){if(!confirm('¿Descartar marcas todavía no guardadas?'))return;store.marks=[];}store.review=null;store.selectedId=item.id;display();});list.append(el);
@@ -65,8 +68,30 @@ function renderStatus(status){
   $('stat-ready').textContent=status.db.tasks.ready||0;
   $('stat-marks').textContent=status.db.marks;
   $('stat-workers').textContent=`${status.active}/${status.workers}`;
+  const a=status.allocation||{};
+  $('worker-allocation').textContent=`D ${a.activeDiscovery||0}/${a.discovery??'—'} · R ${a.activeBranches||0}/${a.branches??'—'}`;
   $('stat-live').textContent=`${status.live}/${status.maxLive}`;
   store.running=!status.paused;$('pause-btn').textContent=status.paused?'▶ Iniciar workers':'Ⅱ Pausar workers';
+}
+async function loadTrace(item){
+  $('game-trace-info').textContent=`Proveedor: ${item.provider||'pragmatic'} · Juego #${item.game_id} · Symbol: ${item.game_symbol||item.capture?.gameSymbol||'pendiente'} · Sesión: ${item.capture?.sessionId||'—'}`;
+  const link=$('export-game');link.hidden=false;link.href=`/api/games/${item.game_id}/export`;
+  link.download=`${item.provider||'pragmatic'}-${item.game_symbol||item.slug}-${item.game_id}.json`;
+  $('trace-list').textContent='Consultando operaciones…';
+  try{
+    const data=await api(`/api/tasks/${item.id}/trace?limit=25`);
+    if(store.traceFor!==item.id)return;
+    const list=$('trace-list');list.replaceChildren();
+    if(!data.events.length){list.textContent='Sin operaciones de red del proveedor para esta captura.';return;}
+    for(const e of data.events){
+      const entry=document.createElement('div');entry.className='trace-entry';
+      const heading=document.createElement('div');
+      heading.textContent=`${e.action||e.method} · HTTP ${e.status??'—'} · ${e.endpoint}`;
+      const detail=document.createElement('small');
+      detail.textContent=`Sesión ${e.session_id.slice(0,8)} · Petición: ${JSON.stringify(e.request)} · Respuesta: ${JSON.stringify(e.response)}`;
+      entry.append(heading,detail);list.append(entry);
+    }
+  }catch(e){if(store.traceFor===item.id)$('trace-list').textContent=`No se pudo leer tráfico: ${e.message}`;}
 }
 async function refresh(){if(store.pollBusy)return;store.pollBusy=true;
   try{
@@ -91,12 +116,13 @@ $('image-wrap').addEventListener('click',e=>{
   const r=$('shot').getBoundingClientRect();const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
   if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>1||y<0||y>1)return;
   if(store.marks.length>=40)return toast('Máximo 40 marcas por foto',true);
+  store.lastActivityAt=Date.now();
   store.marks.push({x:Math.round(x*1000000)/1000000,y:Math.round(y*1000000)/1000000,kind:store.mode,label:''});renderPins();
 });
 function setMode(mode){store.mode=mode;document.querySelectorAll('.modes button').forEach(b=>b.classList.toggle('selected',b.dataset.mode===mode));}
 document.querySelectorAll('.modes button').forEach(el=>el.addEventListener('click',()=>setMode(el.dataset.mode)));
 function undo(){if(store.review)return;store.marks.pop();renderPins();}
-async function commit(skip=false){
+async function commit(skip=false){store.lastActivityAt=Date.now();
   if(store.review){store.review=null;display();return;}
   const item=getCurrent();if(!item)return;
   const marks=skip?[]:[...store.marks];
@@ -104,7 +130,8 @@ async function commit(skip=false){
   store.history.push({...item,savedMarks:marks});if(store.history.length>100)store.history.shift();
   store.items=store.items.filter(t=>t.id!==item.id);store.selectedId=null;store.marks=[];selectFirst();display();
   try{await api(`/api/tasks/${item.id}/commit`,'POST',{marks});store.optimistic.delete(item.id);refresh();}
-  catch(e){store.optimistic.delete(item.id);toast(`No se guardó #${item.id}: ${e.message}`,true);refresh();}
+  catch(e){store.optimistic.delete(item.id);store.items.unshift(item);store.selectedId=item.id;
+    store.review=null;store.marks=marks;toast(`No se guardó #${item.id}: ${e.message}`,true);display();refresh();}
 }
 async function pause(){try{const r=await api('/api/run','POST',{running:!store.running});store.running=!r.paused;refresh();}
   catch(e){toast(e.message,true);}}
@@ -128,7 +155,7 @@ document.addEventListener('keydown',e=>{
   const code=shortcutName(e),keys=store.hotkeys;
   const action=Object.keys(keys).find(key=>keys[key]===code);
   if(!action)return;
-  e.preventDefault();
+  store.lastActivityAt=Date.now();e.preventDefault();
   if(action==='next')commit(false);else if(action==='previous')previous();else if(action==='undo')undo();else if(action==='skip')commit(true);else if(action==='pause')pause();else setMode(action);
 });
 function fillKeys(){const fields=$('key-fields');fields.replaceChildren();
@@ -146,5 +173,11 @@ $('save-keys').addEventListener('click',async()=>{
   if(unique.some(x=>!x)||new Set(unique).size!==unique.length)return toast('Los atajos no pueden estar vacíos ni repetidos',true);
   try{await api('/api/settings','POST',{hotkeys:keys});store.hotkeys=keys;$('settings-dialog').close();toast('Atajos guardados');}catch(e){toast(e.message,true);}
 });
-async function init(){try{const cfg=await api('/api/settings');if(cfg.hotkeys)store.hotkeys={...DEFAULT_KEYS,...cfg.hotkeys};}catch{}fillKeys();await refresh();setInterval(refresh,1300);}
+async function heartbeat(){
+  const active=document.visibilityState==='visible'&&Date.now()-store.lastActivityAt<90000;
+  await api('/api/activity','POST',{active}).catch(()=>{});
+}
+window.addEventListener('focus',()=>{store.lastActivityAt=Date.now();heartbeat();});
+document.addEventListener('visibilitychange',heartbeat);
+async function init(){try{const cfg=await api('/api/settings');if(cfg.hotkeys)store.hotkeys={...DEFAULT_KEYS,...cfg.hotkeys};}catch{}fillKeys();await refresh();await heartbeat();setInterval(refresh,1300);setInterval(heartbeat,8000);}
 init();
