@@ -12,6 +12,7 @@ export class CatalogDB {
     this.db.exec(`
     CREATE TABLE IF NOT EXISTS games(
       id INTEGER PRIMARY KEY, url TEXT UNIQUE NOT NULL, slug TEXT NOT NULL,
+      provider TEXT NOT NULL DEFAULT 'pragmatic', game_symbol TEXT,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
     CREATE TABLE IF NOT EXISTS tasks(
@@ -37,7 +38,23 @@ export class CatalogDB {
       UNIQUE(task_id,ordinal)
     );
     CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY,value TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS network_events(
+      id INTEGER PRIMARY KEY, game_id INTEGER NOT NULL REFERENCES games(id),
+      task_id INTEGER NOT NULL REFERENCES tasks(id),session_id TEXT NOT NULL,
+      provider TEXT NOT NULL, game_symbol TEXT, phase TEXT NOT NULL DEFAULT 'prepare',
+      endpoint TEXT NOT NULL, method TEXT NOT NULL, action TEXT,
+      status INTEGER, request_json TEXT NOT NULL DEFAULT '{}',
+      response_json TEXT NOT NULL DEFAULT '{}',
+      observed_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE INDEX IF NOT EXISTS events_game ON network_events(game_id,id);
+    CREATE INDEX IF NOT EXISTS events_task ON network_events(task_id,id);
+    CREATE INDEX IF NOT EXISTS events_session ON network_events(session_id,id);
     `);
+    // Non-destructive upgrade of catalogs created before provider/trace support.
+    const cols=new Set(this.db.prepare('PRAGMA table_info(games)').all().map(c=>c.name));
+    if(!cols.has('provider'))this.db.exec("ALTER TABLE games ADD COLUMN provider TEXT NOT NULL DEFAULT 'pragmatic'");
+    if(!cols.has('game_symbol'))this.db.exec('ALTER TABLE games ADD COLUMN game_symbol TEXT');
     // A crash cannot leave a permanent "preparing" lock.
     this.db.prepare("UPDATE tasks SET status='queued' WHERE status='preparing'").run();
   }
@@ -61,10 +78,10 @@ export class CatalogDB {
     }catch(e){this.db.exec('ROLLBACK');throw e;}
     return {added,existing,unique:urls.length};
   }
-  getTask(id){return this.db.prepare(`SELECT t.*,g.url,g.slug FROM tasks t JOIN games g ON t.game_id=g.id WHERE t.id=?`).get(id)||null;}
+  getTask(id){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol FROM tasks t JOIN games g ON t.game_id=g.id WHERE t.id=?`).get(id)||null;}
   getMark(id){return this.db.prepare('SELECT * FROM marks WHERE id=?').get(id)||null;}
   marksForTask(id){return this.db.prepare('SELECT * FROM marks WHERE task_id=? ORDER BY ordinal').all(id);}
-  listReady(limit=100){return this.db.prepare(`SELECT t.id,t.depth,t.status,t.capture_file,t.capture_json,t.updated_at,g.slug,g.url,COUNT(m.id) as marks_count
+  listReady(limit=100){return this.db.prepare(`SELECT t.id,t.game_id,t.depth,t.status,t.capture_file,t.capture_json,t.updated_at,g.slug,g.url,g.provider,g.game_symbol,COUNT(m.id) as marks_count
   FROM tasks t JOIN games g ON t.game_id=g.id LEFT JOIN marks m ON m.task_id=t.id
   WHERE t.status='ready' GROUP BY t.id ORDER BY t.depth DESC,t.id ASC LIMIT ?`).all(limit).map(x=>({...x,capture:x.capture_json?(({state,rootMode,capturedAt,bytes})=>({state,rootMode,capturedAt,bytes}))(JSON.parse(x.capture_json)):null,capture_json:undefined}));}
   listProblems(limit=100){return this.db.prepare(`SELECT t.id,t.depth,t.status,t.error,g.slug FROM tasks t JOIN games g ON t.game_id=g.id WHERE t.status IN ('failed','blocked') ORDER BY t.id DESC LIMIT ?`).all(limit);}
@@ -74,14 +91,52 @@ export class CatalogDB {
     const marks=this.db.prepare('SELECT COUNT(*) as marks FROM marks').get();
     return {games:totals.games,marks:marks.marks,tasks:Object.fromEntries(statuses.map(r=>[r.status,r.count]))};
   }
-  nextQueued(){return this.db.prepare(`SELECT t.*,g.url,g.slug,m.kind AS via_kind FROM tasks t
+  nextQueued(){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,m.kind AS via_kind FROM tasks t
     JOIN games g ON g.id=t.game_id LEFT JOIN marks m ON m.id=t.via_mark_id
     WHERE t.status='queued' ORDER BY (t.depth>0) DESC,t.depth DESC,t.id ASC LIMIT 1`).get()||null;}
   queuedBatch(limit=50){return this.db.prepare(`SELECT t.*,g.url,g.slug,m.kind AS via_kind FROM tasks t
     JOIN games g ON g.id=t.game_id LEFT JOIN marks m ON m.id=t.via_mark_id
     WHERE t.status='queued' ORDER BY (t.depth>0) DESC,t.depth DESC,t.id ASC LIMIT ?`).all(limit);}
-  queuedRoots(limit=20){return this.db.prepare(`SELECT t.*,g.url,g.slug,NULL AS via_kind FROM tasks t JOIN games g ON g.id=t.game_id
+  queuedRoots(limit=20){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,NULL AS via_kind FROM tasks t JOIN games g ON g.id=t.game_id
     WHERE t.status='queued' AND t.depth=0 ORDER BY t.id LIMIT ?`).all(limit);}
+  queuedBranches(limit=100){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,m.kind AS via_kind FROM tasks t
+    JOIN games g ON g.id=t.game_id LEFT JOIN marks m ON m.id=t.via_mark_id
+    WHERE t.status='queued' AND t.depth>0 ORDER BY t.depth DESC,t.id ASC LIMIT ?`).all(limit);}
+  queueCounts(){return this.db.prepare(`SELECT SUM(CASE WHEN depth=0 THEN 1 ELSE 0 END) AS discovery,
+    SUM(CASE WHEN depth>0 THEN 1 ELSE 0 END) AS branches FROM tasks WHERE status='queued'`).get();}
+  setGameSymbol(gameId,symbol){
+    if(!symbol||!/^[a-zA-Z0-9_-]{2,64}$/.test(symbol))return false;
+    return this.db.prepare(`UPDATE games SET game_symbol=? WHERE id=? AND game_symbol IS NULL`).run(symbol,gameId).changes===1;
+  }
+  recordNetworkEvent(gameId,taskId,sessionId,event){
+    if(!Number.isSafeInteger(gameId)||!Number.isSafeInteger(taskId)||!sessionId||!event?.endpoint)return;
+    return this.db.prepare(`INSERT INTO network_events(game_id,task_id,session_id,provider,game_symbol,
+      phase,endpoint,method,action,status,request_json,response_json,observed_at)
+      VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`).run(gameId,taskId,String(sessionId),event.provider||'pragmatic',
+      event.gameSymbol||null,event.phase||'prepare',event.endpoint,event.method||'GET',event.action||null,
+      event.status??null,JSON.stringify(event.request||{}),JSON.stringify(event.response||{}),
+      event.observedAt||new Date().toISOString());
+  }
+  eventsForTask(id,limit=100){return this.db.prepare(`SELECT id,game_id,task_id,session_id,provider,
+      game_symbol,phase,endpoint,method,action,status,request_json,response_json,observed_at
+      FROM network_events WHERE task_id=? ORDER BY id DESC LIMIT ?`).all(id,limit).map(r=>({
+      ...r,request:JSON.parse(r.request_json),response:JSON.parse(r.response_json),
+      request_json:undefined,response_json:undefined
+    }));}
+  gameDetail(gameId,{taskLimit=500,eventLimit=2000}={}){
+    const game=this.db.prepare('SELECT * FROM games WHERE id=?').get(gameId);
+    if(!game)return null;
+    const tasks=this.db.prepare('SELECT id,parent_task_id,via_mark_id,depth,status,error,capture_file,created_at FROM tasks WHERE game_id=? ORDER BY id LIMIT ?').all(gameId,taskLimit);
+    const marks=this.db.prepare(`SELECT m.* FROM marks m JOIN tasks t ON t.id=m.task_id WHERE t.game_id=? ORDER BY m.id LIMIT ?`).all(gameId,taskLimit*8);
+    const events=this.db.prepare(`SELECT id,game_id,task_id,session_id,provider,game_symbol,phase,endpoint,
+      method,action,status,request_json,response_json,observed_at
+      FROM network_events WHERE game_id=? ORDER BY id LIMIT ?`).all(gameId,eventLimit).map(r=>({
+        ...r,request:JSON.parse(r.request_json),response:JSON.parse(r.response_json),request_json:undefined,response_json:undefined
+      }));
+    const totalTasks=this.db.prepare('SELECT COUNT(*) AS n FROM tasks WHERE game_id=?').get(gameId).n;
+    const totalEvents=this.db.prepare('SELECT COUNT(*) AS n FROM network_events WHERE game_id=?').get(gameId).n;
+    return {game,tasks,marks,events,counts:{tasks:totalTasks,events:totalEvents},truncated:tasks.length<totalTasks||events.length<totalEvents};
+  }
   claim(id){return this.db.prepare("UPDATE tasks SET status='preparing',updated_at=datetime('now'),error=NULL WHERE id=? AND status='queued'").run(id).changes===1;}
   ready(id,{capture_file,capture}){
     this.db.prepare("UPDATE tasks SET status='ready',capture_file=?,capture_json=?,error=NULL,updated_at=datetime('now') WHERE id=? AND status='preparing'").run(capture_file,JSON.stringify(capture),id);
