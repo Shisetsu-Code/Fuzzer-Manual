@@ -10,4 +10,5 @@ try{
   const result=await browser.prepare(task);
   console.log(JSON.stringify({image:result.file,state:result.capture.state,controls:result.capture.controls.length,
     gpuRenderer:browser.metrics.lastRenderer,bytes:result.capture.bytes},null,2));
+  if(result.capture.controls.length<1)throw Error('DEMO_RUNTIME_NOT_OBSERVED: screenshot was saved but no active runtime controls were found');
 }finally{await browser.stop();db.close();}
