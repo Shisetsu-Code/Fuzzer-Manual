@@ -94,7 +94,7 @@ export class CatalogDB {
   nextQueued(){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,m.kind AS via_kind FROM tasks t
     JOIN games g ON g.id=t.game_id LEFT JOIN marks m ON m.id=t.via_mark_id
     WHERE t.status='queued' ORDER BY (t.depth>0) DESC,t.depth DESC,t.id ASC LIMIT 1`).get()||null;}
-  queuedBatch(limit=50){return this.db.prepare(`SELECT t.*,g.url,g.slug,m.kind AS via_kind FROM tasks t
+  queuedBatch(limit=50){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,m.kind AS via_kind FROM tasks t
     JOIN games g ON g.id=t.game_id LEFT JOIN marks m ON m.id=t.via_mark_id
     WHERE t.status='queued' ORDER BY (t.depth>0) DESC,t.depth DESC,t.id ASC LIMIT ?`).all(limit);}
   queuedRoots(limit=20){return this.db.prepare(`SELECT t.*,g.url,g.slug,g.provider,g.game_symbol,NULL AS via_kind FROM tasks t JOIN games g ON g.id=t.game_id
