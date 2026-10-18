@@ -1,3 +1,4 @@
+import fs from 'node:fs/promises';
 /** Dual queue scheduler: discovery never waits for annotation, branches never block the UI. */
 export class Scheduler {
   constructor({db,browser,cache,workers=6,discoveryWorkers=2,branchWorkers=4,
@@ -12,7 +13,7 @@ export class Scheduler {
   }
   start(){if(this.timer)return;this.timer=setInterval(()=>this.pump(),350);this.timer.unref?.();if(!this.paused)this.pump();}
   stop(){this.closed=true;if(this.timer)clearInterval(this.timer);this.timer=null;}
-  async drain(timeoutMs=30000){
+  async drain(timeoutMs=Infinity){
     const deadline=Date.now()+timeoutMs;
     while(this.active.size&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,100));
     return this.active.size===0;
@@ -26,6 +27,17 @@ export class Scheduler {
     const branches=this.workers-discovery;
     return {discovery,branches,adaptive:this.adaptiveWorkers,catalogerActive:this.catalogerActive};
   }
+  runnableBranches(){
+    // A retained RNG continuation must not sit behind fresh-capacity candidates.
+    const retained=this.db.queuedChildren([...this.browser.live?.keys()||[]])
+      .filter(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
+    if(retained.length)return retained;
+    for(let offset=0;;offset+=200){
+      const batch=this.db.queuedBranches(200,offset);
+      const runnable=batch.filter(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
+      if(runnable.length||batch.length<200)return runnable;
+    }
+  }
   pump(){
     if(this.closed||this.paused)return;
     const {discovery,branches}=this.allocation();
@@ -33,10 +45,11 @@ export class Scheduler {
     let lookups=0;
     while(this.active.size<this.workers&&lookups++<this.workers+4){
       const roots=this.db.queuedRoots(100).filter(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
-      const forks=this.db.queuedBranches(200).filter(x=>!this.active.has(x.id)&&this.browser.canPrepare(x));
+      const forks=this.runnableBranches();
       let task;
       // Honor each queue's reserved share; lend unused slots to the other queue.
-      if(activeCount('discovery')<discovery&&roots.length)task=roots[0];
+      if(forks.length&&this.browser.hasLive?.(forks[0].parent_task_id))task=forks[0];
+      else if(activeCount('discovery')<discovery&&roots.length)task=roots[0];
       else if(activeCount('branch')<branches&&forks.length)task=forks[0];
       else if(forks.length&&this.catalogerActive)task=forks[0];
       else task=roots[0]||forks[0];
@@ -61,6 +74,24 @@ export class Scheduler {
       this.errors.push({taskId:task.id,reason:String(e.message||e).slice(0,180)});
       if(this.errors.length>20)this.errors.shift();
     }finally{this.onProgress();}
+  }
+  async recapture(id){
+    if(this.closed)throw Error('ENGINE_STOPPED');
+    if(this.active.has(id)||this.browser.isBusy(id))throw Error('ACTIVE_WORK: session is preparing or recapturing');
+    const task=this.db.getTask(id);if(!task)throw Error('Task not found');
+    if(!this.browser.hasLive(id))throw Error('LIVE_SESSION_LOST: no retained session to capture');
+    if(!this.db.beginRecapture(id))throw Error('Task not ready for recapture');
+    this.active.set(id,'recovery');
+    try{
+      const result=await this.browser.recapture(task);
+      // A retained task reuses its image path. Settle any earlier read, then
+      // replace cached bytes before publishing the newly captured ready state.
+      await this.cache.load(result.file).catch(()=>{});
+      this.cache.put(result.file,await fs.readFile(result.file));
+      this.db.ready(id,{capture_file:result.file,capture:result.capture});
+      return {ok:true};
+    }catch(e){this.db.fail(id,'failed',String(e.message||e));throw e;}
+    finally{this.active.delete(id);this.onProgress();if(!this.closed)this.pump();}
   }
   async warmup(){
     if(this.preloadActive||this.closed)return;

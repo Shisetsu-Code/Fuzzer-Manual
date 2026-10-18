@@ -31,7 +31,7 @@ La persona es **catalogadora de decisiones**, no ejecutora manual de todos los p
 6. **Explorar ramas:** otros workers toman esos trabajos, reconstruyen los pasos anteriores desde una sesión DEMO adecuada y ejecutan **una alternativa por rama**, con verificaciones de estado/controles antes de cada clic.
 7. **Nueva oleada:** cada estado nuevo produce otra fotografía. Se agrega a la cola del operador mientras continúa la preparación de otros juegos. La persona puede ausentarse y volver cuando quiera.
 
-**Importante sobre el guardado:** los puntos aparecen de inmediato en la GUI al hacer clic, pero su confirmación durable en SQLite sucede al guardar la fotografía (`Espacio` o botón equivalente). No se debe describir ese clic inicial como una operación ya persistida.
+**Guardado y borradores:** los puntos aparecen de inmediato en la GUI y se conservan como un borrador de esa fotografía, también al navegar a otra. Su confirmación durable en SQLite sucede al guardar (`Espacio` o botón equivalente) y recibir la respuesta. Si esa respuesta se pierde, el envío original queda pendiente y se puede repetir sin crear hijos duplicados. El historial incluye únicamente guardados confirmados. Los borradores locales preservan el trabajo al recargar cuando el almacenamiento del navegador está disponible; no equivalen a decisiones ya ejecutadas por los workers.
 
 ## 3. Ejemplo conceptual: cuatro compras
 
@@ -78,7 +78,7 @@ Configuración inicial:
 | Operador ausente o inactivo | 2 | 4 |
 | Operador clasificando activamente | 1 | 5 |
 
-El planificador presta plazas vacantes de una cola a la otra. La asignación `1+5` es **una prioridad de planificación**, no la promesa de que todos los workers están ocupados o de que seis sesiones de bonus permanecen vivas. Las sesiones DEMO que deben permanecer abiertas están limitadas por `MAX_LIVE` (inicialmente, 4).
+El planificador presta plazas vacantes de una cola a la otra. La asignación `1+5` es **una prioridad de planificación**, no la promesa de que todos los workers están ocupados o de que seis sesiones de bonus permanecen vivas. Las sesiones DEMO que deben permanecer abiertas están limitadas por `MAX_LIVE` (inicialmente, 4). Se reserva la capacidad antes de iniciar la preparación y se mantiene ocupada hasta terminar el cierre del contexto. Las continuaciones de sesiones retenidas se buscan primero; una página llena de ramas que esperan capacidad no debe ocultar una continuación ejecutable.
 
 El objetivo de UX es que cambiar de fotografía precargada no dependa de un viaje por red ni de que termine una tirada: las fotos se almacenan en disco y se precargan en memoria. Los tiempos reales de preparación, captura, replay y finalización deben medirse en juegos reales; la velocidad de la GUI no prueba la capacidad total del motor.
 
@@ -106,7 +106,7 @@ Proveedor → Juego (game_id)
 
 El objetivo no es solo saber **dónde se hizo clic**, sino también **en qué juego y estado, a través de qué rama, qué petición se observó, qué respondió el servidor y cuál fue la siguiente pantalla**.
 
-El motor actual registra tráfico DEMO de Pragmatic con una **lista blanca** de endpoints y campos de protocolo; no conserva cuerpos HAR íntegros, cookies ni tokens. La vista de la GUI ofrece trazas por tarea y exportación JSON estructurada por juego. Otros proveedores necesitarán adaptadores específicos. Los resultados deben diferenciar una acción intentada, una petición aceptada, una transición observada y una operación realmente verificada.
+El motor actual registra tráfico DEMO de Pragmatic con una **lista blanca** de endpoints y campos de protocolo, extraídos tanto de parámetros GET como del cuerpo POST; no conserva cuerpos HAR íntegros, cookies ni tokens. La vista de la GUI ofrece trazas por tarea y exportación JSON estructurada por juego. Otros proveedores necesitarán adaptadores específicos. Los resultados deben diferenciar una acción intentada, una petición aceptada, una transición observada y una operación realmente verificada.
 
 ## 7. Reproducibilidad y estados aleatorios
 
@@ -117,6 +117,14 @@ El motor actual registra tráfico DEMO de Pragmatic con una **lista blanca** de 
 
 Un HTTP 200, `doCollect` o una captura de premio son evidencia **parcial**. No certifican por sí solos el retorno al estado base ni la cobertura total de un bonus.
 
+### Recuperación de una operación incierta
+
+Antes de pulsar un control irreversible, el motor verifica su estado y escribe un checkpoint de acción despachada. Si termina el proceso después de ese punto, el siguiente arranque conserva la rama bloqueada: la ausencia de una captura final no demuestra que el clic no ocurrió. Los trabajos que quedaron antes de una acción y pueden reconstruirse con seguridad sí pueden reencolarse.
+
+Durante una continuación, la sesión pasa al hijo antes de verificar o ejecutar el clic. Si algo falla y el contexto sigue vivo, ese hijo aparece en **Sesiones para recuperar**. El operador puede **Recapturar** el estado actual sin repetir la acción, o **Liberar** el contexto y conservar la incidencia. No se permite recuperar o liberar una sesión mientras está ejecutando trabajo. Una petición para liberar un antiguo padre tampoco puede alterar al hijo que ahora posee la sesión.
+
+Si la sesión se perdió, una fotografía anterior no basta para continuar el RNG. La GUI debe conservar las marcas locales para consulta y mostrar el bloqueo, sin presentar esa foto como trabajo listo. Un reintento de guardado sin respuesta se reconcilia por separado, porque SQLite podría haber confirmado ya sus marcas.
+
 ## 8. Qué se considera terminado y qué falta
 
 ### Incluido en el MVP de la rama de desarrollo
@@ -126,8 +134,10 @@ Un HTTP 200, `doCollect` o una captura de premio son evidencia **parcial**. No c
 - Varias marcas por foto, creación persistente de trabajos hijos y replay con controles de seguridad.
 - Dos colas de workers con redistribución según actividad.
 - Persistencia del árbol, sesiones observadas, fotografías y trazabilidad selectiva de protocolo.
-- Recuperación de tareas incompletas sin declararlas finalizadas.
-- Pruebas unitarias/CI y una prueba DEMO acotada de tres ramas de compra hasta pantallas de confirmación.
+- Recuperación de tareas incompletas con checkpoint de acción, recaptura sin clic cuando la sesión sigue viva y bloqueo conservador cuando se perdió.
+- Borradores por fotografía y reintentos de guardado idempotentes, sin reemplazar el trabajo de otra foto por una respuesta tardía.
+- Regresiones con SQLite, el motor y los manejadores reales de la interfaz; los límites externos del navegador/red se simulan para provocar fallos de forma reproducible.
+- Una prueba DEMO acotada de al menos tres ramas hasta pantallas de confirmación, con lotes concurrentes y diagnósticos asociados al commit probado. Su resultado debe verificarse en el workflow de ese commit; no representa una certificación del bonus completo.
 
 ### Objetivos de evolución, **no funcionalidades garantizadas hoy**
 

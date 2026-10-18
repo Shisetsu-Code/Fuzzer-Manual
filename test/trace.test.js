@@ -19,3 +19,20 @@ test('sanitized transport payload never retains tokens or unrelated fields',()=>
   assert.equal(r.action,'doSpin');assert.equal(r.endpoint.includes('auth'),false);
   assert.deepEqual(r.payload,{action:'doSpin',pur:'0'});
 });
+test('GET transport preserves allowlisted query fields and omits query secrets',()=>{
+  const r=sanitizeRequest({url:()=> 'https://gs2c.pragmaticplay.net/gs2c/v3/gameService?action=doSpin&pur=2&token=SECRET&cookie=COOKIE&other=NOPE',
+    method:()=> 'GET',postData:()=> null});
+  assert.equal(r.endpoint,'https://gs2c.pragmaticplay.net/gs2c/v3/gameService');
+  assert.equal(r.action,'doSpin');
+  assert.deepEqual(r.payload,{action:'doSpin',pur:'2'});
+  assert.equal(JSON.stringify(r).includes('SECRET'),false);
+  assert.equal(JSON.stringify(r).includes('COOKIE'),false);
+});
+test('allowlisted POST body fields override query fields without retaining secrets',()=>{
+  const r=sanitizeRequest({url:()=> 'https://gs2c.pragmaticplay.net/gs2c/v3/gameService?action=doSpin&pur=2&bl=1&token=SECRET',
+    method:()=> 'POST',postData:()=> 'action=doCollect&pur=3&session=COOKIE&other=NOPE'});
+  assert.equal(r.action,'doCollect');
+  assert.deepEqual(r.payload,{action:'doCollect',pur:'3',bl:'1'});
+  assert.equal(JSON.stringify(r).includes('SECRET'),false);
+  assert.equal(JSON.stringify(r).includes('COOKIE'),false);
+});

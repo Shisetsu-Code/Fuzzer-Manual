@@ -41,7 +41,10 @@ export function sanitizeRequest(request){
   const endpoint=safeEndpoint(request.url());if(!endpoint)return null;
   const method=request.method().toUpperCase();
   if(!['GET','POST'].includes(method))return null;
-  const payload=sanitizedFields(request.postData()||'');
+  let queryFields={};
+  try{queryFields=sanitizedFields(new URL(request.url()).search.slice(1));}catch{}
+  const bodyFields=method==='POST'?sanitizedFields(request.postData()||''):{};
+  const payload={...queryFields,...bodyFields};
   const action=typeof payload.action==='string'&&SAFE_ACTION.test(payload.action)?payload.action:null;
   // For navigation record only the DEMO loader, not assets/CMP/analytics.
   if(!action&&!/\/openGame\.do$|\/gs2c\/|\/gameService\//i.test(endpoint))return null;

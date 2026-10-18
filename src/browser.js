@@ -12,9 +12,10 @@ export class ReplayError extends Error {constructor(code,detail=''){super(`${cod
 export class BrowserEngine {
   constructor(config,db,{chromiumLoader=async()=>({chromium:(await import('playwright')).chromium})}={}){
     this.config=config;this.db=db;this.browser=null;this.launchPromise=null;this.chromiumLoader=chromiumLoader;
-    this.live=new Map();this.metrics={sessionsOpened:0,screenshots:0,bytes:0,clicks:0,started:null,lastRenderer:'unknown',failures:0};
+    this.live=new Map();this.reserved=new Set();this.busy=new Set();this.pending=new Set();this.stopped=false;this.metrics={sessionsOpened:0,screenshots:0,bytes:0,clicks:0,started:null,lastRenderer:'unknown',failures:0};
   }
   async start(){
+    if(this.stopped)throw new ReplayError('ENGINE_STOPPED');
     if(this.browser)return;
     if(this.launchPromise)return this.launchPromise;
     this.launchPromise=this.launchOne();
@@ -30,32 +31,44 @@ export class BrowserEngine {
     }else if(this.config.gpuMode==='auto'){
       // Chromium chooses ANGLE/D3D11 on compatible Windows hardware; no --disable-gpu.
     }else if(this.config.gpuMode!=='default')throw Error('GPU_MODE must be auto, d3d11, or default');
-    this.browser=await chromium.launch({headless:this.config.headless,args});
+    const browser=await chromium.launch({headless:this.config.headless,args});
+    if(this.stopped){await browser.close();throw new ReplayError('ENGINE_STOPPED');}
+    this.browser=browser;
     this.metrics.started=new Date().toISOString();
   }
-  async stop(){for(const lease of this.live.values())await this.dispose(lease);this.live.clear();
+  async stop(){
+    this.stopped=true;
+    await this.launchPromise?.catch(()=>{});
+    await Promise.allSettled([...this.pending]);
+    for(const lease of this.live.values())await this.dispose(lease);
+    this.live.clear();this.reserved.clear();
     if(this.browser){await this.browser.close();this.browser=null;}
   }
   hasLive(taskId){return this.live.has(taskId);}
-  liveCount(){return this.live.size;}
-  async release(taskId){const lease=this.live.get(taskId);if(lease){this.live.delete(taskId);await this.dispose(lease);return true;}return false;}
+  liveCount(){return this.live.size+this.reserved.size;}
+  isBusy(taskId){return this.busy.has(taskId);}
+  async release(taskId){
+    if(this.isBusy(taskId))throw new ReplayError('ACTIVE_WORK','session is preparing or recapturing');
+    const lease=this.live.get(taskId);if(!lease)return false;
+    this.busy.add(taskId);
+    try{await this.dispose(lease);this.live.delete(taskId);return true;}
+    finally{this.busy.delete(taskId);}
+  }
   canPrepare(task){
-    const parent=this.db.getTask(task.parent_task_id);
-    const mark=task.via_mark_id?this.db.getMark(task.via_mark_id):null;
-    if(task.parent_task_id && this.db.lineage(task.id).some(x=>isIrreversible(x.mark.kind))){
-      // An irreversible step must run within the exact live, isolated DEMO session.
-      if(parent && this.live.has(parent.id))return true;
-      // The first irreversible action can be taken from a fresh verified navigation path.
-      const steps=this.db.lineage(task.id);
-      if(steps.slice(0,-1).some(x=>isIrreversible(x.mark.kind)))return true; // will fail explicitly if lease lost
-    }
-    return !mark||!isIrreversible(mark.kind)||this.live.size<this.config.maxLive;
+    if(this.stopped||this.isBusy(task.id)||this.isBusy(task.parent_task_id))return false;
+    if(this.hasLive(task.parent_task_id))return true;
+    const steps=this.db.lineage(task.id);
+    if(steps.slice(0,-1).some(x=>isIrreversible(x.mark.kind)))return true; // explicit lost-session outcome
+    return !steps.some(x=>isIrreversible(x.mark.kind))||this.liveCount()<this.config.maxLive;
   }
   async fresh(url,task){
     await this.start();
     const ctxOptions={viewport:{width:this.config.viewportWidth,height:this.config.viewportHeight},deviceScaleFactor:1,serviceWorkers:'allow',acceptDownloads:false};
     const context=await this.browser.newContext(ctxOptions);
-    const page=await context.newPage();this.metrics.sessionsOpened++;
+    let page;
+    try{page=await context.newPage();}catch(e){await context.close().catch(()=>{});throw e;}
+    if(this.stopped){await context.close().catch(()=>{});throw new ReplayError('ENGINE_STOPPED');}
+    this.metrics.sessionsOpened++;
     const session={context,page,id:randomUUID(),events:[],pendingEvents:new Set(),
       created:Date.now(),url,taskId:task.id,gameId:task.game_id,
       gameSymbol:task.game_symbol||null,phase:task.depth===0?'discovery':'branch'};
@@ -80,6 +93,8 @@ export class BrowserEngine {
         const event={provider:'pragmatic',gameSymbol:session.gameSymbol,
           phase:meta.phase,endpoint:meta.endpoint,method:meta.method,action:meta.action,
           status:response.status(),request:meta.payload,response:payload,observedAt};
+        // A response body may resolve after the bounded flush and database shutdown.
+        if(session.disposed)return;
         // Persist a sanitized observation, never cookies, query tokens or raw HAR.
         this.db.recordNetworkEvent(session.gameId,meta.taskId,session.id,event);
         session.events.push({endpoint:event.endpoint,method:event.method,action:event.action,
@@ -97,7 +112,7 @@ export class BrowserEngine {
     await Promise.race([Promise.allSettled([...session.pendingEvents]),
       new Promise(resolve=>setTimeout(resolve,timeoutMs))]);
   }
-  async dispose(session){if(session?.context){await this.flushEvents(session);await session.context.close().catch(()=>{});}}
+  async dispose(session){if(session?.context){await this.flushEvents(session);session.disposed=true;await session.context.close().catch(()=>{});}}
 
   async dismissConsent(session){
     // Late consent overlays are common even after the DEMO iframe exists.
@@ -165,7 +180,7 @@ export class BrowserEngine {
     }
     let scan={supported:false,state:'UNKNOWN',controls:[]};
     if(frame){try{scan=await frame.evaluate(inspectPragmatic);}catch{}}
-    const clip=bounds&&bounds.width>=200&&bounds.height>=150
+    const clip=bounds
       ?this.clipForBounds(bounds)
       :{x:0,y:0,width:this.config.viewportWidth,height:this.config.viewportHeight};
     const symbol=frame?extractSymbol(frame.url()):null;
@@ -181,9 +196,14 @@ export class BrowserEngine {
     const signature=scan.supported?`${scan.state}|${controls.filter(c=>c.hit).map(c=>c.path).sort().join('|')}`:null;
     return {clip,controls,state:scan.state,signature,frameUrl:frame?.url()?safeEndpoint(frame.url()):null,scan};
   }
-  clipForBounds(rect){const W=this.config.viewportWidth,H=this.config.viewportHeight;
-    const x=Math.max(0,Math.min(W-1,Math.floor(rect.x))),y=Math.max(0,Math.min(H-1,Math.floor(rect.y)));
-    return {x,y,width:Math.max(1,Math.min(W-x,Math.ceil(rect.width))),height:Math.max(1,Math.min(H-y,Math.ceil(rect.height)))};
+  clipForBounds(rect){
+    const W=this.config.viewportWidth,H=this.config.viewportHeight;
+    const left=Math.max(0,rect.x),top=Math.max(0,rect.y);
+    const right=Math.min(W,rect.x+rect.width),bottom=Math.min(H,rect.y+rect.height);
+    if(![left,top,right,bottom].every(Number.isFinite)||right<=left||bottom<=top)
+      throw new ReplayError('DEMO_OUTSIDE_VIEWPORT');
+    const x=Math.floor(left),y=Math.floor(top);
+    return {x,y,width:Math.ceil(right)-x,height:Math.ceil(bottom)-y};
   }
   async settle(session,oldState){
     const until=Date.now()+4300;let previous='',matches=0,last=null;
@@ -257,6 +277,9 @@ export class BrowserEngine {
     if(!Number.isFinite(mark.x)||!Number.isFinite(mark.y)||mark.x<0||mark.x>1||mark.y<0||mark.y>1)throw new ReplayError('INVALID_MARK');
     const x=current.clip.x+mark.x*current.clip.width,y=current.clip.y+mark.y*current.clip.height;
     if(!this.inClip(current.clip,x,y))throw new ReplayError('CLICK_OUTSIDE_DEMO');
+    // Verification is complete. Persist before input: even an input exception may
+    // mean the provider received the action. A restart must never replay it.
+    if(isIrreversible(mark.kind))this.db.actionDispatched(session.taskId);
     await session.page.mouse.click(x,y);this.metrics.clicks++;
     await this.settle(session,current.signature);
   }
@@ -274,26 +297,48 @@ export class BrowserEngine {
       rootMode,state:view.state,signature:view.signature,controls:view.controls,
       frameUrl:view.frameUrl,network:session.events.slice(-25),capturedAt:new Date().toISOString(),bytes:bytes.length}};
   }
-  async prepare(task){
+  track(work){
+    this.pending.add(work);
+    work.then(()=>this.pending.delete(work),()=>this.pending.delete(work));
+    return work;
+  }
+  prepare(task){return this.track(this.prepareTask(task));}
+  recapture(task){return this.track(this.captureRetained(task));}
+  async captureRetained(task){
+    if(this.stopped)throw new ReplayError('ENGINE_STOPPED');
+    if(this.isBusy(task.id))throw new ReplayError('ACTIVE_WORK');
+    const session=this.live.get(task.id);if(!session)throw new ReplayError('LIVE_SESSION_LOST');
+    this.busy.add(task.id);
+    try{
+      const previous=task.capture_json?JSON.parse(task.capture_json):{};
+      return await this.screenshot(session,task.id,{rootMode:session.rootMode||previous.rootMode||'base'});
+    }finally{this.busy.delete(task.id);}
+  }
+  async prepareTask(task){
+    if(this.stopped)throw new ReplayError('ENGINE_STOPPED');
+    if(this.isBusy(task.id)||this.isBusy(task.parent_task_id))throw new ReplayError('ACTIVE_WORK');
+    if(this.hasLive(task.id))throw new ReplayError('ACTIVE_WORK','retained task requires recapture');
     const lineage=this.db.lineage(task.id);
     const requiresLive=lineage.some(x=>isIrreversible(x.mark.kind));
     const sourceParent=this.db.getTask(task.parent_task_id);
     let session=sourceParent?this.live.get(sourceParent.id):null;
     const inherited=Boolean(session);
-    if(requiresLive && lineage.slice(0,-1).some(x=>isIrreversible(x.mark.kind)) && !inherited)
+    if(requiresLive&&lineage.slice(0,-1).some(x=>isIrreversible(x.mark.kind))&&!inherited)
       throw new ReplayError('LIVE_SESSION_LOST','a prior nonreplayable state cannot be reconstructed');
-    if(requiresLive && !inherited && this.live.size>=this.config.maxLive)
-      throw new ReplayError('LIVE_SLOTS_FULL');
-    if(!session)session=await this.fresh(task.url,task);
-    session.taskId=task.id;session.gameId=task.game_id;
-    session.phase=task.depth===0?'discovery':'branch';
-    let ownershipMoved=false,success=false;
+    if(requiresLive&&!inherited&&this.liveCount()>=this.config.maxLive)throw new ReplayError('LIVE_SLOTS_FULL');
+    // Capacity and ownership change synchronously, before fresh() or input can yield.
+    if(requiresLive&&!inherited)this.reserved.add(task.id);
+    this.busy.add(task.id);
+    if(inherited){this.busy.add(sourceParent.id);this.live.delete(sourceParent.id);this.live.set(task.id,session);}
     try{
+      if(!session)session=await this.fresh(task.url,task);
+      if(requiresLive){this.reserved.delete(task.id);this.live.set(task.id,session);}
+      session.taskId=task.id;session.gameId=task.game_id;
+      session.phase=task.depth===0?'discovery':'branch';
       let mode='base';
       if(!lineage.length){
         await this.openKnownIntro(session);
-        const opened=await this.openKnownBuyMenu(session);
-        mode=opened.opened?'menu':'base';
+        const opened=await this.openKnownBuyMenu(session);mode=opened.opened?'menu':'base';
       }else{
         if(!inherited){
           await this.openKnownIntro(session);
@@ -303,7 +348,6 @@ export class BrowserEngine {
             const opened=await this.openKnownBuyMenu(session);
             if(!opened.opened)throw new ReplayError('BUY_MENU_NOT_REOPENED');
           }
-          // Replay previous *navigation* steps only, never a previous irreversible purchase.
           for(const step of lineage.slice(0,-1)){
             const previous=step.parent.capture_json?JSON.parse(step.parent.capture_json):{};
             await this.clickMark(session,previous,step.mark);
@@ -311,16 +355,17 @@ export class BrowserEngine {
         }
         const step=lineage.at(-1);
         const parentInfo=step.parent.capture_json?JSON.parse(step.parent.capture_json):{};
-        await this.clickMark(session,parentInfo,step.mark);
         mode=parentInfo.rootMode;
+        session.rootMode=mode||'base';
+        await this.clickMark(session,parentInfo,step.mark);
       }
-      const result=await this.screenshot(session,task.id,{rootMode:mode});success=true;
-      if(requiresLive){
-        if(inherited){this.live.delete(sourceParent.id);ownershipMoved=true;}
-        this.live.set(task.id,session);
-      }
+      const result=await this.screenshot(session,task.id,{rootMode:mode});
       return {...result,live:requiresLive};
     }catch(e){this.metrics.failures++;throw e;}
-    finally{if(!requiresLive||!success){if(inherited){/* Retain parent lease when click could not be completed safely. */}else await this.dispose(session);}}
+    finally{
+      this.reserved.delete(task.id);
+      if(!requiresLive&&session)await this.dispose(session);
+      this.busy.delete(task.id);if(inherited)this.busy.delete(sourceParent.id);
+    }
   }
 }

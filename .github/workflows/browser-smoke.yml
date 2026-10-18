@@ -6,28 +6,31 @@ jobs:
   demo:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      HEADLESS: '1'
+      SAVE_HAR: '0'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '22.13.0'
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Open one public DEMO and capture real runtime
         env:
-          HEADLESS: '1'
           DATA_DIR: ${{ runner.temp }}/fuzzer-manual-smoke
         run: node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
-      - name: Reproduce three observed purchase options in separate DEMO sessions
+      - name: Prepare observed purchase options concurrently and stop at confirmation
         env:
-          HEADLESS: '1'
           DATA_DIR: ${{ runner.temp }}/fuzzer-manual-branches
+          MAX_LIVE: '2'
         run: node scripts/smoke-branches.js https://www.pragmaticplay.fun/en/slots/candy-rush/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: demo-screenshot
+          name: demo-diagnostics-${{ github.sha }}
           path: |
             ${{ runner.temp }}/fuzzer-manual-smoke/shots/*.jpg
             ${{ runner.temp }}/fuzzer-manual-branches/shots/*.jpg
+            ${{ runner.temp }}/fuzzer-manual-branches/diagnostics/${{ github.sha }}/*.json
           if-no-files-found: ignore

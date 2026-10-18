@@ -71,14 +71,26 @@ El programa inicia **pausado** para que puedas importar URLs y elegir cuándo ca
 
 Las teclas se pueden cambiar en la GUI. Cada clic coloca una cruz numerada y guarda coordenadas relativas al área de captura. **Cuatro compras marcadas en el mismo menú producen cuatro nuevos trabajos** para la siguiente oleada, no cuatro clics secuenciales sobre el mismo cliente.
 
+### Borradores, guardado y recuperación
+
+Cada fotografía conserva su propio borrador. Podés cambiar de foto o revisar el historial sin perder las marcas de otra. Al guardar, la interfaz continúa con la siguiente imagen mientras espera la respuesta; la foto entra en el historial cuando SQLite confirma el guardado. Mantener pulsada la tecla de siguiente u omitir no encadena descartes.
+
+Si una respuesta se pierde, **Guardados pendientes** permite reintentar el mismo envío. El servidor devuelve los hijos ya creados cuando las marcas coinciden, evitando duplicarlos. Los borradores y envíos sin confirmar se conservan en el navegador al recargar; si el almacenamiento no está disponible o alcanza su límite, la GUI avisa y mantiene el trabajo en memoria. El borrador local todavía no es una rama confirmada en SQLite.
+
+Los borradores pertenecen a un catálogo concreto: cambiar `DATA_DIR` no mezcla las fotos ni oculta tareas del catálogo nuevo. Al restaurarlos, la interfaz consulta el estado actual de cada tarea. Conserva para consulta las marcas de una rama bloqueada y permite corregir un envío rechazado cuando verifica que el servidor aún no lo guardó. Si cambia la captura de una foto con marcas pendientes, exige descartar explícitamente esas marcas antes de trabajar sobre la imagen nueva.
+
+La sección **Sesiones para recuperar** muestra tareas fallidas o bloqueadas que aún conservan su contexto DEMO. **Recapturar** toma una fotografía del estado actual sin ejecutar otra acción del juego. **Liberar** cierra esa sesión y deja registrada la incidencia. Ambas operaciones rechazan una sesión que esté trabajando.
+
+Al reiniciar, el motor distingue una preparación segura de una acción cuyo resultado es incierto. El checkpoint se escribe inmediatamente antes del clic irreversible: si el proceso termina después, la tarea queda bloqueada para revisión. Las capturas que dependían de una sesión RNG perdida también dejan de estar disponibles como trabajo listo. El catálogo y las marcas se conservan.
+
 ## Diseño y rendimiento
 
 - **Chromium compartido, contextos aislados** (`DISCOVERY_WORKERS=2`, `BRANCH_WORKERS=4`, `ADAPTIVE_WORKERS=1` por defecto; presupuesto total hasta 12). No instala ni relanza Chromium por juego; cada tarea de navegación usa contexto limpio. Se intenta aceptar cookies/aviso de edad y entrar al iframe DEMO antes de fotografiar. Si se reconoce un único control `FeaturePurchase/MainButton`, intenta abrir el menú y valida el nuevo estado.
 - **Capturas JPEG en NVMe** (`DATA_DIR/shots`) y **LRU de imágenes en RAM** (`IMAGE_CACHE_MB`). El servidor carga previamente capturas listas; el frontend conserva otras 40 precargadas para que la tecla siguiente no dependa del worker.
-- **SQLite WAL**, índice de estados, almacenamiento de metadatos y marcas en transacciones ACID; `SQLITE_CACHE_MB` controla el caché SQL. Se recuperan trabajos interrumpidos al reiniciar, sin dar por completadas las ramas incompletas.
+- **SQLite WAL**, índices de estados y de raíces por juego, almacenamiento de metadatos y marcas en transacciones ACID; `SQLITE_CACHE_MB` controla el caché SQL. Las migraciones conservan los catálogos existentes, incluso si contienen raíces duplicadas históricas. Al reiniciar solo se reencola automáticamente el trabajo que puede repetirse con seguridad.
 - **GPU:** la aceleración de canvas/WebGL queda en manos de Chromium/ANGLE; `GPU_MODE=d3d11` permite comparar la ruta de Direct3D 11 en Windows. Se registra el renderizador cuando el navegador lo reporta. No hay OCR, LLM ni inferencia GPU forzada en el bucle principal. La lectura, la navegación y los servidores siguen siendo fuentes de latencia; aumentar VRAM no acelera automáticamente Internet.
 - **Verificación antes de cada clic de replay:** intenta usar el estado y los controles del runtime Pragmatic; si no se identifica un control, compara una huella visual de 32×18 calculada con libvips/SIMD (`sharp`). Un desajuste bloquea la rama y deja evidencia, en lugar de pulsar coordenadas obsoletas.
-- **Ramas vivas:** comprar, confirmar o elegir se considera potencialmente irreversible. `MAX_LIVE` limita las sesiones DEMO retenidas. Solo se puede continuar la **misma** sesión RNG con una acción; no es posible clonar un resultado aleatorio en otras sesiones. Si se pierde una sesión viva tras reinicio, se bloquea el replay inseguro.
+- **Ramas vivas:** comprar, confirmar o elegir se considera potencialmente irreversible. `MAX_LIVE` cuenta las sesiones retenidas, las reservas de preparación y los contextos que todavía se están cerrando. Solo se puede continuar la **misma** sesión RNG con una acción; no es posible clonar un resultado aleatorio en otras sesiones. La sesión pasa a ser propiedad del hijo antes de ejecutar su acción, de modo que un fallo siga siendo visible y recuperable.
 - **Dos colas independientes:** 2 workers abren juegos sin catalogar y 4 reproducen ramas; con catalogador activo se redistribuyen a 1+5; los slots ociosos se prestan sin detener el progreso. La interfaz y las peticiones HTTP no esperan a Chromium.
 - **Batches en segundo plano:** preparación y replay no bloquean la GUI. La aplicación guarda fotos y acciones automáticamente y expone incidencia por rama.
 
@@ -98,9 +110,18 @@ Consultá `GET /api/tasks/{id}/trace` para eventos de la fotografía y `GET /api
 
 **La captura de payloads es selectiva:** registra campos de protocolo DEMO conocidos (`action`, `pur`, `ind`, `bl`, `c`, `l`, `na`, etc.) y endpoints de Pragmatic permitidos. No captura claves desconocidas, cuerpos completos ni tráfico de otros proveedores. Si se requiere más cobertura, debe ampliarse la lista permitida tras examinar datos sanitizados. No se atribuye el resultado aleatorio a una causa determinista.
 
+Los campos permitidos se extraen tanto de parámetros GET como del cuerpo POST; el cuerpo tiene prioridad si hay un campo repetido. La URL del endpoint se conserva sin parámetros. La cola visual expone `sessionId` y `gameSymbol` cuando fueron observados.
+
+| Operación de recuperación | API |
+|---|---|
+| Fotos listas, incidencias y sesiones retenidas recuperables | `GET /api/queue` |
+| Guardar marcas o confirmar un reintento idéntico | `POST /api/tasks/{id}/commit` |
+| Recapturar la sesión sin otro clic | `POST /api/tasks/{id}/recapture` |
+| Liberar la sesión actualmente asignada a la tarea | `POST /api/tasks/{id}/release` |
+
 ### Cola con política adaptable
 
-Configuración predeterminada: `DISCOVERY_WORKERS=2`, `BRANCH_WORKERS=4`, `MAX_LIVE=4`, `ADAPTIVE_WORKERS=1`. Si mantenés la GUI activa, el frontend envía una señal al planificador y prioriza ramas (1 descubrimiento + 5 ramas). Al dejar de catalogar vuelve a 2+4; si una cola está vacía, la otra toma los slots libres. Los cuatro slots `MAX_LIVE` son **sesiones conservadas**, no el máximo de ramas acumuladas en disco. Si se llenan las sesiones vivas, el sistema continúa descubriendo juegos independientes.
+Configuración predeterminada: `DISCOVERY_WORKERS=2`, `BRANCH_WORKERS=4`, `MAX_LIVE=4`, `ADAPTIVE_WORKERS=1`. Si mantenés la GUI activa, el frontend envía una señal al planificador y prioriza ramas (1 descubrimiento + 5 ramas). Al dejar de catalogar vuelve a 2+4; si una cola está vacía, la otra toma los slots libres. `MAX_LIVE` limita la capacidad reservada para sesiones, sin limitar las ramas acumuladas en disco. Las continuaciones de sesiones retenidas tienen prioridad y no quedan ocultas detrás de una primera página de trabajos que esperan capacidad. Si se llenan las sesiones vivas, el sistema continúa descubriendo juegos independientes.
 
 No equipares un `HTTP 200` o una captura de premio con un bonus completado. El prototipo aún precisa validación con múltiples juegos reales, especialmente en transiciones con RNG y cierre de Free Spins.
 
@@ -112,9 +133,16 @@ npm test
 npm run benchmark
 # Con navegador instalado y acceso a Internet, smoke real de solo preparación:
 node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
+# Preparación concurrente de opciones observadas hasta CONFIRM:
+$env:MAX_LIVE="2"
+node scripts/smoke-branches.js https://www.pragmaticplay.fun/en/slots/candy-rush/
 ```
 
-El benchmark sintético genera 1.000 juegos, anota 4 opciones en cada uno (4.000 ramas) y prueba el caché en memoria, **sin afirmar que haya cargado ni completado 1.000 juegos**. Para rendimiento de preparación y de bonus hay que medirlo en la PC de destino con el smoke y tareas reales. El pipeline CI prueba estructura, persistencia, selección múltiple y planificador usando adaptadores simulados.
+El benchmark sintético genera 1.000 juegos, anota 4 opciones en cada uno (4.000 ramas) y prueba el caché en memoria, **sin afirmar que haya cargado ni completado 1.000 juegos**. Para rendimiento de preparación y de bonus hay que medirlo en la PC de destino con el smoke y tareas reales.
+
+Las regresiones ejecutan las transiciones reales de SQLite y del motor, sustituyendo la comunicación con Chromium y el juego cuando corresponde. Incluyen una interrupción en otro proceso después del clic, límites de capacidad concurrente, recuperación de sesiones, colas extensas, guardados tardíos y la integración HTTP/GUI. Las pruebas de interfaz ejecutan el módulo de estado y los manejadores reales de la aplicación con una frontera DOM controlada.
+
+El workflow **Browser DEMO smoke** utiliza Chromium y la demo pública de Candy Rush. Exige al menos tres opciones observadas que alcancen `CONFIRM`, preparadas en lotes concurrentes bajo `MAX_LIVE=2`, y verifica que no queden sesiones retenidas al cerrar. Publica fotografías y diagnósticos sanitizados bajo un artefacto identificado por el SHA del código; cualquier fallo se informa como incompleto. Este smoke termina antes de confirmar la compra y **no certifica un bonus completo**. Cada resultado debe consultarse en la ejecución correspondiente al commit que se está evaluando.
 
 ## Flujo de una oleada
 

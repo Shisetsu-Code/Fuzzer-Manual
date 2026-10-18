@@ -18,9 +18,13 @@
     <aside class="sidebar">
       <div class="section-head"><div><h2>Cola de capturas</h2><small id="queue-counter">0 pendientes</small></div><button id="refresh-btn" title="Actualizar cola">↻</button></div>
       <div class="queue-list" id="queue-list"></div>
+      <section id="pending-section" class="side-footer" hidden><b>Guardados pendientes</b><div id="pending-saves" aria-live="polite"></div></section>
+      <section id="recovery-section" class="side-footer" hidden><b>Sesiones vivas por recuperar</b><p class="muted small">Recapturar toma una fotografía sin hacer clic. Liberar cierra la sesión retenida.</p><div id="recoveries" aria-live="polite"></div></section>
       <div class="side-footer"><b>Incidencias recientes</b><div id="problems" class="problems">Sin incidencias</div></div>
     </aside>
     <section class="workspace">
+      <div id="draft-warning" class="draft-warning" role="status" hidden></div>
+      <button id="new-capture-btn" class="capture-change" hidden>Descartar estas marcas y usar la captura nueva</button>
       <div class="photo-head"><div class="title-wrap"><div id="game-title">Sin fotografía seleccionada</div><div id="game-subtitle">Importá URLs e iniciá los workers para generar la cola</div></div><div id="photo-status" class="pill">COLA VACÍA</div></div>
       <div class="photo-viewport" id="viewport">
         <div id="empty" class="empty-state"><span class="big-icon">▧</span><h2>Capturas listas para catalogar</h2><p>Los navegadores trabajan por separado. Una vez preparada, cada fotografía aparece aquí sin esperas de carga.</p></div>
