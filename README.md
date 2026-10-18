@@ -6,6 +6,35 @@
 
 > **Alcance actual:** páginas públicas `https://www.pragmaticplay.fun/<idioma>/slots/<juego>/` y su iframe DEMO. No utiliza credenciales, cuentas de casino ni apuestas con dinero real. El motor NO está certificado todavía con una prueba completa de un bonus hasta su cierre real; necesita pruebas locales con Playwright y juegos variados. Otros proveedores requieren adaptadores DEMO específicos.
 
+## Objetivo del proyecto
+
+**Procesar miles de juegos DEMO con una catalogación visual humana rápida, mientras la preparación y expansión de rutas funcionan de manera independiente y persistente.**
+
+La persona **no tiene que navegar cada juego en tiempo real**: el sistema prepara fotografías de estados pendientes; el operador entra cuando quiere, marca uno o varios controles sobre cada imagen y avanza de inmediato a otra fotografía ya precargada. Las marcas confirmadas crean trabajos que se reproducen en sesiones aisladas y generan nuevas imágenes para la siguiente oleada.
+
+### Funcionamiento conceptual
+
+```text
+URLs de demos ──→ Cola de descubrimiento (2 workers) ──→ Fotografías en disco
+                                                             │
+                                                             ▼
+                                       Operador: marcar N opciones + Espacio
+                                                             │
+                                                             ▼
+                                        SQLite: N marcas → N ramas independientes
+                                                             │
+                                                             ▼
+                            Cola de reproducción (4 workers) → nuevas fotografías
+                                                             │
+                                                  Repetir por oleadas
+```
+
+Los **workers preparan y recorren rutas aunque la GUI esté cerrada**, siempre que el servidor continúe funcionando. Mientras la persona cataloga, la política adaptativa favorece las ramas (objetivo 1 trabajador de descubrimiento + 5 de ramas) para reponer su cola de fotos. No se ejecutan cuatro compras como clics consecutivos en un único cliente: cada marca es una alternativa y se verifica individualmente.
+
+Todo permanece ligado a **proveedor, identificador del juego, símbolo, fotografía/tarea, marca, rama, sesión, endpoint y payload DEMO permitido**, de modo que se pueda reconstruir qué se exploró y qué quedó pendiente. Los estados aleatorios no se reproducen como si fueran menús deterministas.
+
+**Referencia funcional completa:** [Objetivo, concepto, flujo de oleadas, trazabilidad y criterios de éxito](docs/OBJETIVO_Y_FUNCIONAMIENTO.md). El documento diferencia el alcance del MVP actual de las mejoras previstas; constituye la guía conceptual para próximos desarrollos.
+
 ## Instalación (Windows 10/11, Node 22.13+; recomendado Node 24/26)
 
 ```powershell
@@ -103,7 +132,7 @@ Los estados del juego aleatorios no son reproducibles como si fueran menús dete
 
 ### Límites conocidos del MVP
 
-- No se ha ejecutado aún un smoke con demos reales en esta versión; el test sin navegador valida **solo** el almacenamiento y la planificación.
+- Existe un smoke acotado con Candy Rush en Chromium/Playwright que generó tres fotografías de confirmación desde ramas separadas; **no equivale a certificar el recorrido completo de bonus**. Los tests sin navegador cubren almacenamiento y planificación con adaptadores simulados.
 - Los estados de canvases con controles ocultos o animaciones pueden dar falsos negativos de huella visual. En ese caso la rama queda bloqueada para revisión; no se inventan clics.
 - Las operaciones de Free Spins, picks aleatorios y cierres precisan pruebas end-to-end con Chromium local. Una captura y un HTTP 200 no equivalen a una rama completada.
 - Cada compra DEMO retiene un contexto, que consume RAM/GPU. `MAX_LIVE` tiene límites reales de capacidad; no se pueden dejar miles de bonus activos simultáneamente.
