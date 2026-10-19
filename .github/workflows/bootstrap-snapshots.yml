@@ -1,0 +1,59 @@
+name: Recover published Pragmatic screenshot batch
+on:
+  push:
+    branches: [feat/dual-queue-visual-tracing-20261018]
+    paths:
+      - .github/workflows/bootstrap-snapshots.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  first-five:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    env:
+      GH_TOKEN: ${{ github.token }}
+      HEADLESS: '1'
+      SAVE_HAR: '0'
+      DATA_DIR: ${{ runner.temp }}/catalog-first-five
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: Initialize image-only orphan branch
+        run: |
+          node --input-type=module - <<'NODE'
+          import {GithubPublisher} from './scripts/catalog-batch.js';
+          const client=new GithubPublisher({repo:process.env.GITHUB_REPOSITORY,token:process.env.GH_TOKEN});
+          const ref=await client.ensureBranch();
+          if(!ref?.object?.sha)throw Error('Archive branch unavailable');
+          console.log('Screenshot archive:',ref.object.sha);
+          NODE
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Collect first five DEMO games with the same capture pipeline and publish
+        run: node scripts/catalog-batch.js --headless --limit=5 --retries=1
+      - name: Verify published result remotely
+        run: |
+          node --input-type=module - <<'NODE'
+          import {GithubPublisher} from './scripts/catalog-batch.js';
+          const client=new GithubPublisher({repo:process.env.GITHUB_REPOSITORY,token:process.env.GH_TOKEN});
+          const item=await client.api('GET','/contents/runs/pragmatic-20261019/manifest.json?ref=catalog-snapshots');
+          const manifest=JSON.parse(Buffer.from(item.content,'base64').toString('utf8'));
+          const values=Object.values(manifest.entries);
+          const ready=values.filter(x=>x.status==='ready');
+          console.log('Published ready games:',ready.map(x=>x.slug));
+          if(ready.length!==5)throw Error('Expected five ready screenshots');
+          for(const entry of ready)await client.api('GET','/contents/runs/pragmatic-20261019/'+entry.image+'?ref=catalog-snapshots');
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalog-first-five-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/manifest.json
+            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/shots/*.jpg
+            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/metadata/*.json
+          if-no-files-found: ignore
