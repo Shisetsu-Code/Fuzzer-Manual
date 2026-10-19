@@ -1,0 +1,542 @@
+{
+  "slug": "cheetah-wild",
+  "session": "cheetah-wild-1",
+  "tasks": [
+    {
+      "id": 1,
+      "parent_task_id": null,
+      "via_mark_id": null,
+      "depth": 0,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-1.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:13:00",
+      "updated_at": "2026-10-19 02:13:52"
+    },
+    {
+      "id": 2,
+      "parent_task_id": 1,
+      "via_mark_id": 1,
+      "depth": 1,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-2.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:13:52",
+      "updated_at": "2026-10-19 02:14:08"
+    },
+    {
+      "id": 3,
+      "parent_task_id": 2,
+      "via_mark_id": 2,
+      "depth": 2,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-3.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:14:08",
+      "updated_at": "2026-10-19 02:14:32"
+    },
+    {
+      "id": 4,
+      "parent_task_id": 3,
+      "via_mark_id": 3,
+      "depth": 3,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-4.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:14:32",
+      "updated_at": "2026-10-19 02:14:48"
+    },
+    {
+      "id": 5,
+      "parent_task_id": 4,
+      "via_mark_id": 4,
+      "depth": 4,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-5.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:14:48",
+      "updated_at": "2026-10-19 02:16:32"
+    },
+    {
+      "id": 6,
+      "parent_task_id": 5,
+      "via_mark_id": 5,
+      "depth": 5,
+      "status": "ready",
+      "action_state": "dispatched",
+      "capture_file": "sessions/cheetah-wild-1/shots/task-6.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:16:32",
+      "updated_at": "2026-10-19 02:16:34"
+    }
+  ],
+  "marks": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.805,
+      "y": 0.706,
+      "kind": "navigate",
+      "label": "Manual intro play"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.082,
+      "y": 0.385,
+      "kind": "navigate",
+      "label": "Manual Buy Feature 2 options"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.342,
+      "y": 0.461,
+      "kind": "buy",
+      "label": "Free Spins standard $200"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.572,
+      "y": 0.619,
+      "kind": "confirm",
+      "label": "Yes buy Standard Free Spins $200"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.6,
+      "kind": "continue",
+      "label": "15 Free Spins press anywhere"
+    }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "task_id": 1,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "discovery",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "observed_at": "2026-10-19T02:13:06.961Z",
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:2000,type:\"default\"},{bet:10000,type:\"default\"}]"
+      }
+    },
+    {
+      "id": 4,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:14:51.967Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0",
+        "pur": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "12.50"
+      }
+    },
+    {
+      "id": 5,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:16:39.266Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "2",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 6,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:16:47.194Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "3",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 7,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:16:52.163Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "4",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 8,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:16:58.786Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "3.00",
+        "bl": "0",
+        "fs": "5",
+        "c": "0.10",
+        "l": "20",
+        "w": "3.00"
+      }
+    },
+    {
+      "id": 9,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:07.193Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "3.00",
+        "bl": "0",
+        "fs": "6",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 11,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:20.669Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "3.00",
+        "bl": "0",
+        "fs": "7",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 12,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:40.738Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "43.00",
+        "bl": "0",
+        "fs": "8",
+        "c": "0.10",
+        "l": "20",
+        "w": "40.00"
+      }
+    },
+    {
+      "id": 13,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:19:03.609Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "43.00",
+        "bl": "0",
+        "fs": "9",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 14,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:05.005Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "66.50",
+        "bl": "0",
+        "fs": "10",
+        "c": "0.10",
+        "l": "20",
+        "w": "23.50"
+      }
+    },
+    {
+      "id": 15,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:34.242Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "66.50",
+        "bl": "0",
+        "fs": "11",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 17,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:38.734Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "66.50",
+        "bl": "0",
+        "fs": "12",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 18,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vswayscheetah",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:50.686Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "194.50",
+        "bl": "0",
+        "fs": "13",
+        "c": "0.10",
+        "l": "20",
+        "w": "128.00"
+      }
+    }
+  ]
+}

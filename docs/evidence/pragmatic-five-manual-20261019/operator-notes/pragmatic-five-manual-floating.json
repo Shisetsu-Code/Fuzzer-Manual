@@ -1,0 +1,410 @@
+{
+  "game": "Floating Dragon Wild Horses",
+  "slug": "floating-dragon-wild-horses",
+  "method": "Human-directed screenshot review and real clicks; no automatic purchase classifiers",
+  "status": "completed",
+  "baseBet": 2.0,
+  "observedPurchaseCount": 2,
+  "acceptedPurchaseCount": 2,
+  "purchases": [
+    {
+      "name": "Buy Free Spins",
+      "displayedCost": 200.0,
+      "baseBetMultiplier": 100,
+      "optionCoordinate": {
+        "x": 0.073,
+        "y": 0.515
+      },
+      "confirmationCoordinate": {
+        "x": 0.56,
+        "y": 0.643
+      },
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0",
+        "pur": "0"
+      },
+      "httpStatus": 200,
+      "acceptedResponse": {
+        "balance": "99,797.00",
+        "fsmax": "15",
+        "fs": "1",
+        "fswin": "0.00",
+        "fsmul": "1",
+        "na": "s",
+        "bl": "0",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      },
+      "previousBalance": "99,997.00",
+      "debit": 200,
+      "confirmationScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-8.jpg",
+      "awardScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-9.jpg",
+      "bonusStatus": "completed: 15 free spins; $59.20 win; doCollect accepted; final result dismissed",
+      "bonusWin": 59.2,
+      "bonusFinalBalance": "99,856.20",
+      "bonusFinalResultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-10.jpg",
+      "bonusCompletedScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-11.jpg",
+      "collectionEvidence": {
+        "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+        "method": "POST",
+        "action": "doCollect",
+        "status": 200,
+        "request": {
+          "action": "doCollect"
+        },
+        "response": {
+          "balance": "99,856.20",
+          "na": "s"
+        },
+        "at": "2026-10-19T02:24:21.105Z"
+      },
+      "genuineAdditionalChoicesObserved": []
+    },
+    {
+      "name": "Buy Super Free Spins",
+      "displayedCost": 600.0,
+      "baseBetMultiplier": 300,
+      "optionCoordinate": {
+        "x": 0.073,
+        "y": 0.742
+      },
+      "confirmationCoordinate": {
+        "x": 0.56,
+        "y": 0.646
+      },
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0",
+        "pur": "1"
+      },
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "httpStatus": 200,
+      "acceptedResponse": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "1",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      },
+      "observedAt": "2026-10-19T02:23:55.187Z",
+      "previousBalance": "100,000.00",
+      "debit": 600,
+      "confirmationScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-3.jpg",
+      "awardScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-4.jpg",
+      "bonusStatus": "completed: 15 free spins; $100.80 win; doCollect accepted; final result dismissed and base screen observed",
+      "genuineAdditionalChoicesObserved": [],
+      "bonusWin": 100.8,
+      "bonusFinalBalance": "99,500.80",
+      "bonusFinalResultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-5.jpg",
+      "bonusCompletedScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-6.jpg",
+      "collectionEvidence": {
+        "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+        "method": "POST",
+        "action": "doCollect",
+        "status": 200,
+        "request": {
+          "action": "doCollect"
+        },
+        "response": {
+          "balance": "99,500.80",
+          "na": "s"
+        },
+        "at": "2026-10-19T02:27:19.738Z"
+      },
+      "terminalSpinEvidence": {
+        "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+        "method": "POST",
+        "action": "doSpin",
+        "status": 200,
+        "request": {
+          "action": "doSpin",
+          "c": "0.2",
+          "l": "10",
+          "bl": "0"
+        },
+        "response": {
+          "fs_total": "15",
+          "balance": "99,400.00",
+          "na": "c",
+          "bl": "0",
+          "c": "0.20",
+          "l": "10",
+          "w": "0.00"
+        },
+        "at": "2026-10-19T02:27:15.357Z"
+      }
+    }
+  ],
+  "anteBet": {
+    "observedVariants": [
+      "OFF",
+      "ON"
+    ],
+    "offBet": 2,
+    "onBet": 3,
+    "multiplier": 1.5,
+    "toggleCoordinate": {
+      "x": 0.07,
+      "y": 0.355
+    },
+    "uiVerifiedBothDirections": true,
+    "purchasesDisabledWhileOn": true,
+    "testSpinCoordinate": {
+      "x": 0.774,
+      "y": 0.895
+    },
+    "onSpinRequest": {
+      "action": "doSpin",
+      "c": "0.2",
+      "l": "10",
+      "bl": "1"
+    },
+    "httpStatus": 200,
+    "onSpinResponse": {
+      "balance": "99,997.00",
+      "na": "s",
+      "bl": "1",
+      "c": "0.20",
+      "l": "15",
+      "w": "0.00"
+    },
+    "onScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-3.jpg",
+    "offScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-5.jpg"
+  },
+  "actions": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.55,
+      "kind": "navigate",
+      "label": "Manual intro arrow",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-1.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-2.jpg"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.07,
+      "y": 0.355,
+      "kind": "navigate",
+      "label": "Manual Ante Bet OFF to ON",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-2.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-3.jpg"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.774,
+      "y": 0.895,
+      "kind": "confirm",
+      "label": "Manual single spin with Ante Bet ON",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-3.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-4.jpg"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.07,
+      "y": 0.355,
+      "kind": "navigate",
+      "label": "Manual Ante Bet ON to OFF",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-4.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-5.jpg"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.073,
+      "y": 0.515,
+      "kind": "buy",
+      "label": "Manual Buy Free Spins $200",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-5.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-6.jpg"
+    },
+    {
+      "id": 6,
+      "task_id": 6,
+      "ordinal": 1,
+      "x": 0.605,
+      "y": 0.643,
+      "kind": "confirm",
+      "label": "Manual confirm Buy Free Spins $200",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-6.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-7.jpg"
+    },
+    {
+      "id": 7,
+      "task_id": 7,
+      "ordinal": 1,
+      "x": 0.073,
+      "y": 0.515,
+      "kind": "buy",
+      "label": "Manual reopen Buy Free Spins $200 after no request",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-7.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-8.jpg"
+    },
+    {
+      "id": 8,
+      "task_id": 8,
+      "ordinal": 1,
+      "x": 0.56,
+      "y": 0.643,
+      "kind": "confirm",
+      "label": "Manual green check on settled Free Spins confirmation",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-8.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-9.jpg"
+    },
+    {
+      "id": 9,
+      "task_id": 9,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual continue 15 Free Spins award",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-9.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-10.jpg"
+    },
+    {
+      "id": 10,
+      "task_id": 10,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual close 15-spin result $59.20",
+      "session": 1,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-10.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-1/shots/task-11.jpg"
+    },
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.55,
+      "kind": "navigate",
+      "label": "Manual intro arrow for Super session",
+      "session": 2,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-1.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-2.jpg"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.073,
+      "y": 0.742,
+      "kind": "buy",
+      "label": "Manual Buy Super Free Spins $600",
+      "session": 2,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-2.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-3.jpg"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.56,
+      "y": 0.646,
+      "kind": "confirm",
+      "label": "Manual confirm Super Free Spins $600",
+      "session": 2,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-3.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-4.jpg"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual continue Super 15 Free Spins award",
+      "session": 2,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-4.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-5.jpg"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual close Super result $100.80 in 15 Free Spins",
+      "session": 2,
+      "sourceScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-5.jpg",
+      "resultScreenshot": "sessions/floating-dragon-wild-horses-2/shots/task-6.jpg"
+    }
+  ],
+  "notes": [
+    "The first photographed green confirmation was animated; a click at (0.605,0.643) closed the dialog without any purchase request or debit. The dialog was reopened and re-observed before the successful confirmation.",
+    "No exhaustive stake mapping was attempted."
+  ],
+  "updatedAt": "2026-10-19T02:29:28.479305+00:00",
+  "currencySymbol": "$",
+  "moneyType": "demo credits",
+  "counts": {
+    "purchasesObserved": 2,
+    "purchasesTestedAndAccepted": 2,
+    "anteVariantsObserved": 2,
+    "anteVariantsUiTested": 2,
+    "anteOnSpinsAccepted": 1,
+    "manualActions": 15,
+    "bonusRunsCompleted": 2,
+    "bonusRunsInProgress": 0
+  },
+  "unfinishedContinuations": [],
+  "sessions": [
+    {
+      "id": 1,
+      "closed": true,
+      "directory": "sessions/floating-dragon-wild-horses-1",
+      "traceExport": "sessions/floating-dragon-wild-horses-1/trace.json",
+      "tasks": 11
+    },
+    {
+      "id": 2,
+      "closed": true,
+      "directory": "sessions/floating-dragon-wild-horses-2",
+      "traceExport": "sessions/floating-dragon-wild-horses-2/trace.json",
+      "tasks": 6
+    }
+  ],
+  "gameSymbol": "vs10fdwhorses",
+  "coverage": {
+    "scope": "All distinct purchase buttons and Ante Bet ON/OFF variants visibly present at the observed $2 base stake",
+    "purchasesObserved": 2,
+    "purchasesAccepted": 2,
+    "bonusRunsObservedToCompletion": 2,
+    "extraInteractiveBonusChoiceObserved": false,
+    "stakeValuesExhaustivelyMapped": false
+  }
+}

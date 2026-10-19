@@ -1,0 +1,987 @@
+{
+  "slug": "sugar-rush-xmas",
+  "session": "sugar-rush-xmas-1",
+  "tasks": [
+    {
+      "id": 1,
+      "parent_task_id": null,
+      "via_mark_id": null,
+      "depth": 0,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-1.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:13:33",
+      "updated_at": "2026-10-19 02:14:54"
+    },
+    {
+      "id": 2,
+      "parent_task_id": 1,
+      "via_mark_id": 1,
+      "depth": 1,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-2.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:14:54",
+      "updated_at": "2026-10-19 02:15:21"
+    },
+    {
+      "id": 3,
+      "parent_task_id": 2,
+      "via_mark_id": 2,
+      "depth": 2,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-3.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:15:21",
+      "updated_at": "2026-10-19 02:16:00"
+    },
+    {
+      "id": 4,
+      "parent_task_id": 3,
+      "via_mark_id": 3,
+      "depth": 3,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-4.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:16:00",
+      "updated_at": "2026-10-19 02:17:11"
+    },
+    {
+      "id": 5,
+      "parent_task_id": 4,
+      "via_mark_id": 4,
+      "depth": 4,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-5.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:17:11",
+      "updated_at": "2026-10-19 02:19:05"
+    },
+    {
+      "id": 6,
+      "parent_task_id": 5,
+      "via_mark_id": 5,
+      "depth": 5,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-6.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:19:05",
+      "updated_at": "2026-10-19 02:26:58"
+    },
+    {
+      "id": 7,
+      "parent_task_id": 6,
+      "via_mark_id": 6,
+      "depth": 6,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-7.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:26:58",
+      "updated_at": "2026-10-19 02:28:20"
+    },
+    {
+      "id": 8,
+      "parent_task_id": 7,
+      "via_mark_id": 7,
+      "depth": 7,
+      "status": "ready",
+      "action_state": "dispatched",
+      "capture_file": "sessions/sugar-rush-xmas-1/shots/task-8.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:28:20",
+      "updated_at": "2026-10-19 02:28:21"
+    }
+  ],
+  "marks": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.833,
+      "y": 0.6,
+      "kind": "navigate",
+      "label": "Intro play arrow"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.08,
+      "y": 0.245,
+      "kind": "buy",
+      "label": "BUY FREE SPINS $200.00 at $2.00 bet"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.674,
+      "y": 0.67,
+      "kind": "confirm",
+      "label": "Confirm BUY FREE SPINS $200.00 green check"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.81,
+      "kind": "continue",
+      "label": "10 FREE SPINS press anywhere to continue"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.734,
+      "y": 0.982,
+      "kind": "navigate",
+      "label": "Free spins speed chevrons"
+    },
+    {
+      "id": 6,
+      "task_id": 6,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.535,
+      "kind": "continue",
+      "label": "Advance visible MEGA award display"
+    },
+    {
+      "id": 7,
+      "task_id": 7,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.81,
+      "kind": "continue",
+      "label": "Dismiss final $338.20 in10 free spins result"
+    }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "task_id": 1,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "discovery",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "observed_at": "2026-10-19T02:13:43.161Z",
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:2000,type:\"default\"}]"
+      }
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:16:03.642Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20",
+        "pur": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "0.00",
+        "fs": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:26.213Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "0.50",
+        "rs_p": "0",
+        "fs": "2",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.50"
+      }
+    },
+    {
+      "id": 7,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:36.531Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "1.30",
+        "rs_p": "1",
+        "fs": "2",
+        "rs_c": "2",
+        "rs_m": "2",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.80"
+      }
+    },
+    {
+      "id": 8,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:45.983Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "9.30",
+        "rs_p": "2",
+        "fs": "2",
+        "rs_c": "3",
+        "rs_m": "3",
+        "c": "0.10",
+        "l": "20",
+        "w": "8.00"
+      }
+    },
+    {
+      "id": 9,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:17:57.306Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "9.30",
+        "rs_t": "3",
+        "fs": "2",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 10,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:03.291Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "9.30",
+        "fs": "3",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 11,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:08.975Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "10.30",
+        "rs_p": "0",
+        "fs": "4",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "1.00"
+      }
+    },
+    {
+      "id": 12,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:18.167Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "10.30",
+        "rs_t": "1",
+        "fs": "4",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 13,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:23.748Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "26.30",
+        "rs_p": "0",
+        "fs": "5",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "16.00"
+      }
+    },
+    {
+      "id": 14,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:35.198Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "26.30",
+        "rs_t": "1",
+        "fs": "5",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 15,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:18:45.439Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "26.80",
+        "rs_p": "0",
+        "fs": "6",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.50"
+      }
+    },
+    {
+      "id": 16,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:19:00.222Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "26.80",
+        "rs_t": "1",
+        "fs": "6",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 17,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:05.264Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "59.80",
+        "rs_p": "0",
+        "fs": "7",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "33.00"
+      }
+    },
+    {
+      "id": 18,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:11.989Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "61.40",
+        "rs_p": "1",
+        "fs": "7",
+        "rs_c": "2",
+        "rs_m": "2",
+        "c": "0.10",
+        "l": "20",
+        "w": "1.60"
+      }
+    },
+    {
+      "id": 19,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:22.263Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "71.40",
+        "rs_p": "2",
+        "fs": "7",
+        "rs_c": "3",
+        "rs_m": "3",
+        "c": "0.10",
+        "l": "20",
+        "w": "10.00"
+      }
+    },
+    {
+      "id": 20,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:31.411Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "135.40",
+        "rs_p": "3",
+        "fs": "7",
+        "rs_c": "4",
+        "rs_m": "4",
+        "c": "0.10",
+        "l": "20",
+        "w": "64.00"
+      }
+    },
+    {
+      "id": 21,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:41.411Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "161.00",
+        "rs_p": "4",
+        "fs": "7",
+        "rs_c": "5",
+        "rs_m": "5",
+        "c": "0.10",
+        "l": "20",
+        "w": "25.60"
+      }
+    },
+    {
+      "id": 22,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:22:50.912Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "161.00",
+        "rs_t": "5",
+        "fs": "7",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 24,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:24:51.615Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "161.00",
+        "fs": "8",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 25,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:24:55.288Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "181.40",
+        "rs_p": "0",
+        "fs": "9",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "20.40"
+      }
+    },
+    {
+      "id": 26,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:01.595Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "225.40",
+        "rs_p": "1",
+        "fs": "9",
+        "rs_c": "2",
+        "rs_m": "2",
+        "c": "0.10",
+        "l": "20",
+        "w": "44.00"
+      }
+    },
+    {
+      "id": 27,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:10.586Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "225.40",
+        "rs_t": "2",
+        "fs": "9",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 29,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:07.671Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "226.60",
+        "rs_p": "0",
+        "fs": "10",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "1.20"
+      }
+    },
+    {
+      "id": 30,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:11.612Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,800.00",
+        "fsmax": "10",
+        "na": "s",
+        "fswin": "226.60",
+        "rs_t": "1",
+        "fs": "10",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 31,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:14.961Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fs_total": "10",
+        "balance": "99,800.00",
+        "na": "s",
+        "rs_p": "0",
+        "rs_c": "1",
+        "rs_m": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "111.60"
+      }
+    },
+    {
+      "id": 32,
+      "task_id": 6,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:18.774Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.1",
+        "l": "20"
+      },
+      "response": {
+        "fs_total": "10",
+        "balance": "99,800.00",
+        "na": "c",
+        "rs_t": "1",
+        "c": "0.10",
+        "l": "20",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 33,
+      "task_id": 7,
+      "provider": "pragmatic",
+      "game_symbol": "vs20sugrux",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doCollect",
+      "status": 200,
+      "observed_at": "2026-10-19T02:27:04.614Z",
+      "request": {
+        "action": "doCollect"
+      },
+      "response": {
+        "balance": "100,138.20",
+        "na": "s"
+      }
+    }
+  ]
+}
