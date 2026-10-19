@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "slug": "emotiwins",
+  "taskId": 211,
+  "url": "https://www.pragmaticplay.fun/en/slots/emotiwins/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs10emotiwins",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetPlus",
+      "name": "SmartBetPlus",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.5304377332880896,
+        "y": 0.8309467254835425,
+        "w": 0.02508059043094668,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetMinus",
+      "name": "SmartBetMinus",
+      "texts": [
+        "Decrement",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.4444816762809637,
+        "y": 0.8309467254835425,
+        "w": 0.025080590430946736,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/SoundButtonsLand/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "SoundON",
+        "ButtonBkg",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.02595860196810318,
+        "y": 0.9105870376654224,
+        "w": 0.0435188327112318,
+        "h": 0.044791313199864485
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel0/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.36774489311163894,
+        "y": 0.22229290804207663,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066509
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel0/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.36774489311163894,
+        "y": 0.34136939260264676,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel0/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.36774489311163894,
+        "y": 0.4585304377332881,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel1/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.42089833729216153,
+        "y": 0.22229290804207663,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066509
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel1/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.42089833729216153,
+        "y": 0.34136939260264676,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel1/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.42089833729216153,
+        "y": 0.4585304377332881,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel2/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.47423135391924,
+        "y": 0.22229290804207663,
+        "w": 0.05207600950118768,
+        "h": 0.11652256532066509
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel2/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.47423135391924,
+        "y": 0.34136939260264676,
+        "w": 0.05207600950118768,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel2/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.47423135391924,
+        "y": 0.4585304377332881,
+        "w": 0.05207600950118768,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel3/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5273847980997625,
+        "y": 0.22229290804207663,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066509
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel3/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5273847980997625,
+        "y": 0.34136939260264676,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel3/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5273847980997625,
+        "y": 0.4585304377332881,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel4/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5800893111638955,
+        "y": 0.22229290804207663,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066509
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel4/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5800893111638955,
+        "y": 0.34136939260264676,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Utils/EMWI_OverlayPaytable/ArrangeableGame/ArrangeableReels/OverlayPTReels/Reel4/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5800893111638955,
+        "y": 0.4585304377332881,
+        "w": 0.052076009501187626,
+        "h": 0.11652256532066513
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible",
+        "Decrement",
+        "spin",
+        "circle",
+        "spinGlow"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4885476756023075,
+        "y": 0.8328808958262639,
+        "w": 0.022904648795385174,
+        "h": 0.04071937563624021
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "CREDIT",
+        "$100,000.00",
+        "BET",
+        "$2.00",
+        "PRAGMATIC PLAY • 7:31",
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible",
+        "LeftArrow",
+        "MiddleArrowSmall"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.3304101628775026,
+        "y": 0.9550390227349848,
+        "w": 0.33917967424499484,
+        "h": 0.044960977265015245
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/AutoplayButton/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.43128605361384453,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredLeft/PaytableButton/PaytableButtonOpen",
+      "name": "PaytableButtonOpen",
+      "texts": [
+        "Info"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36208061163895483,
+        "y": 0.9056667797760435,
+        "w": 0.03149389209365455,
+        "h": 0.05598914149983022
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredRight/MenuButton/MenuOpenClose/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.6056381489650493,
+        "y": 0.9035883949779439,
+        "w": 0.03306858669833723,
+        "h": 0.05878859857482155
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "ButtonBkg",
+        "LeftArrow",
+        "MiddleArrowSmall",
+        "RightArrowSmall",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.49026552426196135,
+        "y": 0.9156769596199525,
+        "w": 0.019468951476077356,
+        "h": 0.03461146929080409
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/BetButtons/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "bets",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5267220902612827,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "82743c78-0009-4964-a684-33a0d559071b",
+  "capturedAt": "2026-10-19T10:31:16.514Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:31:01.421Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,12.00,14.00,15.00,17.00,20.00,22.00,25.00",
+        "c": "0.20",
+        "l": "10"
+      },
+      "at": "2026-10-19T10:31:10.316Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:31:10.582Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
