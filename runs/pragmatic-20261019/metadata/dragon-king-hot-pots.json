@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "slug": "dragon-king-hot-pots",
+  "taskId": 194,
+  "url": "https://www.pragmaticplay.fun/en/slots/dragon-king-hot-pots/",
+  "provider": "pragmatic",
+  "state": "INTRO",
+  "gameSymbol": "vs10dkinghp",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/IntroScreen/Content/IntroButtons/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "ananas_circle",
+        "spin_normal"
+      ],
+      "handlers": [
+        "Evt_DataToCode_IntroClosePressed"
+      ],
+      "hit": {
+        "x": 0.8364301540687669,
+        "y": 0.5525525525,
+        "w": 0.07601351343750007,
+        "h": 0.13513513500000002
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/SoundButtons/SoundOff",
+      "name": "SoundOff",
+      "texts": [
+        "SoundMute"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10078828868749995,
+        "y": 0.9539539535,
+        "w": 0.01914414412500004,
+        "h": 0.04504504500000017
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0,
+        "y": 0.947447447,
+        "w": 0.48761261262500005,
+        "h": 0.052552552999999946
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9594594590000001,
+        "w": 0.022522522500000086,
+        "h": 0.04004003999999996
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.14977477512499998,
+        "y": 0.954954893438939,
+        "w": 0.019144144124999984,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.12500000037499998,
+        "y": 0.954954923951872,
+        "w": 0.01914414412500004,
+        "h": 0.04504504499999998
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "3474d842-e5a5-413d-b8c5-fe2cdc8a3b93",
+  "capturedAt": "2026-10-19T10:23:10.560Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:22:32.997Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+        "c": "0.40",
+        "l": "5",
+        "purInit": "[{bet:500,type:\"default\"}]"
+      },
+      "at": "2026-10-19T10:22:38.638Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:22:38.725Z"
+    }
+  ],
+  "review": true,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
