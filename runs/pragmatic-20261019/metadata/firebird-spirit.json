@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "slug": "firebird-spirit",
+  "taskId": 240,
+  "url": "https://www.pragmaticplay.fun/en/slots/firebird-spirit/",
+  "provider": "pragmatic",
+  "state": "INTRO",
+  "gameSymbol": "vswaysconcoll",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/IntroScreen/Content/Buttons/CloseButton/ButtonSpin",
+      "name": "ButtonSpin",
+      "texts": [
+        "Spin_Normal",
+        "Spin_Start_Icon"
+      ],
+      "handlers": [
+        "Evt_DataToCode_IntroClosePressed"
+      ],
+      "hit": {
+        "x": 0.38188288300099993,
+        "y": 0.8095335332240001,
+        "w": 0.059432432373,
+        "h": 0.1056576575519998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/SoundButtons/SoundOff",
+      "name": "SoundOff",
+      "texts": [
+        "SoundMute"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10078828868749995,
+        "y": 0.9539539535,
+        "w": 0.01914414412500004,
+        "h": 0.04504504500000017
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/BuyFeature/ContentBuyFeature/Button/ButtonCollider",
+      "name": "ButtonCollider",
+      "texts": [
+        "BUY FREE SPINS",
+        "$200",
+        "BuyBonus"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.017454955437499975,
+        "y": 0.233733734,
+        "w": 0.06756756749999998,
+        "h": 0.148148148
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0,
+        "y": 0.947447447,
+        "w": 0.539414414375,
+        "h": 0.052552552999999946
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9594594590000001,
+        "w": 0.022522522500000086,
+        "h": 0.04004003999999996
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.14977477512499998,
+        "y": 0.954954893438939,
+        "w": 0.019144144124999984,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.12500000037499998,
+        "y": 0.954954923951872,
+        "w": 0.01914414412500004,
+        "h": 0.04504504499999998
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "2bef5467-9323-4b74-83fd-ca24b603832c",
+  "capturedAt": "2026-10-19T10:44:53.006Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:44:14.778Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.08,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00",
+        "c": "0.08",
+        "l": "25",
+        "purInit": "[{bet:2500,type:\"fs\"}]"
+      },
+      "at": "2026-10-19T10:44:21.678Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:44:21.810Z"
+    }
+  ],
+  "review": true,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
