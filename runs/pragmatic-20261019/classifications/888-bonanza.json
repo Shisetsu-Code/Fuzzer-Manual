@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "888-bonanza"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/888-bonanza.jpg",
+    "imageGitBlobSha": "fb98c8386b89709006adadc77e373a9e97edfcc4",
+    "metadataPath": "runs/pragmatic-20261019/metadata/888-bonanza.json",
+    "metadataGitBlobSha": "8a6a62136ee0f33c3c193f8ab4af4eebd1e890cb"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "purchase_menu_and_special_bets",
+    "observation": "BUY FEATURE 4 OPTIONS and SPECIAL BETS 5 OPTIONS, both accessible as menus.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [
+    {
+      "x": 0.07505,
+      "y": 0.21975,
+      "kind": "navigate",
+      "label": "Open BUY FEATURE — 4 options",
+      "purpose": "open_purchase_menu",
+      "pathSuffix": "FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+      "rectNormalized": {
+        "x": 0.0075,
+        "y": 0.1147,
+        "w": 0.1351,
+        "h": 0.2101
+      },
+      "confidence": "high"
+    },
+    {
+      "x": 0.07505,
+      "y": 0.46995,
+      "kind": "navigate",
+      "label": "Open SPECIAL BETS — 5 options",
+      "purpose": "open_special_bets",
+      "pathSuffix": "AnteBet/MainButton/content/Colliders/Collider0",
+      "rectNormalized": {
+        "x": 0.0075,
+        "y": 0.3649,
+        "w": 0.1351,
+        "h": 0.2101
+      },
+      "confidence": "high"
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.07505,
+      "y": 0.21975,
+      "kind": "navigate",
+      "label": "Open BUY FEATURE — 4 options"
+    },
+    {
+      "x": 0.07505,
+      "y": 0.46995,
+      "kind": "navigate",
+      "label": "Open SPECIAL BETS — 5 options"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

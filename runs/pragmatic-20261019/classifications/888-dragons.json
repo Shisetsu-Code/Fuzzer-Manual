@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "888-dragons"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/888-dragons.jpg",
+    "imageGitBlobSha": "2214e3d1205963d4badbe9ac3581a639f4d92a89",
+    "metadataPath": "runs/pragmatic-20261019/metadata/888-dragons.json",
+    "metadataGitBlobSha": "68df16408b693d4ec4716652d9927a6cdbab863d"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No buy feature or Ante Bet visible on BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

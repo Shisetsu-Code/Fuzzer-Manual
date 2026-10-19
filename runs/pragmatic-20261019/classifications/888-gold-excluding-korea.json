@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "888-gold-excluding-korea"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/888-gold-excluding-korea.jpg",
+    "imageGitBlobSha": "3fe80ff0a2e1817de792abcb3b175fcd46803cf7",
+    "metadataPath": "runs/pragmatic-20261019/metadata/888-gold-excluding-korea.json",
+    "metadataGitBlobSha": "622fad2585b13d735a3388d01014611eb1b7dcf9"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No buy feature or Ante Bet visible on BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

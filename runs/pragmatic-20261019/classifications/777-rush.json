@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "777-rush"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/777-rush.jpg",
+    "imageGitBlobSha": "c296da53dd804513313242c480bf1a3fe352a2e6",
+    "metadataPath": "runs/pragmatic-20261019/metadata/777-rush.json",
+    "metadataGitBlobSha": "30718cf3965f78668583448dec76c16fce0c4cdb"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "no_purchase_visible_on_base",
+    "observation": "Portrait 3-reel game shows PLACE YOUR BETS but no feature purchase option on BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

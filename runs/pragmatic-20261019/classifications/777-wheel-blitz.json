@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "777-wheel-blitz"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/777-wheel-blitz.jpg",
+    "imageGitBlobSha": "21bbd3f3328469ce0d03c488206a727ffebb09cd",
+    "metadataPath": "runs/pragmatic-20261019/metadata/777-wheel-blitz.json",
+    "metadataGitBlobSha": "3eec16232cd4d6826aea0934fbb8140794e30813"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "purchase_menu",
+    "observation": "Visible BUY FEATURE button at left; price and available variants require next screenshot.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [
+    {
+      "x": 0.07515,
+      "y": 0.50005,
+      "kind": "navigate",
+      "label": "Open BUY FEATURE",
+      "purpose": "open_purchase_menu",
+      "pathSuffix": "FeaturePurchase/MainButton/content/Collider",
+      "rectNormalized": {
+        "x": 0.0034,
+        "y": 0.4125,
+        "w": 0.1435,
+        "h": 0.1751
+      },
+      "confidence": "high"
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.07515,
+      "y": 0.50005,
+      "kind": "navigate",
+      "label": "Open BUY FEATURE"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

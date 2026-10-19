@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "african-elephant"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/african-elephant.jpg",
+    "imageGitBlobSha": "8dc32b5bd94e60c0fb062dc2524fa845d309009b",
+    "metadataPath": "runs/pragmatic-20261019/metadata/african-elephant.json",
+    "metadataGitBlobSha": "0eb5cebfbfd7e71721b5f3ba8d7c6896f18734f0"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "purchase_button",
+    "observation": "BUY FREE SPINS $200 visible on right; base bet $2.00.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [
+    {
+      "x": 0.9034,
+      "y": 0.60725,
+      "kind": "buy",
+      "label": "Buy Free Spins — $200",
+      "purpose": "purchase_entry",
+      "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+      "rectNormalized": {
+        "x": 0.8421,
+        "y": 0.4553,
+        "w": 0.1226,
+        "h": 0.3039
+      },
+      "confidence": "high"
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.9034,
+      "y": 0.60725,
+      "kind": "buy",
+      "label": "Buy Free Spins — $200"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

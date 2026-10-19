@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "8-dragons"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/8-dragons.jpg",
+    "imageGitBlobSha": "815f0ba351043b239222f4cc4f1bc19c17555043",
+    "metadataPath": "runs/pragmatic-20261019/metadata/8-dragons.json",
+    "metadataGitBlobSha": "f944df9635d360f5bd2fa097c1deac154edeead9"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No purchase or Ante Bet button visible on BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

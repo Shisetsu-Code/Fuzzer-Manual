@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "anaconda-gold"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/anaconda-gold.jpg",
+    "imageGitBlobSha": "d8f907b574847b033fbbb251ff3afd705cbbaca9",
+    "metadataPath": "runs/pragmatic-20261019/metadata/anaconda-gold.json",
+    "metadataGitBlobSha": "83c435cbce6b1404ea323ecb2a6f40f961290d4f"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "purchase_button",
+    "observation": "BUY FREE SPINS $200 visible at top left; base bet $2.00.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [
+    {
+      "x": 0.1622,
+      "y": 0.2998,
+      "kind": "buy",
+      "label": "Buy Free Spins — $200",
+      "purpose": "purchase_entry",
+      "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+      "rectNormalized": {
+        "x": 0.1059,
+        "y": 0.1797,
+        "w": 0.1126,
+        "h": 0.2402
+      },
+      "confidence": "high"
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.1622,
+      "y": 0.2998,
+      "kind": "buy",
+      "label": "Buy Free Spins — $200"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

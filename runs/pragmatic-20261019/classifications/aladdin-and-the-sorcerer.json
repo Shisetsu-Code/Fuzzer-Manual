@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "aladdin-and-the-sorcerer"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "INTRO",
+    "imagePath": "runs/pragmatic-20261019/review/aladdin-and-the-sorcerer.jpg",
+    "imageGitBlobSha": "9b42202c55fef3c3d01fb0f486c7feaf80a7af7e",
+    "metadataPath": "runs/pragmatic-20261019/metadata/aladdin-and-the-sorcerer.json",
+    "metadataGitBlobSha": "e4b8ef21d939f60b91eab67a6fe0e6f331546fe0"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "intro_pending",
+    "observation": "Intro tutorial with right-side play arrow; cannot classify buys until BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [
+    {
+      "x": 0.87495,
+      "y": 0.5771,
+      "kind": "navigate",
+      "label": "Dismiss intro",
+      "purpose": "intro_skip",
+      "pathSuffix": "IntroScreen/content/Landscape/Buttons/CloseButton/ButtonSpin",
+      "rectNormalized": {
+        "x": 0.8502,
+        "y": 0.5331,
+        "w": 0.0495,
+        "h": 0.088
+      },
+      "confidence": "high"
+    }
+  ],
+  "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+}

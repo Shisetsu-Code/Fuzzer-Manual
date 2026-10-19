@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "amazing-money-machine"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "INTRO",
+    "imagePath": "runs/pragmatic-20261019/review/amazing-money-machine.jpg",
+    "imageGitBlobSha": "9b160809dbf2055c283028c3f3157ed2929900db",
+    "metadataPath": "runs/pragmatic-20261019/metadata/amazing-money-machine.json",
+    "metadataGitBlobSha": "32bfc209194b15b8460c6b63ff47981a2e7ece12"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "category": "intro_pending",
+    "observation": "Intro tutorial with center-bottom play arrow; cannot classify buys until BASE.",
+    "purchaseExecuted": false,
+    "needsMoreScreenshots": true
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [
+    {
+      "x": 0.40585,
+      "y": 0.7391,
+      "kind": "navigate",
+      "label": "Dismiss intro",
+      "purpose": "intro_skip",
+      "pathSuffix": "IntroScreen/content/Landscape/Buttons/CloseButton/ButtonSpin",
+      "rectNormalized": {
+        "x": 0.3823,
+        "y": 0.6973,
+        "w": 0.0471,
+        "h": 0.0836
+      },
+      "confidence": "high"
+    }
+  ],
+  "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+}

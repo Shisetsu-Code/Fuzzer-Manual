@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "batchId": "base-0002b",
+  "reviewedAt": "2026-10-19",
+  "scope": "screenshots 18–29",
+  "items": [
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "777-rush"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/777-rush.jpg",
+        "imageGitBlobSha": "c296da53dd804513313242c480bf1a3fe352a2e6",
+        "metadataPath": "runs/pragmatic-20261019/metadata/777-rush.json",
+        "metadataGitBlobSha": "30718cf3965f78668583448dec76c16fce0c4cdb"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "no_purchase_visible_on_base",
+        "observation": "Portrait 3-reel game shows PLACE YOUR BETS but no feature purchase option on BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "777-wheel-blitz"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/777-wheel-blitz.jpg",
+        "imageGitBlobSha": "21bbd3f3328469ce0d03c488206a727ffebb09cd",
+        "metadataPath": "runs/pragmatic-20261019/metadata/777-wheel-blitz.json",
+        "metadataGitBlobSha": "3eec16232cd4d6826aea0934fbb8140794e30813"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "purchase_menu",
+        "observation": "Visible BUY FEATURE button at left; price and available variants require next screenshot.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [
+        {
+          "x": 0.07515,
+          "y": 0.50005,
+          "kind": "navigate",
+          "label": "Open BUY FEATURE",
+          "purpose": "open_purchase_menu",
+          "pathSuffix": "FeaturePurchase/MainButton/content/Collider",
+          "rectNormalized": {
+            "x": 0.0034,
+            "y": 0.4125,
+            "w": 0.1435,
+            "h": 0.1751
+          },
+          "confidence": "high"
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.07515,
+          "y": 0.50005,
+          "kind": "navigate",
+          "label": "Open BUY FEATURE"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "8-dragons"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/8-dragons.jpg",
+        "imageGitBlobSha": "815f0ba351043b239222f4cc4f1bc19c17555043",
+        "metadataPath": "runs/pragmatic-20261019/metadata/8-dragons.json",
+        "metadataGitBlobSha": "f944df9635d360f5bd2fa097c1deac154edeead9"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No purchase or Ante Bet button visible on BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "8-golden-dragon-challenge"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/8-golden-dragon-challenge.jpg",
+        "imageGitBlobSha": "4e785dfaf6289f0bd999187540a45106d196646b",
+        "metadataPath": "runs/pragmatic-20261019/metadata/8-golden-dragon-challenge.json",
+        "metadataGitBlobSha": "4637bf3331db372649faa8fb9e8b4c4a37cd8f34"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "intro_pending",
+        "observation": "Full-screen intro with circular start control on right, detected visually; no corresponding clickable runtime hitbox identified. Manual recovery candidate requires visual-state verification.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.8375,
+          "y": 0.5005,
+          "kind": "navigate",
+          "label": "Dismiss intro — visually located",
+          "purpose": "intro_skip",
+          "pathSuffix": "visual_manual_no_runtime_collider",
+          "rectNormalized": {
+            "x": 0.797,
+            "y": 0.416,
+            "w": 0.081,
+            "h": 0.169
+          },
+          "confidence": "medium"
+        }
+      ],
+      "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "888-bonanza"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/888-bonanza.jpg",
+        "imageGitBlobSha": "fb98c8386b89709006adadc77e373a9e97edfcc4",
+        "metadataPath": "runs/pragmatic-20261019/metadata/888-bonanza.json",
+        "metadataGitBlobSha": "8a6a62136ee0f33c3c193f8ab4af4eebd1e890cb"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "purchase_menu_and_special_bets",
+        "observation": "BUY FEATURE 4 OPTIONS and SPECIAL BETS 5 OPTIONS, both accessible as menus.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [
+        {
+          "x": 0.07505,
+          "y": 0.21975,
+          "kind": "navigate",
+          "label": "Open BUY FEATURE — 4 options",
+          "purpose": "open_purchase_menu",
+          "pathSuffix": "FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+          "rectNormalized": {
+            "x": 0.0075,
+            "y": 0.1147,
+            "w": 0.1351,
+            "h": 0.2101
+          },
+          "confidence": "high"
+        },
+        {
+          "x": 0.07505,
+          "y": 0.46995,
+          "kind": "navigate",
+          "label": "Open SPECIAL BETS — 5 options",
+          "purpose": "open_special_bets",
+          "pathSuffix": "AnteBet/MainButton/content/Colliders/Collider0",
+          "rectNormalized": {
+            "x": 0.0075,
+            "y": 0.3649,
+            "w": 0.1351,
+            "h": 0.2101
+          },
+          "confidence": "high"
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.07505,
+          "y": 0.21975,
+          "kind": "navigate",
+          "label": "Open BUY FEATURE — 4 options"
+        },
+        {
+          "x": 0.07505,
+          "y": 0.46995,
+          "kind": "navigate",
+          "label": "Open SPECIAL BETS — 5 options"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "888-dragons"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/888-dragons.jpg",
+        "imageGitBlobSha": "2214e3d1205963d4badbe9ac3581a639f4d92a89",
+        "metadataPath": "runs/pragmatic-20261019/metadata/888-dragons.json",
+        "metadataGitBlobSha": "68df16408b693d4ec4716652d9927a6cdbab863d"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No buy feature or Ante Bet visible on BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "888-gold-excluding-korea"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/888-gold-excluding-korea.jpg",
+        "imageGitBlobSha": "3fe80ff0a2e1817de792abcb3b175fcd46803cf7",
+        "metadataPath": "runs/pragmatic-20261019/metadata/888-gold-excluding-korea.json",
+        "metadataGitBlobSha": "622fad2585b13d735a3388d01014611eb1b7dcf9"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No buy feature or Ante Bet visible on BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "african-elephant"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/african-elephant.jpg",
+        "imageGitBlobSha": "8dc32b5bd94e60c0fb062dc2524fa845d309009b",
+        "metadataPath": "runs/pragmatic-20261019/metadata/african-elephant.json",
+        "metadataGitBlobSha": "0eb5cebfbfd7e71721b5f3ba8d7c6896f18734f0"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "purchase_button",
+        "observation": "BUY FREE SPINS $200 visible on right; base bet $2.00.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [
+        {
+          "x": 0.9034,
+          "y": 0.60725,
+          "kind": "buy",
+          "label": "Buy Free Spins — $200",
+          "purpose": "purchase_entry",
+          "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+          "rectNormalized": {
+            "x": 0.8421,
+            "y": 0.4553,
+            "w": 0.1226,
+            "h": 0.3039
+          },
+          "confidence": "high"
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.9034,
+          "y": 0.60725,
+          "kind": "buy",
+          "label": "Buy Free Spins — $200"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "aladdin-and-the-sorcerer"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/aladdin-and-the-sorcerer.jpg",
+        "imageGitBlobSha": "9b42202c55fef3c3d01fb0f486c7feaf80a7af7e",
+        "metadataPath": "runs/pragmatic-20261019/metadata/aladdin-and-the-sorcerer.json",
+        "metadataGitBlobSha": "e4b8ef21d939f60b91eab67a6fe0e6f331546fe0"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "intro_pending",
+        "observation": "Intro tutorial with right-side play arrow; cannot classify buys until BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.87495,
+          "y": 0.5771,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/content/Landscape/Buttons/CloseButton/ButtonSpin",
+          "rectNormalized": {
+            "x": 0.8502,
+            "y": 0.5331,
+            "w": 0.0495,
+            "h": 0.088
+          },
+          "confidence": "high"
+        }
+      ],
+      "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "alien-invaders"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/alien-invaders.jpg",
+        "imageGitBlobSha": "5cc2181f8c565844c6f6c64dde885816c049ccc9",
+        "metadataPath": "runs/pragmatic-20261019/metadata/alien-invaders.json",
+        "metadataGitBlobSha": "7fd39cb3317bf95fe67278c4c53599e9aa12b969"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "intro_pending",
+        "observation": "Intro tutorial with right-side play arrow; cannot classify buys until BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.86035,
+          "y": 0.7602,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/Content/IntroButtons/CloseButton/ButtonSpin",
+          "rectNormalized": {
+            "x": 0.8393,
+            "y": 0.7228,
+            "w": 0.0421,
+            "h": 0.0748
+          },
+          "confidence": "high"
+        }
+      ],
+      "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "amazing-money-machine"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/amazing-money-machine.jpg",
+        "imageGitBlobSha": "9b160809dbf2055c283028c3f3157ed2929900db",
+        "metadataPath": "runs/pragmatic-20261019/metadata/amazing-money-machine.json",
+        "metadataGitBlobSha": "32bfc209194b15b8460c6b63ff47981a2e7ece12"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "intro_pending",
+        "observation": "Intro tutorial with center-bottom play arrow; cannot classify buys until BASE.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.40585,
+          "y": 0.7391,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/content/Landscape/Buttons/CloseButton/ButtonSpin",
+          "rectNormalized": {
+            "x": 0.3823,
+            "y": 0.6973,
+            "w": 0.0471,
+            "h": 0.0836
+          },
+          "confidence": "high"
+        }
+      ],
+      "note": "Recapture BASE after updating known intro helper. Do not apply this click if auto-intro has already advanced the state."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "anaconda-gold"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/anaconda-gold.jpg",
+        "imageGitBlobSha": "d8f907b574847b033fbbb251ff3afd705cbbaca9",
+        "metadataPath": "runs/pragmatic-20261019/metadata/anaconda-gold.json",
+        "metadataGitBlobSha": "83c435cbce6b1404ea323ecb2a6f40f961290d4f"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "category": "purchase_button",
+        "observation": "BUY FREE SPINS $200 visible at top left; base bet $2.00.",
+        "purchaseExecuted": false,
+        "needsMoreScreenshots": true
+      },
+      "marks": [
+        {
+          "x": 0.1622,
+          "y": 0.2998,
+          "kind": "buy",
+          "label": "Buy Free Spins — $200",
+          "purpose": "purchase_entry",
+          "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+          "rectNormalized": {
+            "x": 0.1059,
+            "y": 0.1797,
+            "w": 0.1126,
+            "h": 0.2402
+          },
+          "confidence": "high"
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.1622,
+          "y": 0.2998,
+          "kind": "buy",
+          "label": "Buy Free Spins — $200"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    }
+  ]
+}
