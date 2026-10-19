@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "argonauts",
+    "taskId": 35
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/argonauts.jpg",
+    "imageGitBlobSha": "d0bd4c1592661098919b5027969b14d58d298ac0",
+    "metadataGitBlobSha": "7949b75d908dc26a62bf6b592fc93c4f29a3b80a"
+  },
+  "status": "marked",
+  "marks": [
+    {
+      "x": 0.120777,
+      "y": 0.325325,
+      "kind": "buy",
+      "label": "BUY RESPINS — $120"
+    }
+  ]
+}
