@@ -211,7 +211,11 @@ export class GithubPublisher{
   }
   async ensureBranch(){
     const current=await this.head();if(current)return current;
-    const tree=await this.api('POST','/git/trees',{tree:[]});
+    // GitHub returns HTTP 422 for empty trees; a root commit needs at least one entry.
+    const tree=await this.api('POST','/git/trees',{tree:[{
+      path:'README.md',mode:'100644',type:'blob',
+      content:'# Demo screenshot archive\n\nPublic demo screenshots for manual classification.\n'
+    }]});
     const commit=await this.api('POST','/git/commits',{message:'Initialize image-only catalog branch',tree:tree.sha,parents:[]});
     try{await this.api('POST','/git/refs',{ref:`refs/heads/${this.branch}`,sha:commit.sha});}
     catch(e){if(e.status!==422)throw e;}
