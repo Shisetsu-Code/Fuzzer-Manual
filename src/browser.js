@@ -219,7 +219,7 @@ export class BrowserEngine {
     const view=await this.observe(session);
     if(view.state!=='INTRO')return {opened:false,view};
     const candidates=view.controls.filter(c=>c.hit &&
-      /PlayButtonIntro|IntroScreen\/.*(?:Play|Start)Button/i.test(c.path));
+      /PlayButtonIntro|IntroScreen\/.*(?:Play|Start)Button|IntroScreen\/.*\/CloseButton\/ButtonSpin/i.test(c.path));
     if(candidates.length!==1)return {opened:false,view};
     const h=candidates[0].hit;
     const x=view.clip.x+(h.x+h.w/2)*view.clip.width;
