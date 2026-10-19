@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T10:00:05.216Z",
+  "updatedAt": "2026-10-19T10:02:30.351Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -1885,6 +1885,84 @@
       "attempts": 1,
       "error": null,
       "capturedAt": "2026-10-19T10:00:05.211Z"
+    },
+    "chicken-drop": {
+      "slug": "chicken-drop",
+      "url": "https://www.pragmaticplay.fun/en/slots/chicken-drop/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/chicken-drop.jpg",
+      "metadata": "metadata/chicken-drop.json",
+      "taskId": 144,
+      "gameSymbol": "vs20chickdrop",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:00:32.404Z"
+    },
+    "chilli-heat-megaways": {
+      "slug": "chilli-heat-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/chilli-heat-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/chilli-heat-megaways.jpg",
+      "metadata": "metadata/chilli-heat-megaways.json",
+      "taskId": 145,
+      "gameSymbol": "vswayschilheat",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:00:58.025Z"
+    },
+    "chilli-heat-spicy-spins": {
+      "slug": "chilli-heat-spicy-spins",
+      "url": "https://www.pragmaticplay.fun/en/slots/chilli-heat-spicy-spins/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/chilli-heat-spicy-spins.jpg",
+      "metadata": "metadata/chilli-heat-spicy-spins.json",
+      "taskId": 146,
+      "gameSymbol": "vs10chillihmr",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:01:13.545Z"
+    },
+    "chilli-heat": {
+      "slug": "chilli-heat",
+      "url": "https://www.pragmaticplay.fun/en/slots/chilli-heat/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/chilli-heat.jpg",
+      "metadata": "metadata/chilli-heat.json",
+      "taskId": 147,
+      "gameSymbol": "vs25chilli",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T10:01:55.530Z"
+    },
+    "christmas-big-bass-bonanza": {
+      "slug": "christmas-big-bass-bonanza",
+      "url": "https://www.pragmaticplay.fun/en/slots/christmas-big-bass-bonanza/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/christmas-big-bass-bonanza.jpg",
+      "metadata": "metadata/christmas-big-bass-bonanza.json",
+      "taskId": 148,
+      "gameSymbol": "vs10bxmasbnza",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:02:05.484Z"
+    },
+    "christmas-carol-megaways": {
+      "slug": "christmas-carol-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/christmas-carol-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/christmas-carol-megaways.jpg",
+      "metadata": "metadata/christmas-carol-megaways.json",
+      "taskId": 149,
+      "gameSymbol": "vs20xmascarol",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:02:30.344Z"
     }
   },
   "sheets": [
@@ -1896,7 +1974,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -1906,7 +1984,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -1916,7 +1994,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -1926,7 +2004,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -1936,7 +2014,7 @@
         "777-wheel-blitz",
         "8-dragons"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
@@ -1946,7 +2024,7 @@
         "888-dragons",
         "888-gold-excluding-korea"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0007.jpg",
@@ -1956,7 +2034,7 @@
         "alien-invaders",
         "amazing-money-machine"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0008.jpg",
@@ -1966,7 +2044,7 @@
         "ancient-egypt-classic",
         "ancient-island-megaways"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0009.jpg",
@@ -1976,7 +2054,7 @@
         "argonauts",
         "asgard"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0010.jpg",
@@ -1986,7 +2064,7 @@
         "aztec-gems",
         "aztec-gems-deluxe"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0011.jpg",
@@ -1996,7 +2074,7 @@
         "aztec-king-megaways",
         "aztec-powernudge"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0012.jpg",
@@ -2006,7 +2084,7 @@
         "badge-blitz",
         "bali-dragon-excluding-indonesia"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0013.jpg",
@@ -2016,7 +2094,7 @@
         "barnyard-megahays-megaways",
         "bear-crazy"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0014.jpg",
@@ -2026,7 +2104,7 @@
         "beware-the-deep-megaways",
         "big-bass-amazon-xtreme"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0015.jpg",
@@ -2036,7 +2114,7 @@
         "big-bass-bonanza-1000",
         "big-bass-bonanza-3-reeler"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0016.jpg",
@@ -2046,7 +2124,7 @@
         "big-bass-boxing-bonus-round",
         "big-bass-christmas-bash"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0017.jpg",
@@ -2056,7 +2134,7 @@
         "big-bass-floats-my-boat",
         "big-bass-football-bonanza"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0018.jpg",
@@ -2066,7 +2144,7 @@
         "big-bass-halloween-3",
         "big-bass-halloween-splash-1000"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0019.jpg",
@@ -2076,7 +2154,7 @@
         "big-bass-keeping-it-reel",
         "big-bass-mission-fishin"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0020.jpg",
@@ -2086,7 +2164,7 @@
         "big-bass-return-to-the-races",
         "big-bass-secrets-of-the-golden-lake"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0021.jpg",
@@ -2096,7 +2174,7 @@
         "big-bass-trophy-catch",
         "big-bass-vegas-1000"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0022.jpg",
@@ -2106,7 +2184,7 @@
         "big-burger-load-it-up-with-xtra-cheese",
         "big-juan"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0023.jpg",
@@ -2116,7 +2194,7 @@
         "bigger-bass-bonanza",
         "bigger-bass-splash"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0024.jpg",
@@ -2126,7 +2204,7 @@
         "blade-fangs",
         "blazing-wilds-megaways"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0025.jpg",
@@ -2136,7 +2214,7 @@
         "bomb-bonanza",
         "bonanza-gold"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0026.jpg",
@@ -2146,7 +2224,7 @@
         "book-of-kingdoms",
         "book-of-monsters"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0027.jpg",
@@ -2156,7 +2234,7 @@
         "bounty-gold",
         "bounty-hunter"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0028.jpg",
@@ -2166,7 +2244,7 @@
         "bubble-pop",
         "bubble-up"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0029.jpg",
@@ -2176,7 +2254,7 @@
         "buffalo-king-megaways",
         "buffalo-king-untamed-megaways"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0030.jpg",
@@ -2186,7 +2264,7 @@
         "caishen-s-cash",
         "caishen-s-cash-pots"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0031.jpg",
@@ -2196,7 +2274,7 @@
         "candy-blitz-bombs",
         "candy-corner"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0032.jpg",
@@ -2206,7 +2284,7 @@
         "candy-stars",
         "candy-village"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0033.jpg",
@@ -2216,7 +2294,7 @@
         "cash-box",
         "cash-chips"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0034.jpg",
@@ -2226,7 +2304,7 @@
         "cash-surge",
         "casino-heist-megaways-excluding-indonesia"
       ],
-      "publishedAt": "2026-10-19T09:57:39.555Z"
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0035.jpg",
@@ -2235,14 +2313,31 @@
         "chase-for-glory",
         "cheeky-emperor",
         "cheetah-wild"
-      ]
+      ],
+      "publishedAt": "2026-10-19T10:00:19.659Z"
     },
     {
       "file": "sheets/sheet-0036.jpg",
       "slugs": [
         "chests-of-cai-shen",
         "chests-of-cai-shen-2",
-        "chicken-chase-caccia-alla-gallina"
+        "chicken-chase-caccia-alla-gallina",
+        "chicken-drop"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0037.jpg",
+      "slugs": [
+        "chilli-heat",
+        "chilli-heat-megaways",
+        "chilli-heat-spicy-spins",
+        "christmas-big-bass-bonanza"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0038.jpg",
+      "slugs": [
+        "christmas-carol-megaways"
       ]
     }
   ]
