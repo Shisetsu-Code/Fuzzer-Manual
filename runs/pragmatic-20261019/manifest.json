@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T09:17:22.015Z",
+  "updatedAt": "2026-10-19T09:21:04.245Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -780,6 +780,84 @@
       "attempts": 1,
       "error": "INTRO_NEEDS_MANUAL_CLICK",
       "capturedAt": "2026-10-19T09:17:21.940Z"
+    },
+    "big-bass-bonanza-megaways": {
+      "slug": "big-bass-bonanza-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-bonanza-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/big-bass-bonanza-megaways.jpg",
+      "metadata": "metadata/big-bass-bonanza-megaways.json",
+      "taskId": 60,
+      "gameSymbol": "vswaysbbb",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:17:55.887Z"
+    },
+    "big-bass-bonanza-reel-action": {
+      "slug": "big-bass-bonanza-reel-action",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-bonanza-reel-action/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/big-bass-bonanza-reel-action.jpg",
+      "metadata": "metadata/big-bass-bonanza-reel-action.json",
+      "taskId": 61,
+      "gameSymbol": "vs10bbbrlact",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:18:34.036Z"
+    },
+    "big-bass-bonanza": {
+      "slug": "big-bass-bonanza",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-bonanza/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/big-bass-bonanza.jpg",
+      "metadata": "metadata/big-bass-bonanza.json",
+      "taskId": 62,
+      "gameSymbol": "vs10bbbonanza",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:19:10.327Z"
+    },
+    "big-bass-boxing-bonus-round": {
+      "slug": "big-bass-boxing-bonus-round",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-boxing-bonus-round/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/big-bass-boxing-bonus-round.jpg",
+      "metadata": "metadata/big-bass-boxing-bonus-round.json",
+      "taskId": 63,
+      "gameSymbol": "vs10bbbbrnd",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:19:49.531Z"
+    },
+    "big-bass-christmas-bash": {
+      "slug": "big-bass-christmas-bash",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-christmas-bash/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/big-bass-christmas-bash.jpg",
+      "metadata": "metadata/big-bass-christmas-bash.json",
+      "taskId": 64,
+      "gameSymbol": "vs10bbsplxmas",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:20:26.062Z"
+    },
+    "big-bass-christmas-frozen-lake": {
+      "slug": "big-bass-christmas-frozen-lake",
+      "url": "https://www.pragmaticplay.fun/en/slots/big-bass-christmas-frozen-lake/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/big-bass-christmas-frozen-lake.jpg",
+      "metadata": "metadata/big-bass-christmas-frozen-lake.json",
+      "taskId": 65,
+      "gameSymbol": "vs10bbglxmas",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:21:04.216Z"
     }
   },
   "sheets": [
@@ -791,7 +869,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -801,7 +879,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -811,7 +889,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -821,7 +899,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -831,7 +909,7 @@
         "777-wheel-blitz",
         "8-dragons"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
@@ -841,7 +919,7 @@
         "888-dragons",
         "888-gold-excluding-korea"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0007.jpg",
@@ -851,7 +929,7 @@
         "alien-invaders",
         "amazing-money-machine"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0008.jpg",
@@ -861,7 +939,7 @@
         "ancient-egypt-classic",
         "ancient-island-megaways"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0009.jpg",
@@ -871,7 +949,7 @@
         "argonauts",
         "asgard"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0010.jpg",
@@ -881,7 +959,7 @@
         "aztec-gems",
         "aztec-gems-deluxe"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0011.jpg",
@@ -891,7 +969,7 @@
         "aztec-king-megaways",
         "aztec-powernudge"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0012.jpg",
@@ -901,7 +979,7 @@
         "badge-blitz",
         "bali-dragon-excluding-indonesia"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0013.jpg",
@@ -911,7 +989,7 @@
         "barnyard-megahays-megaways",
         "bear-crazy"
       ],
-      "publishedAt": "2026-10-19T09:14:09.433Z"
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0014.jpg",
@@ -920,14 +998,31 @@
         "better-barn-house-bonanza",
         "beware-the-deep-megaways",
         "big-bass-amazon-xtreme"
-      ]
+      ],
+      "publishedAt": "2026-10-19T09:17:35.860Z"
     },
     {
       "file": "sheets/sheet-0015.jpg",
       "slugs": [
         "big-bass-blast",
+        "big-bass-bonanza",
         "big-bass-bonanza-1000",
         "big-bass-bonanza-3-reeler"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0016.jpg",
+      "slugs": [
+        "big-bass-bonanza-megaways",
+        "big-bass-bonanza-reel-action",
+        "big-bass-boxing-bonus-round",
+        "big-bass-christmas-bash"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0017.jpg",
+      "slugs": [
+        "big-bass-christmas-frozen-lake"
       ]
     }
   ]
