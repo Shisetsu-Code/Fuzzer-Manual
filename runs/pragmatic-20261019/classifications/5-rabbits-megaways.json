@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-rabbits-megaways"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-rabbits-megaways.jpg",
+    "imageGitBlobSha": "0805ef156fe4b2e7546d6f2d37f0eb3e5bf61e46",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-rabbits-megaways.json",
+    "metadataGitBlobSha": "6a33a6b5d86c28be599aca61119ae924809a60ec"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "purchase_menu_and_special_bets",
+    "observation": "BUY FEATURE 4 OPTIONS and SPECIAL BETS 5 OPTIONS, both require menu screenshots.",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.07505,
+      "y": 0.21975,
+      "kind": "navigate",
+      "label": "Open Buy Feature — 4 options",
+      "purpose": "open_purchase_menu",
+      "pathSuffix": "FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+      "controlRectNormalized": {
+        "x": 0.0075,
+        "y": 0.1147,
+        "w": 0.1351,
+        "h": 0.2101
+      }
+    },
+    {
+      "x": 0.07505,
+      "y": 0.46995,
+      "kind": "navigate",
+      "label": "Open Special Bets — 5 options",
+      "purpose": "open_special_bets",
+      "pathSuffix": "AnteBet/MainButton/content/Colliders/Collider0",
+      "controlRectNormalized": {
+        "x": 0.0075,
+        "y": 0.3649,
+        "w": 0.1351,
+        "h": 0.2101
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.07505,
+      "y": 0.21975,
+      "kind": "navigate",
+      "label": "Open Buy Feature — 4 options"
+    },
+    {
+      "x": 0.07505,
+      "y": 0.46995,
+      "kind": "navigate",
+      "label": "Open Special Bets — 5 options"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

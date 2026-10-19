@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "7-monkeys"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/7-monkeys.jpg",
+    "imageGitBlobSha": "6dd764cc6c562a620146a8780b031e790412eda0",
+    "metadataPath": "runs/pragmatic-20261019/metadata/7-monkeys.json",
+    "metadataGitBlobSha": "c56a01a6edcb8c2a1aba7f1e0e5cbd8312ed0ec5"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No buy or Ante Bet visible on BASE screenshot; base bet $2.10.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

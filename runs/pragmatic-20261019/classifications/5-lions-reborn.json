@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-lions-reborn"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "INTRO",
+    "imagePath": "runs/pragmatic-20261019/review/5-lions-reborn.jpg",
+    "imageGitBlobSha": "044b1eae15da9dc440b4cc29fdb8651268a7d7b9",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-reborn.json",
+    "metadataGitBlobSha": "8e1fd2256beffee11bf85ddda5d5fc92c89eb10d"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "intro_pending",
+    "observation": "Tutorial screenshot; start-arrow control identified. Not a BASE capture.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [
+    {
+      "x": 0.81535,
+      "y": 0.5,
+      "kind": "navigate",
+      "label": "Dismiss intro",
+      "purpose": "intro_skip",
+      "pathSuffix": "IntroScreen/Content/IntroButtons/CloseButton/ButtonSpin",
+      "controlRectNormalized": {
+        "x": 0.7906,
+        "y": 0.456,
+        "w": 0.0495,
+        "h": 0.088
+      }
+    }
+  ],
+  "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+}

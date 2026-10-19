@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-lions-dance"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-lions-dance.jpg",
+    "imageGitBlobSha": "3022d9b7003befa7992483d9e8f7360ca7fe08cf",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-dance.json",
+    "metadataGitBlobSha": "531db49cf3288386b56320f40fbeb22f6ee3f5b6"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No purchase or Ante Bet visible in BASE.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

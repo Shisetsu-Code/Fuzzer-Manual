@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-lions-megaways-2"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-lions-megaways-2.jpg",
+    "imageGitBlobSha": "7baec63068c6fbce1a8046e40ee3efc3504bda23",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-megaways-2.json",
+    "metadataGitBlobSha": "2f29514a8c354a78e6896ce9a57e43edeaead316"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "purchase_and_ante",
+    "observation": "BUY FREE SPINS visible without price, separate BET $5.00 seven-times-higher-chance toggle (base $2.00).",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.07225,
+      "y": 0.33985,
+      "kind": "buy",
+      "label": "Buy Free Spins — price pending",
+      "purpose": "purchase_entry",
+      "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+      "controlRectNormalized": {
+        "x": 0.0216,
+        "y": 0.2598,
+        "w": 0.1013,
+        "h": 0.1601
+      }
+    },
+    {
+      "x": 0.07225,
+      "y": 0.6302,
+      "kind": "other",
+      "label": "Higher chance BET $5.00",
+      "purpose": "ante_toggle",
+      "pathSuffix": "AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+      "controlRectNormalized": {
+        "x": 0.0216,
+        "y": 0.4901,
+        "w": 0.1013,
+        "h": 0.2802
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.07225,
+      "y": 0.33985,
+      "kind": "buy",
+      "label": "Buy Free Spins — price pending"
+    },
+    {
+      "x": 0.07225,
+      "y": 0.6302,
+      "kind": "other",
+      "label": "Higher chance BET $5.00"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

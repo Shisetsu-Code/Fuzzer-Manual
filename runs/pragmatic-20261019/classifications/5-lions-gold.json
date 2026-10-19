@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-lions-gold"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-lions-gold.jpg",
+    "imageGitBlobSha": "67057e411755b5e8a88f8f84c64e756c26556e7b",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-gold.json",
+    "metadataGitBlobSha": "c654999f27bb6775dfe39afd358e626a589a3a3a"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No purchase or Ante Bet visible in BASE.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

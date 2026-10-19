@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-frozen-charms-megaways"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-frozen-charms-megaways.jpg",
+    "imageGitBlobSha": "5abebdb6a65790fe93e56bd1d886032f69e222ab",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-frozen-charms-megaways.json",
+    "metadataGitBlobSha": "755a3ec316103498956a76937c9fea043570f0e0"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "purchase_and_ante",
+    "observation": "BUY FREE SPINS $200.00, optional BET $2.50 double-chance toggle (base $2.00).",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.082,
+      "y": 0.31445,
+      "kind": "buy",
+      "label": "Buy Free Spins $200",
+      "purpose": "purchase_entry",
+      "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+      "controlRectNormalized": {
+        "x": 0.0277,
+        "y": 0.2054,
+        "w": 0.1086,
+        "h": 0.2181
+      }
+    },
+    {
+      "x": 0.0822,
+      "y": 0.57395,
+      "kind": "other",
+      "label": "Double Chance BET $2.50",
+      "purpose": "ante_toggle",
+      "pathSuffix": "AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+      "controlRectNormalized": {
+        "x": 0.0313,
+        "y": 0.4553,
+        "w": 0.1018,
+        "h": 0.2373
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.082,
+      "y": 0.31445,
+      "kind": "buy",
+      "label": "Buy Free Spins $200"
+    },
+    {
+      "x": 0.0822,
+      "y": 0.57395,
+      "kind": "other",
+      "label": "Double Chance BET $2.50"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

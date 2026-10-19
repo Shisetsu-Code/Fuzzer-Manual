@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "batchId": "base-0002a",
+  "reviewedAt": "2026-10-19",
+  "items": [
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-frozen-charms-megaways"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-frozen-charms-megaways.jpg",
+        "imageGitBlobSha": "5abebdb6a65790fe93e56bd1d886032f69e222ab",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-frozen-charms-megaways.json",
+        "metadataGitBlobSha": "755a3ec316103498956a76937c9fea043570f0e0"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "purchase_and_ante",
+        "observation": "BUY FREE SPINS $200.00, optional BET $2.50 double-chance toggle (base $2.00).",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.082,
+          "y": 0.31445,
+          "kind": "buy",
+          "label": "Buy Free Spins $200",
+          "purpose": "purchase_entry",
+          "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+          "controlRectNormalized": {
+            "x": 0.0277,
+            "y": 0.2054,
+            "w": 0.1086,
+            "h": 0.2181
+          }
+        },
+        {
+          "x": 0.0822,
+          "y": 0.57395,
+          "kind": "other",
+          "label": "Double Chance BET $2.50",
+          "purpose": "ante_toggle",
+          "pathSuffix": "AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+          "controlRectNormalized": {
+            "x": 0.0313,
+            "y": 0.4553,
+            "w": 0.1018,
+            "h": 0.2373
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.082,
+          "y": 0.31445,
+          "kind": "buy",
+          "label": "Buy Free Spins $200"
+        },
+        {
+          "x": 0.0822,
+          "y": 0.57395,
+          "kind": "other",
+          "label": "Double Chance BET $2.50"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions-dance"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-lions-dance.jpg",
+        "imageGitBlobSha": "3022d9b7003befa7992483d9e8f7360ca7fe08cf",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-dance.json",
+        "metadataGitBlobSha": "531db49cf3288386b56320f40fbeb22f6ee3f5b6"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No purchase or Ante Bet visible in BASE.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions-gold"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-lions-gold.jpg",
+        "imageGitBlobSha": "67057e411755b5e8a88f8f84c64e756c26556e7b",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-gold.json",
+        "metadataGitBlobSha": "c654999f27bb6775dfe39afd358e626a589a3a3a"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No purchase or Ante Bet visible in BASE.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions-megaways-2"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-lions-megaways-2.jpg",
+        "imageGitBlobSha": "7baec63068c6fbce1a8046e40ee3efc3504bda23",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-megaways-2.json",
+        "metadataGitBlobSha": "2f29514a8c354a78e6896ce9a57e43edeaead316"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "purchase_and_ante",
+        "observation": "BUY FREE SPINS visible without price, separate BET $5.00 seven-times-higher-chance toggle (base $2.00).",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.07225,
+          "y": 0.33985,
+          "kind": "buy",
+          "label": "Buy Free Spins — price pending",
+          "purpose": "purchase_entry",
+          "pathSuffix": "FeaturePurchase/FSPurchaseButton/content/Collider",
+          "controlRectNormalized": {
+            "x": 0.0216,
+            "y": 0.2598,
+            "w": 0.1013,
+            "h": 0.1601
+          }
+        },
+        {
+          "x": 0.07225,
+          "y": 0.6302,
+          "kind": "other",
+          "label": "Higher chance BET $5.00",
+          "purpose": "ante_toggle",
+          "pathSuffix": "AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+          "controlRectNormalized": {
+            "x": 0.0216,
+            "y": 0.4901,
+            "w": 0.1013,
+            "h": 0.2802
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.07225,
+          "y": 0.33985,
+          "kind": "buy",
+          "label": "Buy Free Spins — price pending"
+        },
+        {
+          "x": 0.07225,
+          "y": 0.6302,
+          "kind": "other",
+          "label": "Higher chance BET $5.00"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions-megaways"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-lions-megaways.jpg",
+        "imageGitBlobSha": "c5ec8c04294b8ac2885518726812e0c5b4df0b20",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-megaways.json",
+        "metadataGitBlobSha": "1ce0f551e2d5877fdf777fb6c8ec56af110f80cf"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "purchase_and_ante",
+        "observation": "BUY FREE SPINS $200 and optional BET $2.50 double-chance toggle (base $2.00).",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.0777,
+          "y": 0.4314,
+          "kind": "buy",
+          "label": "Buy Free Spins $200",
+          "purpose": "purchase_entry",
+          "pathSuffix": "FeaturePurchase/Button/content/Collider",
+          "controlRectNormalized": {
+            "x": 0.0321,
+            "y": 0.3188,
+            "w": 0.0912,
+            "h": 0.2252
+          }
+        },
+        {
+          "x": 0.0777,
+          "y": 0.7152,
+          "kind": "other",
+          "label": "Double Chance BET $2.50",
+          "purpose": "ante_toggle",
+          "pathSuffix": "AnteBet/BetLevel/Content/Levels/Level_0and1/Level0Button",
+          "controlRectNormalized": {
+            "x": 0.0321,
+            "y": 0.6026,
+            "w": 0.0912,
+            "h": 0.2252
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.0777,
+          "y": 0.4314,
+          "kind": "buy",
+          "label": "Buy Free Spins $200"
+        },
+        {
+          "x": 0.0777,
+          "y": 0.7152,
+          "kind": "other",
+          "label": "Double Chance BET $2.50"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions-reborn"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/5-lions-reborn.jpg",
+        "imageGitBlobSha": "044b1eae15da9dc440b4cc29fdb8651268a7d7b9",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-reborn.json",
+        "metadataGitBlobSha": "8e1fd2256beffee11bf85ddda5d5fc92c89eb10d"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "intro_pending",
+        "observation": "Tutorial screenshot; start-arrow control identified. Not a BASE capture.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.81535,
+          "y": 0.5,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/Content/IntroButtons/CloseButton/ButtonSpin",
+          "controlRectNormalized": {
+            "x": 0.7906,
+            "y": 0.456,
+            "w": 0.0495,
+            "h": 0.088
+          }
+        }
+      ],
+      "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-lions"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/5-lions.jpg",
+        "imageGitBlobSha": "24824afecf6df79a07e5961d3ddaee8a68af842e",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-lions.json",
+        "metadataGitBlobSha": "2aa39a639ba504e64677b388494776a9609b6b39"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "intro_pending",
+        "observation": "Tutorial screenshot; start-arrow control identified. Not a BASE capture.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.49995,
+          "y": 0.8403,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/content/Landscape/Buttons/CloseButton/ButtonSpin",
+          "controlRectNormalized": {
+            "x": 0.4752,
+            "y": 0.7963,
+            "w": 0.0495,
+            "h": 0.088
+          }
+        }
+      ],
+      "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "5-rabbits-megaways"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/5-rabbits-megaways.jpg",
+        "imageGitBlobSha": "0805ef156fe4b2e7546d6f2d37f0eb3e5bf61e46",
+        "metadataPath": "runs/pragmatic-20261019/metadata/5-rabbits-megaways.json",
+        "metadataGitBlobSha": "6a33a6b5d86c28be599aca61119ae924809a60ec"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "purchase_menu_and_special_bets",
+        "observation": "BUY FEATURE 4 OPTIONS and SPECIAL BETS 5 OPTIONS, both require menu screenshots.",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.07505,
+          "y": 0.21975,
+          "kind": "navigate",
+          "label": "Open Buy Feature — 4 options",
+          "purpose": "open_purchase_menu",
+          "pathSuffix": "FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+          "controlRectNormalized": {
+            "x": 0.0075,
+            "y": 0.1147,
+            "w": 0.1351,
+            "h": 0.2101
+          }
+        },
+        {
+          "x": 0.07505,
+          "y": 0.46995,
+          "kind": "navigate",
+          "label": "Open Special Bets — 5 options",
+          "purpose": "open_special_bets",
+          "pathSuffix": "AnteBet/MainButton/content/Colliders/Collider0",
+          "controlRectNormalized": {
+            "x": 0.0075,
+            "y": 0.3649,
+            "w": 0.1351,
+            "h": 0.2101
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.07505,
+          "y": 0.21975,
+          "kind": "navigate",
+          "label": "Open Buy Feature — 4 options"
+        },
+        {
+          "x": 0.07505,
+          "y": 0.46995,
+          "kind": "navigate",
+          "label": "Open Special Bets — 5 options"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "6-jokers"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/6-jokers.jpg",
+        "imageGitBlobSha": "b999c4eb9103b0368d096e17a46ec94c184df031",
+        "metadataPath": "runs/pragmatic-20261019/metadata/6-jokers.json",
+        "metadataGitBlobSha": "b784fe196acc074b64621ece044b44470feca59c"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "ante_only",
+        "observation": "ANTE BET More Joker Reels Guaranteed toggle visible; no buy feature visible.",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.16105,
+          "y": 0.3248,
+          "kind": "other",
+          "label": "Toggle Ante Bet",
+          "purpose": "ante_toggle",
+          "pathSuffix": "AnteBet_v2_multi/AnteBet/Content/Visual_AnteBet/MainButton/Arrangeable/MainButtonColliders/MainButtonCollider0",
+          "controlRectNormalized": {
+            "x": 0.0931,
+            "y": 0.176,
+            "w": 0.1359,
+            "h": 0.2976
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.16105,
+          "y": 0.3248,
+          "kind": "other",
+          "label": "Toggle Ante Bet"
+        }
+      ],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "7-clovers-of-fortune"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/7-clovers-of-fortune.jpg",
+        "imageGitBlobSha": "93884f45234d4ca690ab6b7d477706eb9b868b05",
+        "metadataPath": "runs/pragmatic-20261019/metadata/7-clovers-of-fortune.json",
+        "metadataGitBlobSha": "711a40a76ef5856d96ad1f5ffcc48d59c4ce4d5c"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "intro_pending",
+        "observation": "Intro screenshot; runtime reports a BUY FREE SPINS $200 behind overlay but it is not visually accessible yet.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.80125,
+          "y": 0.7552,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/Content/IntroButtons/CloseButton/ButtonSpin",
+          "controlRectNormalized": {
+            "x": 0.7765,
+            "y": 0.7112,
+            "w": 0.0495,
+            "h": 0.088
+          }
+        }
+      ],
+      "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "7-monkeys"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "BASE",
+        "imagePath": "runs/pragmatic-20261019/shots/7-monkeys.jpg",
+        "imageGitBlobSha": "6dd764cc6c562a620146a8780b031e790412eda0",
+        "metadataPath": "runs/pragmatic-20261019/metadata/7-monkeys.json",
+        "metadataGitBlobSha": "c56a01a6edcb8c2a1aba7f1e0e5cbd8312ed0ec5"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No buy or Ante Bet visible on BASE screenshot; base bet $2.10.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [],
+      "note": ""
+    },
+    {
+      "schemaVersion": 1,
+      "game": {
+        "provider": "pragmatic",
+        "slug": "7-piggies"
+      },
+      "runId": "pragmatic-20261019",
+      "source": {
+        "state": "INTRO",
+        "imagePath": "runs/pragmatic-20261019/review/7-piggies.jpg",
+        "imageGitBlobSha": "ca35991bee3b5ade9f474d9593e079d45a7834d1",
+        "metadataPath": "runs/pragmatic-20261019/metadata/7-piggies.json",
+        "metadataGitBlobSha": "0a8212f70b08521dd8ce921ae35ac470826a841a"
+      },
+      "review": {
+        "method": "assistant_manual_visual",
+        "scope": "single screenshot",
+        "category": "intro_pending",
+        "observation": "Tutorial screenshot; spin-arrow start control identified.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": [],
+      "introRecoveryCandidates": [
+        {
+          "x": 0.50005,
+          "y": 0.80035,
+          "kind": "navigate",
+          "label": "Dismiss intro",
+          "purpose": "intro_skip",
+          "pathSuffix": "IntroScreen/content/Landscape/Overlay/CloseButton/ButtonSpin",
+          "controlRectNormalized": {
+            "x": 0.473,
+            "y": 0.7523,
+            "w": 0.0541,
+            "h": 0.0961
+          }
+        }
+      ],
+      "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+    }
+  ]
+}

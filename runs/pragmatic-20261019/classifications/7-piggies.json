@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "7-piggies"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "INTRO",
+    "imagePath": "runs/pragmatic-20261019/review/7-piggies.jpg",
+    "imageGitBlobSha": "ca35991bee3b5ade9f474d9593e079d45a7834d1",
+    "metadataPath": "runs/pragmatic-20261019/metadata/7-piggies.json",
+    "metadataGitBlobSha": "0a8212f70b08521dd8ce921ae35ac470826a841a"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "intro_pending",
+    "observation": "Tutorial screenshot; spin-arrow start control identified.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [
+    {
+      "x": 0.50005,
+      "y": 0.80035,
+      "kind": "navigate",
+      "label": "Dismiss intro",
+      "purpose": "intro_skip",
+      "pathSuffix": "IntroScreen/content/Landscape/Overlay/CloseButton/ButtonSpin",
+      "controlRectNormalized": {
+        "x": 0.473,
+        "y": 0.7523,
+        "w": 0.0541,
+        "h": 0.0961
+      }
+    }
+  ],
+  "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+}

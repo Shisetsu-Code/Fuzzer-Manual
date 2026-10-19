@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "5-lions-megaways"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/5-lions-megaways.jpg",
+    "imageGitBlobSha": "c5ec8c04294b8ac2885518726812e0c5b4df0b20",
+    "metadataPath": "runs/pragmatic-20261019/metadata/5-lions-megaways.json",
+    "metadataGitBlobSha": "1ce0f551e2d5877fdf777fb6c8ec56af110f80cf"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "purchase_and_ante",
+    "observation": "BUY FREE SPINS $200 and optional BET $2.50 double-chance toggle (base $2.00).",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.0777,
+      "y": 0.4314,
+      "kind": "buy",
+      "label": "Buy Free Spins $200",
+      "purpose": "purchase_entry",
+      "pathSuffix": "FeaturePurchase/Button/content/Collider",
+      "controlRectNormalized": {
+        "x": 0.0321,
+        "y": 0.3188,
+        "w": 0.0912,
+        "h": 0.2252
+      }
+    },
+    {
+      "x": 0.0777,
+      "y": 0.7152,
+      "kind": "other",
+      "label": "Double Chance BET $2.50",
+      "purpose": "ante_toggle",
+      "pathSuffix": "AnteBet/BetLevel/Content/Levels/Level_0and1/Level0Button",
+      "controlRectNormalized": {
+        "x": 0.0321,
+        "y": 0.6026,
+        "w": 0.0912,
+        "h": 0.2252
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.0777,
+      "y": 0.4314,
+      "kind": "buy",
+      "label": "Buy Free Spins $200"
+    },
+    {
+      "x": 0.0777,
+      "y": 0.7152,
+      "kind": "other",
+      "label": "Double Chance BET $2.50"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}

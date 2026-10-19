@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "7-clovers-of-fortune"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "INTRO",
+    "imagePath": "runs/pragmatic-20261019/review/7-clovers-of-fortune.jpg",
+    "imageGitBlobSha": "93884f45234d4ca690ab6b7d477706eb9b868b05",
+    "metadataPath": "runs/pragmatic-20261019/metadata/7-clovers-of-fortune.json",
+    "metadataGitBlobSha": "711a40a76ef5856d96ad1f5ffcc48d59c4ce4d5c"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "intro_pending",
+    "observation": "Intro screenshot; runtime reports a BUY FREE SPINS $200 behind overlay but it is not visually accessible yet.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": [],
+  "introRecoveryCandidates": [
+    {
+      "x": 0.80125,
+      "y": 0.7552,
+      "kind": "navigate",
+      "label": "Dismiss intro",
+      "purpose": "intro_skip",
+      "pathSuffix": "IntroScreen/Content/IntroButtons/CloseButton/ButtonSpin",
+      "controlRectNormalized": {
+        "x": 0.7765,
+        "y": 0.7112,
+        "w": 0.0495,
+        "h": 0.088
+      }
+    }
+  ],
+  "note": "Do not replay intro mark after the updated browser already dismisses it; recapture a BASE screenshot instead."
+}

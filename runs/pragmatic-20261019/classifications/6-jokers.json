@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "game": {
+    "provider": "pragmatic",
+    "slug": "6-jokers"
+  },
+  "runId": "pragmatic-20261019",
+  "source": {
+    "state": "BASE",
+    "imagePath": "runs/pragmatic-20261019/shots/6-jokers.jpg",
+    "imageGitBlobSha": "b999c4eb9103b0368d096e17a46ec94c184df031",
+    "metadataPath": "runs/pragmatic-20261019/metadata/6-jokers.json",
+    "metadataGitBlobSha": "b784fe196acc074b64621ece044b44470feca59c"
+  },
+  "review": {
+    "method": "assistant_manual_visual",
+    "scope": "single screenshot",
+    "category": "ante_only",
+    "observation": "ANTE BET More Joker Reels Guaranteed toggle visible; no buy feature visible.",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.16105,
+      "y": 0.3248,
+      "kind": "other",
+      "label": "Toggle Ante Bet",
+      "purpose": "ante_toggle",
+      "pathSuffix": "AnteBet_v2_multi/AnteBet/Content/Visual_AnteBet/MainButton/Arrangeable/MainButtonColliders/MainButtonCollider0",
+      "controlRectNormalized": {
+        "x": 0.0931,
+        "y": 0.176,
+        "w": 0.1359,
+        "h": 0.2976
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.16105,
+      "y": 0.3248,
+      "kind": "other",
+      "label": "Toggle Ante Bet"
+    }
+  ],
+  "introRecoveryCandidates": [],
+  "note": ""
+}
