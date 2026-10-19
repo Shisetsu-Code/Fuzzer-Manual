@@ -31,7 +31,7 @@ jobs:
           if(!ref?.object?.sha)throw Error('Archive branch unavailable');
           console.log('Screenshot archive:',ref.object.sha);
           NODE
-      - run: npm ci
+      - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Collect first five DEMO games with the same capture pipeline and publish
         run: node scripts/catalog-batch.js --headless --limit=5 --retries=1
