@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "aztec-bonanza",
+    "taskId": 38
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/aztec-bonanza.jpg",
+    "imageGitBlobSha": "e1aa4a59f5b0e245f612709b58db78296f47d55b",
+    "metadataGitBlobSha": "3dd88ac7eeec16470ba99e23e361e570e6c54fd9"
+  },
+  "status": "no_relevant_points_visible",
+  "marks": []
+}
