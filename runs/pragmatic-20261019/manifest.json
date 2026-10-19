@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T09:06:20.361Z",
+  "updatedAt": "2026-10-19T09:09:08.708Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -468,6 +468,84 @@
       "attempts": 1,
       "error": null,
       "capturedAt": "2026-10-19T09:06:20.345Z"
+    },
+    "asgard": {
+      "slug": "asgard",
+      "url": "https://www.pragmaticplay.fun/en/slots/asgard/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/asgard.jpg",
+      "metadata": "metadata/asgard.json",
+      "taskId": 36,
+      "gameSymbol": "vs25asgard",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:07:12.360Z"
+    },
+    "aztec-blaze": {
+      "slug": "aztec-blaze",
+      "url": "https://www.pragmaticplay.fun/en/slots/aztec-blaze/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/aztec-blaze.jpg",
+      "metadata": "metadata/aztec-blaze.json",
+      "taskId": 37,
+      "gameSymbol": "vs25kfruit",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:07:27.896Z"
+    },
+    "aztec-bonanza": {
+      "slug": "aztec-bonanza",
+      "url": "https://www.pragmaticplay.fun/en/slots/aztec-bonanza/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/aztec-bonanza.jpg",
+      "metadata": "metadata/aztec-bonanza.json",
+      "taskId": 38,
+      "gameSymbol": "vs7776aztec",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:07:47.620Z"
+    },
+    "aztec-gems-deluxe": {
+      "slug": "aztec-gems-deluxe",
+      "url": "https://www.pragmaticplay.fun/en/slots/aztec-gems-deluxe/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/aztec-gems-deluxe.jpg",
+      "metadata": "metadata/aztec-gems-deluxe.json",
+      "taskId": 39,
+      "gameSymbol": "vs9aztecgemsdx",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:08:07.372Z"
+    },
+    "aztec-gems-megaways": {
+      "slug": "aztec-gems-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/aztec-gems-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/aztec-gems-megaways.jpg",
+      "metadata": "metadata/aztec-gems-megaways.json",
+      "taskId": 40,
+      "gameSymbol": "vswaysaztec",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:08:30.006Z"
+    },
+    "aztec-gems": {
+      "slug": "aztec-gems",
+      "url": "https://www.pragmaticplay.fun/en/slots/aztec-gems/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/aztec-gems.jpg",
+      "metadata": "metadata/aztec-gems.json",
+      "taskId": 41,
+      "gameSymbol": "vs5aztecgems",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:09:08.696Z"
     }
   },
   "sheets": [
@@ -479,7 +557,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -489,7 +567,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -499,7 +577,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -509,7 +587,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -519,7 +597,7 @@
         "777-wheel-blitz",
         "8-dragons"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
@@ -529,7 +607,7 @@
         "888-dragons",
         "888-gold-excluding-korea"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0007.jpg",
@@ -539,7 +617,7 @@
         "alien-invaders",
         "amazing-money-machine"
       ],
-      "publishedAt": "2026-10-19T09:03:12.616Z"
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0008.jpg",
@@ -548,14 +626,31 @@
         "ancient-egypt",
         "ancient-egypt-classic",
         "ancient-island-megaways"
-      ]
+      ],
+      "publishedAt": "2026-10-19T09:06:34.253Z"
     },
     {
       "file": "sheets/sheet-0009.jpg",
       "slugs": [
         "angel-vs-sinner",
         "anime-mecha-megaways",
-        "argonauts"
+        "argonauts",
+        "asgard"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0010.jpg",
+      "slugs": [
+        "aztec-blaze",
+        "aztec-bonanza",
+        "aztec-gems",
+        "aztec-gems-deluxe"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0011.jpg",
+      "slugs": [
+        "aztec-gems-megaways"
       ]
     }
   ]
