@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "aztec-blaze",
+    "taskId": 37
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/aztec-blaze.jpg",
+    "imageGitBlobSha": "57a83eb3d5a421fb5ab3511a5217b6bce7ec3445",
+    "metadataGitBlobSha": "3e462470b3933712d1f9012b50a8aeb07d9a20ed"
+  },
+  "status": "marked",
+  "marks": [
+    {
+      "x": 0.069451,
+      "y": 0.394899,
+      "kind": "buy",
+      "label": "BUY FREE SPINS — $120"
+    },
+    {
+      "x": 0.069451,
+      "y": 0.695199,
+      "kind": "other",
+      "label": "EXTRA LIFE IN RESPINS — BET $3.20"
+    }
+  ]
+}
