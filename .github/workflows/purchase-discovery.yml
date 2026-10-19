@@ -1,0 +1,41 @@
+name: Five Pragmatic DEMO purchase discovery
+
+on:
+  push:
+    paths:
+      - 'scripts/probe-purchases.js'
+      - 'scripts/fixtures/pragmatic-five-20261019.json'
+      - '.github/workflows/purchase-discovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      HEADLESS: '1'
+      SAVE_HAR: '0'
+      MAX_LIVE: '2'
+      EXECUTE_PURCHASES: '0'
+      DATA_DIR: ${{ runner.temp }}/pragmatic-five
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Discover every observed purchase option in the recorded random sample
+        run: node scripts/probe-purchases.js scripts/fixtures/pragmatic-five-20261019.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pragmatic-five-purchases-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/pragmatic-five/**/*.json
+            ${{ runner.temp }}/pragmatic-five/**/*.jpg
+          if-no-files-found: error
+          retention-days: 30
