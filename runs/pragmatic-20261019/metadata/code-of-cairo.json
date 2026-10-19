@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "slug": "code-of-cairo",
+  "taskId": 154,
+  "url": "https://www.pragmaticplay.fun/en/slots/code-of-cairo/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs5spjokfp",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetPlus",
+      "name": "SmartBetPlus",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.5259840515778758,
+        "y": 0.8395995928062435,
+        "w": 0.025080590430946792,
+        "h": 0.04458771632168309
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetMinus",
+      "name": "SmartBetMinus",
+      "texts": [
+        "Decrement",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.44893535799117745,
+        "y": 0.8395995928062435,
+        "w": 0.025080590430946736,
+        "h": 0.04458771632168309
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/SoundButtonsLand/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "SoundON",
+        "ButtonBkg",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.02595860196810318,
+        "y": 0.9105870376654224,
+        "w": 0.0435188327112318,
+        "h": 0.044791313199864485
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/SpinBtnFX/InterfaceArrPort/SpinBtnFXGO/ContentScale/Spin_button",
+      "name": "Spin_button",
+      "texts": [
+        "spin_button"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4663587970817781,
+        "y": 0.8020868680013571,
+        "w": 0.06728240583644385,
+        "h": 0.11961316593145582
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel0/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.37427833920088227,
+        "y": 0.19437546657617924,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850352
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel0/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.37427833920088227,
+        "y": 0.3114431625381744,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel0/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.37427833920088227,
+        "y": 0.4285108585001697,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel1/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4590028736851035,
+        "y": 0.19437546657617924,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850352
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel1/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4590028736851035,
+        "y": 0.3114431625381744,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel1/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4590028736851035,
+        "y": 0.4285108585001697,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel2/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5437274081693247,
+        "y": 0.19437546657617924,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850352
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel2/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5437274081693247,
+        "y": 0.3114431625381744,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Background/OvelayPaytable/OverlayPTReels/Reel2/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "TWO FULL STACKS OF THE SAME SYMBOL WINS THE RESPIN UNTIL YOU WIN",
+        "FULL SCREEN OF THE SAME SYMBOL WINS MULTIPLIER WHEEL",
+        "top_l_pillar",
+        "top_r_pillar",
+        "top_wall_panel_1",
+        "top_wall",
+        "top_right_wall_filler",
+        "extended_reel_frame",
+        "bg_element",
+        "bottom_l_pillar"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5437274081693247,
+        "y": 0.4285108585001697,
+        "w": 0.07956979555480148,
+        "h": 0.11882422802850358
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "HOLD FOR TURBO SPIN",
+        "Increment",
+        "BlobGlowInvisible",
+        "Decrement",
+        "spin",
+        "circle",
+        "spinGlow"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4904563963352562,
+        "y": 0.844927044451985,
+        "w": 0.019087207329487654,
+        "h": 0.03393281303020027
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "CREDIT",
+        "$100,000.00",
+        "BET",
+        "$2.00",
+        "PRAGMATIC PLAY • 7:05",
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible",
+        "LeftArrow",
+        "MiddleArrowSmall"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.3304101628775026,
+        "y": 0.9550390227349848,
+        "w": 0.33917967424499484,
+        "h": 0.044960977265015245
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/AutoplayButton/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.43128605361384453,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredLeft/PaytableButton/PaytableButtonOpen",
+      "name": "PaytableButtonOpen",
+      "texts": [
+        "Info"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36208061163895483,
+        "y": 0.9056667797760435,
+        "w": 0.03149389209365455,
+        "h": 0.05598914149983022
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredRight/MenuButton/MenuOpenClose/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.6056381489650493,
+        "y": 0.9035883949779439,
+        "w": 0.03306858669833723,
+        "h": 0.05878859857482155
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "ButtonBkg",
+        "LeftArrow",
+        "MiddleArrowSmall",
+        "RightArrowSmall",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.49026552426196135,
+        "y": 0.9156769596199525,
+        "w": 0.019468951476077356,
+        "h": 0.03461146929080409
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/BetButtons/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "bets",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5267220902612827,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "eadee342-1614-4b55-9306-40d2475b8046",
+  "capturedAt": "2026-10-19T10:05:10.211Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:04:58.397Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+        "c": "0.40",
+        "l": "5"
+      },
+      "at": "2026-10-19T10:05:03.996Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:05:04.145Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}

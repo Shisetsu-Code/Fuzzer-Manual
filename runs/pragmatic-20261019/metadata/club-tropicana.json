@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "slug": "club-tropicana",
+  "taskId": 153,
+  "url": "https://www.pragmaticplay.fun/en/slots/club-tropicana/",
+  "provider": "pragmatic",
+  "state": "INTRO",
+  "gameSymbol": "vs12tropicana",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/IntroScreen/content/IntroButtons/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "ananas_circle",
+        "spin_normal"
+      ],
+      "handlers": [
+        "Evt_DataToCode_IntroClosePressed"
+      ],
+      "hit": {
+        "x": 0.7984233990683491,
+        "y": 0.45395395399999994,
+        "w": 0.07094594587500003,
+        "h": 0.12612612600000006
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/SoundButtons/SoundOff",
+      "name": "SoundOff",
+      "texts": [
+        "SoundMute"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10078828868749995,
+        "y": 0.9539539535,
+        "w": 0.01914414412500004,
+        "h": 0.04504504500000017
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/BuyButtons_Stuff/BetLevel/Content/Levels/Level_0and1/Level0Button",
+      "name": "Level0Button",
+      "texts": [
+        "Bet",
+        "EXTRA CHANCE OF SCATTERS",
+        "$2.70",
+        "OFF",
+        "Purchase_Landscape",
+        "Slider",
+        "Red",
+        "Arrow"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.8023648645625001,
+        "y": 0.603103103,
+        "w": 0.16891891874999998,
+        "h": 0.23023022999999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/BuyButtons_Stuff/BuyFeature_ROG/ContentBuyFeature/Button/ButtonCollider/Desktop/ButtonCollider",
+      "name": "ButtonCollider",
+      "texts": [
+        "FREE SPINS",
+        "Buy",
+        "$180",
+        "Purchase_Landscape"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.806306306,
+        "y": 0.145645646,
+        "w": 0.16103603587500004,
+        "h": 0.17017016999999995
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0,
+        "y": 0.947447447,
+        "w": 0.48479729731250004,
+        "h": 0.052552552999999946
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9594594590000001,
+        "w": 0.022522522500000086,
+        "h": 0.04004003999999996
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.14977477512499998,
+        "y": 0.954954893438939,
+        "w": 0.019144144124999984,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/VisibleInSpecialFeature/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.12500000037499998,
+        "y": 0.954954923951872,
+        "w": 0.01914414412500004,
+        "h": 0.04504504499999998
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "3cb1685d-b8f9-4df4-b3e6-aaab287c770c",
+  "capturedAt": "2026-10-19T10:04:56.226Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:04:22.015Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.15,0.20,0.30,0.40,0.50,1.00,2.00,2.50,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00,15.00,18.00,20.00",
+        "c": "0.15",
+        "l": "12",
+        "purInit": "[{bet:1200,type:\"default\"}]"
+      },
+      "at": "2026-10-19T10:04:24.781Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:04:24.858Z"
+    }
+  ],
+  "review": true,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
