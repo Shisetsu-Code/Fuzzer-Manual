@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "slug": "3-buzzing-wilds",
+  "taskId": 1,
+  "url": "https://www.pragmaticplay.fun/en/slots/3-buzzing-wilds/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs20wildparty",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "ananas",
+        "ananas_circle",
+        "spin",
+        "generic_roundButtonBkg"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_Spin"
+      ],
+      "hit": {
+        "x": 0.7503185941276632,
+        "y": 0.8621921921921921,
+        "w": 0.04500109865963523,
+        "h": 0.08008008008008005
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+      "name": "BetUp_Button",
+      "texts": [
+        "Increment"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.840883322346737,
+        "y": 0.8893893893893894,
+        "w": 0.01687541199736321,
+        "h": 0.03003003003003002
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+      "name": "BetDown_Button",
+      "texts": [
+        "Decrement"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.6878795869039772,
+        "y": 0.8893893893893894,
+        "w": 0.01687541199736321,
+        "h": 0.03003003003003002
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/SoundButtons/SoundOff",
+      "name": "SoundOff",
+      "texts": [
+        "SoundMute"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10174027686222815,
+        "y": 0.9369369369369368,
+        "w": 0.019125466930344896,
+        "h": 0.04504504504504522
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/Button/Holder/Collider",
+      "name": "Collider",
+      "texts": [
+        "BUY\nFREE\nSPINS",
+        "$200",
+        "shadow",
+        "bg",
+        "bg_add"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.008921912505501685,
+        "y": 0.27353936670616635,
+        "w": 0.13552637561327752,
+        "h": 0.3112207554325332
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.19760428583924955,
+        "y": 0.869369628618409,
+        "w": 0.14062843331136016,
+        "h": 0.1301301301301304
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton",
+      "name": "AutoplayOpenButton",
+      "texts": [
+        "CombinedMiddle",
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7221929246319491,
+        "y": 0.95995995995996,
+        "w": 0.11137771918259726,
+        "h": 0.040040040040040026
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.1336207426939134,
+        "y": 0.917092092092092,
+        "w": 0.01949110085695449,
+        "h": 0.034684684684684636
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.10174027686222815,
+        "y": 0.8878878878878879,
+        "w": 0.019125466930344896,
+        "h": 0.04504504504504503
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton/HiperPlayDisabled",
+      "name": "HiperPlayDisabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7221929246319491,
+        "y": 0.9594594594594594,
+        "w": 0.022500549329817616,
+        "h": 0.040040040040040026
+      }
+    }
+  ],
+  "clip": {
+    "x": 120,
+    "y": 72,
+    "width": 1025,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1025,
+    "height": 576
+  },
+  "sessionId": "dfda7e66-76d4-4d11-b938-baed8d866767",
+  "capturedAt": "2026-10-19T08:40:49.125Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:40:40.809Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:2000,type:\"fs\"}]"
+      },
+      "at": "2026-10-19T08:40:44.630Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:40:44.724Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}

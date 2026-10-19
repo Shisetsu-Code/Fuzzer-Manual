@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "provider": "pragmatic",
+  "source": {
+    "url": "https://www.pragmaticplay.fun/en/slots/",
+    "htmlSha256": "df53836ffdbabe34f257043fb57d95241f305ba6d59fce6b631cca26b4b7582a",
+    "cardCount": 733,
+    "fixture": "scripts/fixtures/pragmatic-five-20261019.json",
+    "notice": "Snapshot as of 2026-10-19; refresh for later releases."
+  },
+  "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
+  "total": 733,
+  "createdAt": "2026-10-19T08:40:36.356Z",
+  "updatedAt": "2026-10-19T08:57:07.922Z",
+  "entries": {
+    "3-buzzing-wilds": {
+      "slug": "3-buzzing-wilds",
+      "url": "https://www.pragmaticplay.fun/en/slots/3-buzzing-wilds/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/3-buzzing-wilds.jpg",
+      "metadata": "metadata/3-buzzing-wilds.json",
+      "taskId": 1,
+      "gameSymbol": "vs20wildparty",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:40:49.125Z"
+    },
+    "3-dancing-monkeys": {
+      "slug": "3-dancing-monkeys",
+      "url": "https://www.pragmaticplay.fun/en/slots/3-dancing-monkeys/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/3-dancing-monkeys.jpg",
+      "metadata": "metadata/3-dancing-monkeys.json",
+      "taskId": 2,
+      "gameSymbol": "vswaysmonkey",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:41:05.255Z"
+    },
+    "3-genie-wishes": {
+      "slug": "3-genie-wishes",
+      "url": "https://www.pragmaticplay.fun/en/slots/3-genie-wishes/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/3-genie-wishes.jpg",
+      "metadata": "metadata/3-genie-wishes.json",
+      "taskId": 3,
+      "gameSymbol": "vs50aladdin",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:41:27.174Z"
+    },
+    "3-kingdoms-battle-of-red-cliffs": {
+      "slug": "3-kingdoms-battle-of-red-cliffs",
+      "url": "https://www.pragmaticplay.fun/en/slots/3-kingdoms-battle-of-red-cliffs/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/3-kingdoms-battle-of-red-cliffs.jpg",
+      "metadata": "metadata/3-kingdoms-battle-of-red-cliffs.json",
+      "taskId": 4,
+      "gameSymbol": "vs25kingdoms",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:41:48.086Z"
+    },
+    "3-magic-eggs": {
+      "slug": "3-magic-eggs",
+      "url": "https://www.pragmaticplay.fun/en/slots/3-magic-eggs/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/3-magic-eggs.jpg",
+      "metadata": "metadata/3-magic-eggs.json",
+      "taskId": 5,
+      "gameSymbol": "vs25wolfgmm",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:42:09.050Z"
+    },
+    "5-frozen-charms-megaways": {
+      "slug": "5-frozen-charms-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-frozen-charms-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-frozen-charms-megaways.jpg",
+      "metadata": "metadata/5-frozen-charms-megaways.json",
+      "taskId": 6,
+      "gameSymbol": "vswayscharms",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:49:25.351Z"
+    },
+    "5-lions-dance": {
+      "slug": "5-lions-dance",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions-dance/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-lions-dance.jpg",
+      "metadata": "metadata/5-lions-dance.json",
+      "taskId": 7,
+      "gameSymbol": "vs1024lionsd",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:49:49.476Z"
+    },
+    "5-lions-gold": {
+      "slug": "5-lions-gold",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions-gold/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-lions-gold.jpg",
+      "metadata": "metadata/5-lions-gold.json",
+      "taskId": 8,
+      "gameSymbol": "vs243lionsgold",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:50:15.854Z"
+    },
+    "5-lions-megaways-2": {
+      "slug": "5-lions-megaways-2",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions-megaways-2/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-lions-megaways-2.jpg",
+      "metadata": "metadata/5-lions-megaways-2.json",
+      "taskId": 9,
+      "gameSymbol": "vsways5lions2",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:50:47.880Z"
+    },
+    "5-lions-megaways": {
+      "slug": "5-lions-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-lions-megaways.jpg",
+      "metadata": "metadata/5-lions-megaways.json",
+      "taskId": 10,
+      "gameSymbol": "vswayslions",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:51:16.162Z"
+    },
+    "5-lions-reborn": {
+      "slug": "5-lions-reborn",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions-reborn/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/5-lions-reborn.jpg",
+      "metadata": "metadata/5-lions-reborn.json",
+      "taskId": 11,
+      "gameSymbol": "vsways5lionsr",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T08:52:10.139Z"
+    },
+    "5-lions": {
+      "slug": "5-lions",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-lions/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/5-lions.jpg",
+      "metadata": "metadata/5-lions.json",
+      "taskId": 12,
+      "gameSymbol": "vs243lions",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T08:53:06.542Z"
+    },
+    "5-rabbits-megaways": {
+      "slug": "5-rabbits-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/5-rabbits-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/5-rabbits-megaways.jpg",
+      "metadata": "metadata/5-rabbits-megaways.json",
+      "taskId": 13,
+      "gameSymbol": "vs20olympmmd",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:53:44.321Z"
+    },
+    "6-jokers": {
+      "slug": "6-jokers",
+      "url": "https://www.pragmaticplay.fun/en/slots/6-jokers/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/6-jokers.jpg",
+      "metadata": "metadata/6-jokers.json",
+      "taskId": 14,
+      "gameSymbol": "vs5magicdoor",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:54:23.278Z"
+    },
+    "7-clovers-of-fortune": {
+      "slug": "7-clovers-of-fortune",
+      "url": "https://www.pragmaticplay.fun/en/slots/7-clovers-of-fortune/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/7-clovers-of-fortune.jpg",
+      "metadata": "metadata/7-clovers-of-fortune.json",
+      "taskId": 15,
+      "gameSymbol": "vswayssevenc",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T08:55:26.826Z"
+    },
+    "7-monkeys": {
+      "slug": "7-monkeys",
+      "url": "https://www.pragmaticplay.fun/en/slots/7-monkeys/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/7-monkeys.jpg",
+      "metadata": "metadata/7-monkeys.json",
+      "taskId": 16,
+      "gameSymbol": "vs7monkeys",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T08:56:01.495Z"
+    },
+    "7-piggies": {
+      "slug": "7-piggies",
+      "url": "https://www.pragmaticplay.fun/en/slots/7-piggies/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/7-piggies.jpg",
+      "metadata": "metadata/7-piggies.json",
+      "taskId": 17,
+      "gameSymbol": "vs7pigs",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T08:57:07.905Z"
+    }
+  },
+  "sheets": [
+    {
+      "file": "sheets/sheet-0001.jpg",
+      "slugs": [
+        "3-buzzing-wilds",
+        "3-dancing-monkeys",
+        "3-genie-wishes",
+        "3-kingdoms-battle-of-red-cliffs"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0002.jpg",
+      "slugs": [
+        "3-magic-eggs",
+        "5-frozen-charms-megaways",
+        "5-lions",
+        "5-lions-dance"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0003.jpg",
+      "slugs": [
+        "5-lions-gold",
+        "5-lions-megaways",
+        "5-lions-megaways-2",
+        "5-lions-reborn"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0004.jpg",
+      "slugs": [
+        "5-rabbits-megaways",
+        "6-jokers",
+        "7-clovers-of-fortune",
+        "7-monkeys"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0005.jpg",
+      "slugs": [
+        "7-piggies"
+      ]
+    }
+  ]
+}
