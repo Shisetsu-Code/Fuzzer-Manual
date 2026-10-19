@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "slug": "diamonds-are-forever-3-lines",
+  "taskId": 183,
+  "url": "https://www.pragmaticplay.fun/en/slots/diamonds-are-forever-3-lines/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "cs3w",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_0/CoinValue/CoinValueUp/CoinValueUp_Button",
+      "name": "CoinValueUp_Button",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_IncreaseCoinValue"
+      ],
+      "hit": {
+        "x": 0.2415540543125,
+        "y": 0.8428428425000001,
+        "w": 0.01914414412500004,
+        "h": 0.04204204199999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_0/CoinValue/CoinValueDown/CoinValueDown_Button",
+      "name": "CoinValueDown_Button",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_DecreaseCoinValue"
+      ],
+      "hit": {
+        "x": 0.10078828868749995,
+        "y": 0.8428428425000001,
+        "w": 0.01914414412500004,
+        "h": 0.04204204199999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_1/AutoPlay/AutoplayStart/AutoplayStartButton",
+      "name": "AutoplayStartButton",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_StartAutoplay"
+      ],
+      "hit": {
+        "x": 0.2742117119375,
+        "y": 0.8918918915,
+        "w": 0.11486486475000002,
+        "h": 0.054054054000000046
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_2/LineBet/BetUp/BetUpButton",
+      "name": "BetUpButton",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_IncreaseBet"
+      ],
+      "hit": {
+        "x": 0.4414414415,
+        "y": 0.8918918915,
+        "w": 0.03716216212500001,
+        "h": 0.054054054000000046
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_4/BetMax/BetMaxButton",
+      "name": "BetMaxButton",
+      "texts": [
+        "button_orange_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_Spin"
+      ],
+      "hit": {
+        "x": 0.620495495375,
+        "y": 0.8918918915,
+        "w": 0.11373873862500006,
+        "h": 0.054054054000000046
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_5/SpinButtons/StartSpin/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "button_green_01"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_Spin"
+      ],
+      "hit": {
+        "x": 0.7483108105625,
+        "y": 0.8458458455000001,
+        "w": 0.15090090074999996,
+        "h": 0.10010010000000008
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_1/AutoPlay/AutoplayUp/AutoplayUpButton",
+      "name": "AutoplayUpButton",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36993243256249997,
+        "y": 0.8428428425000001,
+        "w": 0.01914414412500004,
+        "h": 0.04204204199999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/StaticContent/Group_3/SelectLines/SelectLinesButton",
+      "name": "SelectLinesButton",
+      "texts": [
+        "button_blue_01"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.49268018018750004,
+        "y": 0.8918918915,
+        "w": 0.113738738625,
+        "h": 0.054054054000000046
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/Settings/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "SettingsButton_Normal"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.11711711749999998,
+        "y": 0.954454422968969,
+        "w": 0.01914414412500004,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Paytable/Lines/Line_3/Line3Button",
+      "name": "Line3Button",
+      "texts": [
+        "3",
+        "6000",
+        "symbol_7_lightOFF"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.11148648687499996,
+        "y": 0.08408408450000006,
+        "w": 0.19707207187500003,
+        "h": 0.055055054999999964
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Paytable/Lines/Line_2/Line2Button",
+      "name": "Line2Button",
+      "texts": [
+        "2",
+        "3000",
+        "symbol_7_lightOFF"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.11148648687499996,
+        "y": 0.15215215250000005,
+        "w": 0.19707207187500003,
+        "h": 0.055055054999999915
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Paytable/Lines/Line_1/Line1Button",
+      "name": "Line1Button",
+      "texts": [
+        "1",
+        "1000",
+        "symbol_7_lightOFF"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.11148648687499996,
+        "y": 0.2172172175,
+        "w": 0.19707207187500003,
+        "h": 0.05505505500000001
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "5d3fddb8-c287-4194-8882-b2fbef8db5e3",
+  "capturedAt": "2026-10-19T10:17:28.248Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:17:20.836Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "msg_code": "0",
+        "balance": "100,000.00",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.60,0.70,1.00,1.50,2.00,3.00,4.00,6.00,8.00,10.00,15.00,20.00,25.00,30.00,35.00,40.00,45.00,50.00,55.00,60.00,65.00,70.00,75.00,80.00",
+        "c": "0.60"
+      },
+      "at": "2026-10-19T10:17:25.067Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
