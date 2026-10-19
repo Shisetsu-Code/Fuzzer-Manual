@@ -89,6 +89,9 @@ test('publishing creates an orphan snapshot branch and stores binaries + manifes
     assert.equal(calls.filter(x=>x.url==='/git/blobs').length,1);
     const tree=calls.find(x=>x.url==='/git/trees'&&x.body.tree.length>0);
     assert.deepEqual(tree.body.tree.map(x=>x.path).sort(),['latest.json','runs/pragmatic-test/manifest.json','runs/pragmatic-test/shots/candy-rush.jpg']);
+    const rootTree=calls.find(x=>x.url==='/git/trees'&&!x.body.base_tree);
+    assert.equal(rootTree.body.tree.length,1);
+    assert.equal(rootTree.body.tree[0].path,'README.md');
     assert.ok(calls.find(x=>x.url==='/git/commits'&&x.body.parents?.length===0));
   }finally{await fs.rm(dir,{force:true,recursive:true});}
 });
