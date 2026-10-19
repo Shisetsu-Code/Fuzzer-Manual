@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T09:02:58.019Z",
+  "updatedAt": "2026-10-19T09:06:20.361Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -390,6 +390,84 @@
       "attempts": 1,
       "error": null,
       "capturedAt": "2026-10-19T09:02:58.009Z"
+    },
+    "ancient-egypt-classic": {
+      "slug": "ancient-egypt-classic",
+      "url": "https://www.pragmaticplay.fun/en/slots/ancient-egypt-classic/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/ancient-egypt-classic.jpg",
+      "metadata": "metadata/ancient-egypt-classic.json",
+      "taskId": 30,
+      "gameSymbol": "vs10egyptcls",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:03:52.012Z"
+    },
+    "ancient-egypt": {
+      "slug": "ancient-egypt",
+      "url": "https://www.pragmaticplay.fun/en/slots/ancient-egypt/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/ancient-egypt.jpg",
+      "metadata": "metadata/ancient-egypt.json",
+      "taskId": 31,
+      "gameSymbol": "vs10egypt",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:04:28.088Z"
+    },
+    "ancient-island-megaways": {
+      "slug": "ancient-island-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/ancient-island-megaways/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/ancient-island-megaways.jpg",
+      "metadata": "metadata/ancient-island-megaways.json",
+      "taskId": 32,
+      "gameSymbol": "vswaysmodfr",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:05:09.223Z"
+    },
+    "angel-vs-sinner": {
+      "slug": "angel-vs-sinner",
+      "url": "https://www.pragmaticplay.fun/en/slots/angel-vs-sinner/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/angel-vs-sinner.jpg",
+      "metadata": "metadata/angel-vs-sinner.json",
+      "taskId": 33,
+      "gameSymbol": "vs15fghtmultlv",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:05:45.873Z"
+    },
+    "anime-mecha-megaways": {
+      "slug": "anime-mecha-megaways",
+      "url": "https://www.pragmaticplay.fun/en/slots/anime-mecha-megaways/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/anime-mecha-megaways.jpg",
+      "metadata": "metadata/anime-mecha-megaways.json",
+      "taskId": 34,
+      "gameSymbol": "vs20olympmmd",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:06:02.961Z"
+    },
+    "argonauts": {
+      "slug": "argonauts",
+      "url": "https://www.pragmaticplay.fun/en/slots/argonauts/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/argonauts.jpg",
+      "metadata": "metadata/argonauts.json",
+      "taskId": 35,
+      "gameSymbol": "vswaysargonts",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:06:20.345Z"
     }
   },
   "sheets": [
@@ -401,7 +479,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T09:00:01.339Z"
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -411,7 +489,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T09:00:01.339Z"
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -421,7 +499,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T09:00:01.339Z"
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -431,7 +509,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T09:00:01.339Z"
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -441,7 +519,7 @@
         "777-wheel-blitz",
         "8-dragons"
       ],
-      "publishedAt": "2026-10-19T09:00:01.339Z"
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
@@ -450,7 +528,8 @@
         "888-bonanza",
         "888-dragons",
         "888-gold-excluding-korea"
-      ]
+      ],
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0007.jpg",
@@ -459,12 +538,24 @@
         "aladdin-and-the-sorcerer",
         "alien-invaders",
         "amazing-money-machine"
-      ]
+      ],
+      "publishedAt": "2026-10-19T09:03:12.616Z"
     },
     {
       "file": "sheets/sheet-0008.jpg",
       "slugs": [
-        "anaconda-gold"
+        "anaconda-gold",
+        "ancient-egypt",
+        "ancient-egypt-classic",
+        "ancient-island-megaways"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0009.jpg",
+      "slugs": [
+        "angel-vs-sinner",
+        "anime-mecha-megaways",
+        "argonauts"
       ]
     }
   ]
