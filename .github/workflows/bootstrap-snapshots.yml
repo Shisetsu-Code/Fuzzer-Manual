@@ -16,7 +16,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       HEADLESS: '1'
       SAVE_HAR: '0'
-      DATA_DIR: ${{ runner.temp }}/catalog-first-five
+      DATA_DIR: catalog-first-five-temp
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -53,7 +53,7 @@ jobs:
         with:
           name: catalog-first-five-${{ github.sha }}
           path: |
-            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/manifest.json
-            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/shots/*.jpg
-            ${{ runner.temp }}/catalog-first-five/catalog-exports/**/metadata/*.json
+            catalog-first-five-temp/catalog-exports/**/manifest.json
+            catalog-first-five-temp/catalog-exports/**/shots/*.jpg
+            catalog-first-five-temp/catalog-exports/**/metadata/*.json
           if-no-files-found: ignore
