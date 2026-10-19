@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "slug": "888-bonanza",
+  "taskId": 22,
+  "url": "https://www.pragmaticplay.fun/en/slots/888-bonanza/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs20olympmmd",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "ananas",
+        "ananas_circle",
+        "spin",
+        "generic_roundButtonBkg"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_Spin"
+      ],
+      "hit": {
+        "x": 0.750563045629178,
+        "y": 0.8621921918300001,
+        "w": 0.04504504499999995,
+        "h": 0.08008007999999991
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+      "name": "BetUp_Button",
+      "texts": [
+        "Increment"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.8412162158750001,
+        "y": 0.889389389,
+        "w": 0.016891891875000065,
+        "h": 0.030030030000000114
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+      "name": "BetDown_Button",
+      "texts": [
+        "Decrement"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.688063062875,
+        "y": 0.889389389,
+        "w": 0.016891891875000065,
+        "h": 0.030030030000000114
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/SoundButtons/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Sound"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10135135174999998,
+        "y": 0.9369369365,
+        "w": 0.019144144124999984,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Main/GameFeatures/AnteBet/MainButton/content/Colliders/Collider0",
+      "name": "Collider0",
+      "texts": [
+        "SPECIAL",
+        "BETS",
+        "5",
+        "OPTIONS",
+        "button_ante_bg",
+        "ante_slider_bg_off",
+        "ante_slider_button"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.007541566648406439,
+        "y": 0.3648656158870634,
+        "w": 0.13507431314786572,
+        "h": 0.21011559823001325
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Main/GameFeatures/FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+      "name": "ColliderBuy",
+      "texts": [
+        "BUY",
+        "FEATURE",
+        "4",
+        "OPTIONS",
+        "button_buy_bg"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.007541566648406439,
+        "y": 0.11472799894657143,
+        "w": 0.13507431314786572,
+        "h": 0.21011559823001325
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.19730897782733042,
+        "y": 0.8693696282490397,
+        "w": 0.14076576562500004,
+        "h": 0.1301301299999999
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton",
+      "name": "AutoplayOpenButton",
+      "texts": [
+        "CombinedMiddle",
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9599599595,
+        "w": 0.11148648637500003,
+        "h": 0.04004004000000015
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.13326295081718748,
+        "y": 0.917092091675,
+        "w": 0.019510135115624994,
+        "h": 0.03468468464999989
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.10135135174999998,
+        "y": 0.8878878875,
+        "w": 0.019144144124999984,
+        "h": 0.04504504500000017
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton/HiperPlayDisabled",
+      "name": "HiperPlayDisabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9594594590000001,
+        "w": 0.022522522500000086,
+        "h": 0.04004003999999996
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "ee779cb6-4919-4365-811f-a7ab422d050c",
+  "capturedAt": "2026-10-19T08:59:34.385Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:59:21.016Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:2000,type:\"default\"},{bet:5000,type:\"default\"},{bet:10000,type:\"default\"},{bet:25000,type:\"default\"}]"
+      },
+      "at": "2026-10-19T08:59:24.657Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:59:24.921Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}

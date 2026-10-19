@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "slug": "777-rush",
+  "taskId": 18,
+  "url": "https://www.pragmaticplay.fun/en/slots/777-rush/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs5t8goldfp",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetPlus",
+      "name": "SmartBetPlus",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.5286562606040041,
+        "y": 0.831693247370207,
+        "w": 0.025080590430946792,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetMinus",
+      "name": "SmartBetMinus",
+      "texts": [
+        "Decrement",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.44626314896504926,
+        "y": 0.831693247370207,
+        "w": 0.025080590430946736,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/SoundButtonsLand/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "SoundON",
+        "ButtonBkg",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.02595860196810318,
+        "y": 0.9105870376654224,
+        "w": 0.0435188327112318,
+        "h": 0.044791313199864485
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/SpinBtnFX/InterfaceArrPort/SpinBtnFXGO/ContentScale/Spin_button",
+      "name": "Spin_button",
+      "texts": [
+        "spin_button"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.46921615201900235,
+        "y": 0.7983481506616898,
+        "w": 0.061567695961995295,
+        "h": 0.10945368171021395
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel0/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36972980997624705,
+        "y": 0.30359687818120124,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel0/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36972980997624705,
+        "y": 0.42236172378690184,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570082
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel0/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36972980997624705,
+        "y": 0.5411265693926027,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel1/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4565766033254157,
+        "y": 0.30359687818120124,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel1/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4565766033254157,
+        "y": 0.42236172378690184,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570082
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel1/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4565766033254157,
+        "y": 0.5411265693926027,
+        "w": 0.08684679334916862,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel2/Pos0",
+      "name": "Pos0",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5434233966745843,
+        "y": 0.30359687818120124,
+        "w": 0.08684679334916867,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel2/Pos1",
+      "name": "Pos1",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5434233966745843,
+        "y": 0.42236172378690184,
+        "w": 0.08684679334916867,
+        "h": 0.11876484560570082
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/ArrangeableBaseGame/BaseGame/Reels/OverlayPaytable/OverlayPTReels/Reel2/Pos2",
+      "name": "Pos2",
+      "texts": [
+        "GOOD LUCK!",
+        "IS WILD AND SUBSTITUTES FOR ALL SYMBOLS",
+        "WIN UP TO 2000X BET",
+        "$80.00",
+        "$20.00",
+        "$10.00",
+        "$6.00",
+        "$4.00",
+        "ANY",
+        "$3.20"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5434233966745843,
+        "y": 0.5411265693926027,
+        "w": 0.08684679334916867,
+        "h": 0.11876484560570066
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible",
+        "Decrement",
+        "spin",
+        "circle",
+        "spinGlow"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.489311163895487,
+        "y": 0.8349847302341367,
+        "w": 0.021377672209026144,
+        "h": 0.038004750593824056
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "CREDIT",
+        "$100,000.00",
+        "BET",
+        "$2.00",
+        "PRAGMATIC PLAY • 5:57",
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible",
+        "LeftArrow",
+        "MiddleArrowSmall"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.3304101628775026,
+        "y": 0.9550390227349848,
+        "w": 0.33917967424499484,
+        "h": 0.044960977265015245
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/AutoplayButton/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.43128605361384453,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredLeft/PaytableButton/PaytableButtonOpen",
+      "name": "PaytableButtonOpen",
+      "texts": [
+        "Info"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36208061163895483,
+        "y": 0.9056667797760435,
+        "w": 0.03149389209365455,
+        "h": 0.05598914149983022
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredRight/MenuButton/MenuOpenClose/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.6056381489650493,
+        "y": 0.9035883949779439,
+        "w": 0.03306858669833723,
+        "h": 0.05878859857482155
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "ButtonBkg",
+        "LeftArrow",
+        "MiddleArrowSmall",
+        "RightArrowSmall",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.49026552426196135,
+        "y": 0.9156769596199525,
+        "w": 0.019468951476077356,
+        "h": 0.03461146929080409
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/BetButtons/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "bets",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5267220902612827,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "f94341ba-eb19-416f-b4bc-5f2902fc3ca6",
+  "capturedAt": "2026-10-19T08:57:51.609Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:57:41.294Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+        "c": "0.40",
+        "l": "5"
+      },
+      "at": "2026-10-19T08:57:45.331Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T08:57:45.493Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
