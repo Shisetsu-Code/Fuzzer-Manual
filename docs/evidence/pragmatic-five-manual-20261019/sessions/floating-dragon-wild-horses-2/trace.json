@@ -1,0 +1,648 @@
+{
+  "slug": "floating-dragon-wild-horses",
+  "session": "floating-dragon-wild-horses-2",
+  "tasks": [
+    {
+      "id": 1,
+      "parent_task_id": null,
+      "via_mark_id": null,
+      "depth": 0,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-1.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:18:23",
+      "updated_at": "2026-10-19 02:22:49"
+    },
+    {
+      "id": 2,
+      "parent_task_id": 1,
+      "via_mark_id": 1,
+      "depth": 1,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-2.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:22:49",
+      "updated_at": "2026-10-19 02:23:19"
+    },
+    {
+      "id": 3,
+      "parent_task_id": 2,
+      "via_mark_id": 2,
+      "depth": 2,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-3.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:23:19",
+      "updated_at": "2026-10-19 02:23:52"
+    },
+    {
+      "id": 4,
+      "parent_task_id": 3,
+      "via_mark_id": 3,
+      "depth": 3,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-4.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:23:52",
+      "updated_at": "2026-10-19 02:25:23"
+    },
+    {
+      "id": 5,
+      "parent_task_id": 4,
+      "via_mark_id": 4,
+      "depth": 4,
+      "status": "annotated",
+      "action_state": "dispatched",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-5.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:25:23",
+      "updated_at": "2026-10-19 02:28:15"
+    },
+    {
+      "id": 6,
+      "parent_task_id": 5,
+      "via_mark_id": 5,
+      "depth": 5,
+      "status": "ready",
+      "action_state": "dispatched",
+      "capture_file": "sessions/floating-dragon-wild-horses-2/shots/task-6.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:28:15",
+      "updated_at": "2026-10-19 02:28:16"
+    }
+  ],
+  "marks": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.55,
+      "kind": "navigate",
+      "label": "Manual intro arrow for Super session"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.073,
+      "y": 0.742,
+      "kind": "buy",
+      "label": "Manual Buy Super Free Spins $600"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.56,
+      "y": 0.646,
+      "kind": "confirm",
+      "label": "Manual confirm Super Free Spins $600"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual continue Super 15 Free Spins award"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.815,
+      "kind": "continue",
+      "label": "Manual close Super result $100.80 in 15 Free Spins"
+    }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "task_id": 1,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "discovery",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "observed_at": "2026-10-19T02:19:00.971Z",
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,12.00,14.00,15.00,17.00,20.00,22.00,25.00",
+        "c": "0.20",
+        "l": "10",
+        "purInit": "[{bet:1000,type:\"default\"},{bet:3000,type:\"default\"}]"
+      }
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:23:55.187Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0",
+        "pur": "1"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "0.00",
+        "bl": "0",
+        "fs": "1",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 6,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:28.992Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.00",
+        "bl": "0",
+        "fs": "2",
+        "c": "0.20",
+        "l": "10",
+        "w": "2.00"
+      }
+    },
+    {
+      "id": 7,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:35.384Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.40",
+        "bl": "0",
+        "fs": "3",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.40"
+      }
+    },
+    {
+      "id": 8,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:41.445Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.40",
+        "bl": "0",
+        "fs": "4",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 9,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:46.369Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.40",
+        "bl": "0",
+        "fs": "5",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 10,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:50.930Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.80",
+        "bl": "0",
+        "fs": "6",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.40"
+      }
+    },
+    {
+      "id": 11,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:25:58.232Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.80",
+        "bl": "0",
+        "fs": "7",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 12,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:02.591Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.80",
+        "bl": "0",
+        "fs": "8",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 13,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:06.901Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "2.80",
+        "bl": "0",
+        "fs": "9",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 14,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:11.275Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "20.80",
+        "bl": "0",
+        "fs": "10",
+        "c": "0.20",
+        "l": "10",
+        "w": "18.00"
+      }
+    },
+    {
+      "id": 16,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:21.951Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "20.80",
+        "bl": "0",
+        "fs": "11",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 17,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:26.363Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "20.80",
+        "bl": "0",
+        "fs": "12",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 18,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:30.757Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "20.80",
+        "bl": "0",
+        "fs": "13",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 19,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:35.184Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "20.80",
+        "bl": "0",
+        "fs": "14",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 20,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:26:39.470Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fsmul": "1",
+        "balance": "99,400.00",
+        "fsmax": "15",
+        "na": "s",
+        "fswin": "100.80",
+        "bl": "0",
+        "fs": "15",
+        "c": "0.20",
+        "l": "10",
+        "w": "80.00"
+      }
+    },
+    {
+      "id": 21,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doSpin",
+      "status": 200,
+      "observed_at": "2026-10-19T02:27:15.357Z",
+      "request": {
+        "action": "doSpin",
+        "c": "0.2",
+        "l": "10",
+        "bl": "0"
+      },
+      "response": {
+        "fs_total": "15",
+        "balance": "99,400.00",
+        "na": "c",
+        "bl": "0",
+        "c": "0.20",
+        "l": "10",
+        "w": "0.00"
+      }
+    },
+    {
+      "id": 22,
+      "task_id": 5,
+      "provider": "pragmatic",
+      "game_symbol": "vs10fdwhorses",
+      "phase": "branch",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doCollect",
+      "status": 200,
+      "observed_at": "2026-10-19T02:27:19.738Z",
+      "request": {
+        "action": "doCollect"
+      },
+      "response": {
+        "balance": "99,500.80",
+        "na": "s"
+      }
+    }
+  ]
+}

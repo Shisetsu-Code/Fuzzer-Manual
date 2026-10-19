@@ -6,28 +6,75 @@ jobs:
   demo:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      HEADLESS: '1'
+      SAVE_HAR: '0'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '22.13.0'
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Open one public DEMO and capture real runtime
         env:
-          HEADLESS: '1'
           DATA_DIR: ${{ runner.temp }}/fuzzer-manual-smoke
         run: node scripts/smoke-demo.js https://www.pragmaticplay.fun/en/slots/candy-rush/
-      - name: Reproduce three observed purchase options in separate DEMO sessions
+      - name: Prepare observed purchase options concurrently and stop at confirmation
         env:
-          HEADLESS: '1'
           DATA_DIR: ${{ runner.temp }}/fuzzer-manual-branches
+          MAX_LIVE: '2'
         run: node scripts/smoke-branches.js https://www.pragmaticplay.fun/en/slots/candy-rush/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: demo-screenshot
+          name: demo-diagnostics-${{ github.sha }}
           path: |
             ${{ runner.temp }}/fuzzer-manual-smoke/shots/*.jpg
             ${{ runner.temp }}/fuzzer-manual-branches/shots/*.jpg
+            ${{ runner.temp }}/fuzzer-manual-branches/diagnostics/${{ github.sha }}/*.json
+          if-no-files-found: ignore
+  catalog-capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      HEADLESS: '1'
+      SAVE_HAR: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Capture a BASE screenshot using the NEW local bulk command
+        env:
+          DATA_DIR: ${{ runner.temp }}/catalog-capture
+        run: node scripts/catalog-batch.js --only=candy-rush --limit=1 --retries=1 --timeout-ms=45000 --no-publish --headless
+      - name: Validate exported manifest, JPEG and reusable metadata
+        env:
+          DATA_DIR: ${{ runner.temp }}/catalog-capture
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          root=pathlib.Path(os.environ['DATA_DIR'])/'catalog-exports'
+          folders=list(root.glob('*/manifest.json'))
+          assert len(folders)==1, folders
+          manifest=json.loads(folders[0].read_text())
+          entry=manifest['entries']['candy-rush']
+          print(json.dumps({k:entry.get(k) for k in ('slug','status','state','image','metadata','attempts')},indent=2))
+          assert entry['status']=='ready' and entry['state']=='BASE', entry
+          assert (folders[0].parent/entry['image']).stat().st_size>1000
+          meta=json.loads((folders[0].parent/entry['metadata']).read_text())
+          assert meta['state']=='BASE' and meta['taskId']==entry['taskId']
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalog-capture-smoke-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/catalog-capture/catalog-exports/**/manifest.json
+            ${{ runner.temp }}/catalog-capture/catalog-exports/**/shots/*.jpg
+            ${{ runner.temp }}/catalog-capture/catalog-exports/**/review/*.jpg
+            ${{ runner.temp }}/catalog-capture/catalog-exports/**/metadata/*.json
           if-no-files-found: ignore

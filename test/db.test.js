@@ -21,7 +21,8 @@ test('one photograph forks into four persisted, independent queued tasks',()=>fi
   assert.equal(db.stats().marks,4);
   assert.equal(db.lineage(commit.children[3].taskId)[0].mark.x,.8);
   assert.notEqual(commit.children[0].markId,commit.children[1].markId);
-  assert.throws(()=>db.commit(task.id,marks),/already cataloged/);
+  assert.deepEqual(db.commit(task.id,marks),commit);
+  assert.throws(()=>db.commit(task.id,marks.slice(0,1)),/already cataloged/);
 }));
 test('restart retains screenshots, marks and requeues interrupted preparations',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'fuzz-manual-reopen-'));

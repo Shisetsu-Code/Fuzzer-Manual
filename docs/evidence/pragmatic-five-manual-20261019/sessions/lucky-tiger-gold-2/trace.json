@@ -1,0 +1,150 @@
+{
+  "slug": "lucky-tiger-gold",
+  "session": "lucky-tiger-gold-2",
+  "tasks": [
+    {
+      "id": 1,
+      "parent_task_id": null,
+      "via_mark_id": null,
+      "depth": 0,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-1.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:14:11",
+      "updated_at": "2026-10-19 02:15:25"
+    },
+    {
+      "id": 2,
+      "parent_task_id": 1,
+      "via_mark_id": 1,
+      "depth": 1,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-2.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:15:25",
+      "updated_at": "2026-10-19 02:16:06"
+    },
+    {
+      "id": 3,
+      "parent_task_id": 2,
+      "via_mark_id": 2,
+      "depth": 2,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-3.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:16:06",
+      "updated_at": "2026-10-19 02:16:38"
+    },
+    {
+      "id": 4,
+      "parent_task_id": 3,
+      "via_mark_id": 3,
+      "depth": 3,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-4.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:16:38",
+      "updated_at": "2026-10-19 02:17:20"
+    },
+    {
+      "id": 5,
+      "parent_task_id": 4,
+      "via_mark_id": 4,
+      "depth": 4,
+      "status": "annotated",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-5.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:17:20",
+      "updated_at": "2026-10-19 02:22:08"
+    },
+    {
+      "id": 6,
+      "parent_task_id": 5,
+      "via_mark_id": 5,
+      "depth": 5,
+      "status": "ready",
+      "action_state": "safe",
+      "capture_file": "sessions/lucky-tiger-gold-2/shots/task-6.jpg",
+      "error": null,
+      "created_at": "2026-10-19 02:22:08",
+      "updated_at": "2026-10-19 02:22:08"
+    }
+  ],
+  "marks": [
+    {
+      "id": 1,
+      "task_id": 1,
+      "ordinal": 1,
+      "x": 0.5,
+      "y": 0.884,
+      "kind": "navigate",
+      "label": "Intro play arrow"
+    },
+    {
+      "id": 2,
+      "task_id": 2,
+      "ordinal": 1,
+      "x": 0.62,
+      "y": 0.934,
+      "kind": "navigate",
+      "label": "Open hamburger game menu"
+    },
+    {
+      "id": 3,
+      "task_id": 3,
+      "ordinal": 1,
+      "x": 0.624,
+      "y": 0.101,
+      "kind": "navigate",
+      "label": "Close system settings after visual inspection"
+    },
+    {
+      "id": 4,
+      "task_id": 4,
+      "ordinal": 1,
+      "x": 0.376,
+      "y": 0.933,
+      "kind": "navigate",
+      "label": "Open game information and rules"
+    },
+    {
+      "id": 5,
+      "task_id": 5,
+      "ordinal": 1,
+      "x": 0.631,
+      "y": 0.764,
+      "kind": "navigate",
+      "label": "Rules panel right edge scrollbar lower track"
+    }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "task_id": 1,
+      "provider": "pragmatic",
+      "game_symbol": "vs5luckytru",
+      "phase": "discovery",
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "observed_at": "2026-10-19T02:14:27.591Z",
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+        "c": "0.40",
+        "l": "5"
+      }
+    }
+  ]
+}

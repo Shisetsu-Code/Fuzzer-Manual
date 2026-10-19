@@ -1,0 +1,1547 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-19T02:39:50.899358+00:00",
+  "execution": {
+    "mode": "manual screenshot decisions; real normalized coordinate clicks",
+    "engine": "existing BrowserEngine plus CatalogDB and trace",
+    "tested_production_source_commit": "2fd5ee54d3da975652630d9e7ff76ac57b1da97c",
+    "tested_source_tree": "c87f4c3539fcf111eb90b8c9fb305f9be64d592b",
+    "browser": "Chromium 151.0.7922.34",
+    "node": "24.19.0",
+    "playwright": "1.62.1",
+    "environment": "local Chromium demo sessions; not a GitHub Actions purchase run"
+  },
+  "sample_fixture": "../../../scripts/fixtures/pragmatic-five-20261019.json",
+  "totals": {
+    "games": 5,
+    "purchase_options_observed": 6,
+    "purchase_options_accepted": 6,
+    "accepted_purchase_transactions": 7,
+    "enhanced_wagers_accepted": 2,
+    "purchase_types_with_settlement_verified": 6,
+    "purchase_attempts_with_settlement_verified": 6
+  },
+  "scope": "Every visually exposed purchase at the displayed default $2 base stake was selected and confirmed. This is not an exhaustive mapping of every stake, operator configuration, hidden mode, RNG outcome or normal-spin protocol.",
+  "games": [
+    {
+      "title": "Gates of Valhalla",
+      "slug": "gates-of-valhalla",
+      "url": "https://www.pragmaticplay.fun/en/slots/gates-of-valhalla/",
+      "symbol": "vs10runes",
+      "base_bet_displayed": 2,
+      "currency": "USD demo credits",
+      "observed_purchase_count": 1,
+      "purchases": [
+        {
+          "label": "Buy Free Spins",
+          "displayed_cost": 200,
+          "base_bet_multiple": 100.0,
+          "pur": "0",
+          "accepted": true,
+          "balance_before": "100,000.00",
+          "observed_debit": 200.0,
+          "initial_free_spins": 10,
+          "session": "gates-of-valhalla-1",
+          "purchase_event": {
+            "id": 9,
+            "task_id": 3,
+            "provider": "pragmatic",
+            "game_symbol": "vs10runes",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:13:16.957Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "10",
+              "pur": "0"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,800.00",
+              "fsmax": "10",
+              "na": "s",
+              "fswin": "0.00",
+              "fs": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 21,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs10runes",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:15:48.885Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "10"
+            },
+            "response": {
+              "fs_total": "10",
+              "balance": "99,800.00",
+              "na": "c",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            }
+          },
+          "collect_event": {
+            "id": 22,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs10runes",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:15:52.262Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,801.40",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 22,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs10runes",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:15:52.262Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,801.40",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            10
+          ],
+          "accepted_attempt_count": 1,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "100,000.00",
+              "observed_debit": 200.0,
+              "initial_free_spins": 10,
+              "session": "gates-of-valhalla-1",
+              "purchase_event": {
+                "id": 9,
+                "task_id": 3,
+                "provider": "pragmatic",
+                "game_symbol": "vs10runes",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:13:16.957Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "10",
+                  "pur": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,800.00",
+                  "fsmax": "10",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "fs": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "0.00"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 21,
+                "task_id": 4,
+                "provider": "pragmatic",
+                "game_symbol": "vs10runes",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:15:48.885Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "10"
+                },
+                "response": {
+                  "fs_total": "10",
+                  "balance": "99,800.00",
+                  "na": "c",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "0.00"
+                }
+              },
+              "collect_event": {
+                "id": 22,
+                "task_id": 4,
+                "provider": "pragmatic",
+                "game_symbol": "vs10runes",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:15:52.262Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,801.40",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 22,
+                "task_id": 4,
+                "provider": "pragmatic",
+                "game_symbol": "vs10runes",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v3/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:15:52.262Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,801.40",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "enhanced_wagers": [],
+      "sessions": [
+        "gates-of-valhalla-1"
+      ]
+    },
+    {
+      "title": "Floating Dragon Wild Horses",
+      "slug": "floating-dragon-wild-horses",
+      "url": "https://www.pragmaticplay.fun/en/slots/floating-dragon-wild-horses/",
+      "symbol": "vs10fdwhorses",
+      "base_bet_displayed": 2,
+      "currency": "USD demo credits",
+      "observed_purchase_count": 2,
+      "purchases": [
+        {
+          "label": "Buy Free Spins",
+          "displayed_cost": 200,
+          "base_bet_multiple": 100.0,
+          "pur": "0",
+          "accepted": true,
+          "balance_before": "99,997.00",
+          "observed_debit": 200.0,
+          "initial_free_spins": 15,
+          "session": "floating-dragon-wild-horses-1",
+          "purchase_event": {
+            "id": 6,
+            "task_id": 9,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:17:50.484Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.2",
+              "l": "10",
+              "bl": "0",
+              "pur": "0"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,797.00",
+              "fsmax": "15",
+              "na": "s",
+              "fswin": "0.00",
+              "bl": "0",
+              "fs": "1",
+              "c": "0.20",
+              "l": "10",
+              "w": "0.00"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 23,
+            "task_id": 10,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:24:16.489Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.2",
+              "l": "10",
+              "bl": "0"
+            },
+            "response": {
+              "fs_total": "15",
+              "balance": "99,797.00",
+              "na": "c",
+              "bl": "0",
+              "c": "0.20",
+              "l": "10",
+              "w": "0.00"
+            }
+          },
+          "collect_event": {
+            "id": 24,
+            "task_id": 10,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:24:21.105Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,856.20",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 24,
+            "task_id": 10,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:24:21.105Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,856.20",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            15
+          ],
+          "accepted_attempt_count": 1,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "99,997.00",
+              "observed_debit": 200.0,
+              "initial_free_spins": 15,
+              "session": "floating-dragon-wild-horses-1",
+              "purchase_event": {
+                "id": 6,
+                "task_id": 9,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:17:50.484Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.2",
+                  "l": "10",
+                  "bl": "0",
+                  "pur": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,797.00",
+                  "fsmax": "15",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "bl": "0",
+                  "fs": "1",
+                  "c": "0.20",
+                  "l": "10",
+                  "w": "0.00"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 23,
+                "task_id": 10,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:24:16.489Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.2",
+                  "l": "10",
+                  "bl": "0"
+                },
+                "response": {
+                  "fs_total": "15",
+                  "balance": "99,797.00",
+                  "na": "c",
+                  "bl": "0",
+                  "c": "0.20",
+                  "l": "10",
+                  "w": "0.00"
+                }
+              },
+              "collect_event": {
+                "id": 24,
+                "task_id": 10,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:24:21.105Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,856.20",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 24,
+                "task_id": 10,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:24:21.105Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,856.20",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "Buy Super Free Spins",
+          "displayed_cost": 600,
+          "base_bet_multiple": 300.0,
+          "pur": "1",
+          "accepted": true,
+          "balance_before": "100,000.00",
+          "observed_debit": 600.0,
+          "initial_free_spins": 15,
+          "session": "floating-dragon-wild-horses-2",
+          "purchase_event": {
+            "id": 4,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:23:55.187Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.2",
+              "l": "10",
+              "bl": "0",
+              "pur": "1"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,400.00",
+              "fsmax": "15",
+              "na": "s",
+              "fswin": "0.00",
+              "bl": "0",
+              "fs": "1",
+              "c": "0.20",
+              "l": "10",
+              "w": "0.00"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 21,
+            "task_id": 5,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:27:15.357Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.2",
+              "l": "10",
+              "bl": "0"
+            },
+            "response": {
+              "fs_total": "15",
+              "balance": "99,400.00",
+              "na": "c",
+              "bl": "0",
+              "c": "0.20",
+              "l": "10",
+              "w": "0.00"
+            }
+          },
+          "collect_event": {
+            "id": 22,
+            "task_id": 5,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:27:19.738Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,500.80",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 22,
+            "task_id": 5,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:27:19.738Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,500.80",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            15
+          ],
+          "accepted_attempt_count": 1,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "100,000.00",
+              "observed_debit": 600.0,
+              "initial_free_spins": 15,
+              "session": "floating-dragon-wild-horses-2",
+              "purchase_event": {
+                "id": 4,
+                "task_id": 4,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:23:55.187Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.2",
+                  "l": "10",
+                  "bl": "0",
+                  "pur": "1"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,400.00",
+                  "fsmax": "15",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "bl": "0",
+                  "fs": "1",
+                  "c": "0.20",
+                  "l": "10",
+                  "w": "0.00"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 21,
+                "task_id": 5,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:27:15.357Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.2",
+                  "l": "10",
+                  "bl": "0"
+                },
+                "response": {
+                  "fs_total": "15",
+                  "balance": "99,400.00",
+                  "na": "c",
+                  "bl": "0",
+                  "c": "0.20",
+                  "l": "10",
+                  "w": "0.00"
+                }
+              },
+              "collect_event": {
+                "id": 22,
+                "task_id": 5,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:27:19.738Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,500.80",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 22,
+                "task_id": 5,
+                "provider": "pragmatic",
+                "game_symbol": "vs10fdwhorses",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:27:19.738Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,500.80",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "enhanced_wagers": [
+        {
+          "label": "Higher Chance To Win Feature",
+          "displayed_total_bet": 3,
+          "base_bet_multiple": 1.5,
+          "request_discriminator": {
+            "bl": "1",
+            "pur": "absent"
+          },
+          "accepted": true,
+          "session": "floating-dragon-wild-horses-1",
+          "spin_event": {
+            "id": 4,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs10fdwhorses",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:14:41.677Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.2",
+              "l": "10",
+              "bl": "1"
+            },
+            "response": {
+              "balance": "99,997.00",
+              "na": "s",
+              "bl": "1",
+              "c": "0.20",
+              "l": "15",
+              "w": "0.00"
+            }
+          }
+        }
+      ],
+      "sessions": [
+        "floating-dragon-wild-horses-1",
+        "floating-dragon-wild-horses-2"
+      ]
+    },
+    {
+      "title": "Sugar Rush Xmas",
+      "slug": "sugar-rush-xmas",
+      "url": "https://www.pragmaticplay.fun/en/slots/sugar-rush-xmas/",
+      "symbol": "vs20sugrux",
+      "base_bet_displayed": 2,
+      "currency": "USD demo credits",
+      "observed_purchase_count": 1,
+      "purchases": [
+        {
+          "label": "Buy Free Spins",
+          "displayed_cost": 200,
+          "base_bet_multiple": 100.0,
+          "pur": "0",
+          "accepted": true,
+          "balance_before": "100,000.00",
+          "observed_debit": 200.0,
+          "initial_free_spins": 10,
+          "session": "sugar-rush-xmas-1",
+          "purchase_event": {
+            "id": 4,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vs20sugrux",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:16:03.642Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "pur": "0"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,800.00",
+              "fsmax": "10",
+              "na": "s",
+              "fswin": "0.00",
+              "fs": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 32,
+            "task_id": 6,
+            "provider": "pragmatic",
+            "game_symbol": "vs20sugrux",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:26:18.774Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20"
+            },
+            "response": {
+              "fs_total": "10",
+              "balance": "99,800.00",
+              "na": "c",
+              "rs_t": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            }
+          },
+          "collect_event": {
+            "id": 33,
+            "task_id": 7,
+            "provider": "pragmatic",
+            "game_symbol": "vs20sugrux",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:27:04.614Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "100,138.20",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 33,
+            "task_id": 7,
+            "provider": "pragmatic",
+            "game_symbol": "vs20sugrux",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:27:04.614Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "100,138.20",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            10
+          ],
+          "accepted_attempt_count": 1,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "100,000.00",
+              "observed_debit": 200.0,
+              "initial_free_spins": 10,
+              "session": "sugar-rush-xmas-1",
+              "purchase_event": {
+                "id": 4,
+                "task_id": 4,
+                "provider": "pragmatic",
+                "game_symbol": "vs20sugrux",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:16:03.642Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "pur": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,800.00",
+                  "fsmax": "10",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "fs": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "0.00"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 32,
+                "task_id": 6,
+                "provider": "pragmatic",
+                "game_symbol": "vs20sugrux",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:26:18.774Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20"
+                },
+                "response": {
+                  "fs_total": "10",
+                  "balance": "99,800.00",
+                  "na": "c",
+                  "rs_t": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "0.00"
+                }
+              },
+              "collect_event": {
+                "id": 33,
+                "task_id": 7,
+                "provider": "pragmatic",
+                "game_symbol": "vs20sugrux",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:27:04.614Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "100,138.20",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 33,
+                "task_id": 7,
+                "provider": "pragmatic",
+                "game_symbol": "vs20sugrux",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:27:04.614Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "100,138.20",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "enhanced_wagers": [],
+      "sessions": [
+        "sugar-rush-xmas-1"
+      ]
+    },
+    {
+      "title": "Lucky Tiger Gold",
+      "slug": "lucky-tiger-gold",
+      "url": "https://www.pragmaticplay.fun/en/slots/lucky-tiger-gold/",
+      "symbol": "vs5luckytru",
+      "base_bet_displayed": 2,
+      "currency": "USD demo credits",
+      "observed_purchase_count": 0,
+      "purchases": [],
+      "enhanced_wagers": [],
+      "sessions": [
+        "lucky-tiger-gold-1",
+        "lucky-tiger-gold-2"
+      ]
+    },
+    {
+      "title": "Cheetah Wild",
+      "slug": "cheetah-wild",
+      "url": "https://www.pragmaticplay.fun/en/slots/cheetah-wild/",
+      "symbol": "vswayscheetah",
+      "base_bet_displayed": 2,
+      "currency": "USD demo credits",
+      "observed_purchase_count": 2,
+      "purchases": [
+        {
+          "label": "Free Spins — Standard",
+          "displayed_cost": 200,
+          "base_bet_multiple": 100.0,
+          "pur": "0",
+          "accepted": true,
+          "balance_before": "100,000.00",
+          "observed_debit": 200.0,
+          "initial_free_spins": 8,
+          "session": "cheetah-wild-3",
+          "purchase_event": {
+            "id": 4,
+            "task_id": 6,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:33:21.176Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "bl": "0",
+              "pur": "0"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,800.00",
+              "fsmax": "8",
+              "na": "s",
+              "fswin": "0.00",
+              "bl": "0",
+              "fs": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "2.50"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 15,
+            "task_id": 7,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:35:50.313Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "bl": "0"
+            },
+            "response": {
+              "fs_total": "8",
+              "balance": "99,800.00",
+              "na": "c",
+              "bl": "0",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            }
+          },
+          "collect_event": {
+            "id": 16,
+            "task_id": 7,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:35:53.265Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,975.40",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 16,
+            "task_id": 7,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:35:53.265Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "99,975.40",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            8,
+            15
+          ],
+          "accepted_attempt_count": 2,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "100,000.00",
+              "observed_debit": 200.0,
+              "initial_free_spins": 15,
+              "session": "cheetah-wild-1",
+              "purchase_event": {
+                "id": 4,
+                "task_id": 5,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:14:51.967Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0",
+                  "pur": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,800.00",
+                  "fsmax": "15",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "bl": "0",
+                  "fs": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "12.50"
+                }
+              },
+              "settlement_verified": false,
+              "final_feature_event": null,
+              "collect_event": null,
+              "last_observed_event": {
+                "id": 18,
+                "task_id": 6,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:22:50.686Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,800.00",
+                  "fsmax": "15",
+                  "na": "s",
+                  "fswin": "194.50",
+                  "bl": "0",
+                  "fs": "13",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "128.00"
+                }
+              }
+            },
+            {
+              "accepted": true,
+              "balance_before": "100,000.00",
+              "observed_debit": 200.0,
+              "initial_free_spins": 8,
+              "session": "cheetah-wild-3",
+              "purchase_event": {
+                "id": 4,
+                "task_id": 6,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:33:21.176Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0",
+                  "pur": "0"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "99,800.00",
+                  "fsmax": "8",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "bl": "0",
+                  "fs": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "2.50"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 15,
+                "task_id": 7,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:35:50.313Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0"
+                },
+                "response": {
+                  "fs_total": "8",
+                  "balance": "99,800.00",
+                  "na": "c",
+                  "bl": "0",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "0.00"
+                }
+              },
+              "collect_event": {
+                "id": 16,
+                "task_id": 7,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:35:53.265Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,975.40",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 16,
+                "task_id": 7,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:35:53.265Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "99,975.40",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "Super Free Spins — minimum level 3",
+          "displayed_cost": 1000,
+          "base_bet_multiple": 500.0,
+          "pur": "1",
+          "accepted": true,
+          "balance_before": "99,995.00",
+          "observed_debit": 1000.0,
+          "initial_free_spins": 15,
+          "session": "cheetah-wild-2",
+          "purchase_event": {
+            "id": 5,
+            "task_id": 8,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:22:34.310Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "bl": "0",
+              "pur": "1"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "98,995.00",
+              "fsmax": "15",
+              "na": "s",
+              "fswin": "0.00",
+              "bl": "0",
+              "fs": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "12.50"
+            }
+          },
+          "settlement_verified": true,
+          "final_feature_event": {
+            "id": 34,
+            "task_id": 12,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:29:34.526Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "bl": "0"
+            },
+            "response": {
+              "fs_total": "25",
+              "balance": "98,995.00",
+              "na": "c",
+              "bl": "0",
+              "c": "0.10",
+              "l": "20",
+              "w": "329.50"
+            }
+          },
+          "collect_event": {
+            "id": 35,
+            "task_id": 12,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:29:44.947Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "102,704.70",
+              "na": "s"
+            }
+          },
+          "last_observed_event": {
+            "id": 35,
+            "task_id": 12,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doCollect",
+            "status": 200,
+            "observed_at": "2026-10-19T02:29:44.947Z",
+            "request": {
+              "action": "doCollect"
+            },
+            "response": {
+              "balance": "102,704.70",
+              "na": "s"
+            }
+          },
+          "initial_free_spins_observed": [
+            15
+          ],
+          "accepted_attempt_count": 1,
+          "attempts": [
+            {
+              "accepted": true,
+              "balance_before": "99,995.00",
+              "observed_debit": 1000.0,
+              "initial_free_spins": 15,
+              "session": "cheetah-wild-2",
+              "purchase_event": {
+                "id": 5,
+                "task_id": 8,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:22:34.310Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0",
+                  "pur": "1"
+                },
+                "response": {
+                  "fsmul": "1",
+                  "balance": "98,995.00",
+                  "fsmax": "15",
+                  "na": "s",
+                  "fswin": "0.00",
+                  "bl": "0",
+                  "fs": "1",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "12.50"
+                }
+              },
+              "settlement_verified": true,
+              "final_feature_event": {
+                "id": 34,
+                "task_id": 12,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doSpin",
+                "status": 200,
+                "observed_at": "2026-10-19T02:29:34.526Z",
+                "request": {
+                  "action": "doSpin",
+                  "c": "0.1",
+                  "l": "20",
+                  "bl": "0"
+                },
+                "response": {
+                  "fs_total": "25",
+                  "balance": "98,995.00",
+                  "na": "c",
+                  "bl": "0",
+                  "c": "0.10",
+                  "l": "20",
+                  "w": "329.50"
+                }
+              },
+              "collect_event": {
+                "id": 35,
+                "task_id": 12,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:29:44.947Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "102,704.70",
+                  "na": "s"
+                }
+              },
+              "last_observed_event": {
+                "id": 35,
+                "task_id": 12,
+                "provider": "pragmatic",
+                "game_symbol": "vswayscheetah",
+                "phase": "branch",
+                "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+                "method": "POST",
+                "action": "doCollect",
+                "status": 200,
+                "observed_at": "2026-10-19T02:29:44.947Z",
+                "request": {
+                  "action": "doCollect"
+                },
+                "response": {
+                  "balance": "102,704.70",
+                  "na": "s"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "enhanced_wagers": [
+        {
+          "label": "Higher Chance To Win Feature",
+          "displayed_total_bet": 5,
+          "base_bet_multiple": 2.5,
+          "request_discriminator": {
+            "bl": "1",
+            "pur": "absent"
+          },
+          "accepted": true,
+          "session": "cheetah-wild-2",
+          "spin_event": {
+            "id": 4,
+            "task_id": 4,
+            "provider": "pragmatic",
+            "game_symbol": "vswayscheetah",
+            "phase": "branch",
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "status": 200,
+            "observed_at": "2026-10-19T02:17:58.049Z",
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "bl": "1"
+            },
+            "response": {
+              "balance": "99,995.00",
+              "na": "s",
+              "bl": "1",
+              "c": "0.10",
+              "l": "50",
+              "w": "0.00"
+            }
+          }
+        }
+      ],
+      "sessions": [
+        "cheetah-wild-1",
+        "cheetah-wild-2",
+        "cheetah-wild-3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-19T02:23:04.071515+00:00",
+  "mode": "human-model screenshot review with manually chosen normalized clicks",
+  "decision_policy": "All game actions were chosen from viewed screenshots. No automatic candidate classification, runtime handler invocation, synthetic provider calls, or guessed pur values. Runtime transport is passive supporting evidence. BrowserEngine source was imported unchanged.",
+  "games": [
+    {
+      "slug": "sugar-rush-xmas",
+      "url": "https://www.pragmaticplay.fun/en/slots/sugar-rush-xmas/",
+      "game_symbol": "vs20sugrux",
+      "base_bet": {
+        "display": "$2.00",
+        "amount": 2,
+        "currency_display": "$"
+      },
+      "observed_purchase_option_count": 1,
+      "purchase_menu_observation": "One left-side BUY FREE SPINS $200.00 button. Its dialog presents one purchase amount, cancel, green confirmation, and ordinary total-bet adjustment; no alternate feature tabs or enhanced-wager toggle observed.",
+      "purchase_options": [
+        {
+          "label": "BUY FREE SPINS",
+          "display_cost": "$200.00",
+          "cost": 200,
+          "base_bet_multiplier": 100,
+          "confirmation_required": true,
+          "accepted": true,
+          "acceptance_evidence": [
+            "HTTP 200 doSpin with pur=0 response includes fsmax=10 and fs=1.",
+            "Demo balance changes from 100,000.00 to 99,800.00, exactly the displayed $200 cost.",
+            "Post-confirmation screenshot shows FEATURE ACTIVE and then congratulations for 10 free spins."
+          ],
+          "purchase_network_event": {
+            "id": 4,
+            "task_id": 4,
+            "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+            "method": "POST",
+            "action": "doSpin",
+            "http_status": 200,
+            "request": {
+              "action": "doSpin",
+              "c": "0.1",
+              "l": "20",
+              "pur": "0"
+            },
+            "response": {
+              "fsmul": "1",
+              "balance": "99,800.00",
+              "fsmax": "10",
+              "na": "s",
+              "fswin": "0.00",
+              "fs": "1",
+              "c": "0.10",
+              "l": "20",
+              "w": "0.00"
+            },
+            "observed_at": "2026-10-19T02:16:03.642Z"
+          },
+          "confirmation_screenshot": "sessions/sugar-rush-xmas-1/shots/task-3.jpg",
+          "bonus_award_screenshot": "sessions/sugar-rush-xmas-1/shots/task-4.jpg"
+        }
+      ],
+      "minimum_successful_route": [
+        {
+          "step": "Dismiss visible intro arrow",
+          "from_screenshot": "sessions/sugar-rush-xmas-1/shots/task-1.jpg",
+          "x": 0.833,
+          "y": 0.6,
+          "kind": "navigate",
+          "to_screenshot": "sessions/sugar-rush-xmas-1/shots/task-2.jpg"
+        },
+        {
+          "step": "Open BUY FREE SPINS $200.00",
+          "from_screenshot": "sessions/sugar-rush-xmas-1/shots/task-2.jpg",
+          "x": 0.08,
+          "y": 0.245,
+          "kind": "buy",
+          "to_screenshot": "sessions/sugar-rush-xmas-1/shots/task-3.jpg"
+        },
+        {
+          "step": "Confirm displayed $200.00 using green check",
+          "from_screenshot": "sessions/sugar-rush-xmas-1/shots/task-3.jpg",
+          "x": 0.674,
+          "y": 0.67,
+          "kind": "confirm",
+          "to_screenshot": "sessions/sugar-rush-xmas-1/shots/task-4.jpg"
+        }
+      ],
+      "bonus": {
+        "awarded_free_spins": 10,
+        "start_clicked": true,
+        "start_click": {
+          "x": 0.5,
+          "y": 0.81,
+          "kind": "continue"
+        },
+        "continuation_transport": "Observed automatic doSpin requests use c=0.1,l=20 and omit pur.",
+        "terminal_confirmed": true,
+        "last_observed_network_event": {
+          "id": 33,
+          "task_id": 7,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doCollect",
+          "http_status": 200,
+          "request": {
+            "action": "doCollect"
+          },
+          "response": {
+            "balance": "100,138.20",
+            "na": "s"
+          },
+          "observed_at": "2026-10-19T02:27:04.614Z"
+        },
+        "unfinished": null,
+        "result_display": "$338.20 IN 10 FREE SPINS",
+        "total_bonus_win": 338.2,
+        "final_balance": 100138.2,
+        "terminal_network_event": {
+          "id": 33,
+          "task_id": 7,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doCollect",
+          "http_status": 200,
+          "request": {
+            "action": "doCollect"
+          },
+          "response": {
+            "balance": "100,138.20",
+            "na": "s"
+          },
+          "observed_at": "2026-10-19T02:27:04.614Z"
+        },
+        "result_screenshot": "sessions/sugar-rush-xmas-1/shots/task-7.jpg",
+        "returned_base_screenshot": "sessions/sugar-rush-xmas-1/shots/task-8.jpg",
+        "result_dismissal_click": {
+          "x": 0.5,
+          "y": 0.81,
+          "kind": "continue"
+        }
+      },
+      "coverage": "One visually exposed purchase option exercised and accepted; complete ten-free-spin bonus, collection, and return to base verified. No claim about unseen configurations.",
+      "directory": "sessions/sugar-rush-xmas-1",
+      "tasks": [
+        {
+          "id": 1,
+          "parent_task_id": null,
+          "depth": 0,
+          "status": "annotated",
+          "action_state": "safe",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-1.jpg"
+        },
+        {
+          "id": 2,
+          "parent_task_id": 1,
+          "depth": 1,
+          "status": "annotated",
+          "action_state": "safe",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-2.jpg"
+        },
+        {
+          "id": 3,
+          "parent_task_id": 2,
+          "depth": 2,
+          "status": "annotated",
+          "action_state": "dispatched",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-3.jpg"
+        },
+        {
+          "id": 4,
+          "parent_task_id": 3,
+          "depth": 3,
+          "status": "annotated",
+          "action_state": "dispatched",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-4.jpg"
+        },
+        {
+          "id": 5,
+          "parent_task_id": 4,
+          "depth": 4,
+          "status": "annotated",
+          "action_state": "dispatched",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-5.jpg"
+        },
+        {
+          "id": 6,
+          "parent_task_id": 5,
+          "depth": 5,
+          "status": "annotated",
+          "action_state": "safe",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-6.jpg"
+        },
+        {
+          "id": 7,
+          "parent_task_id": 6,
+          "depth": 6,
+          "status": "annotated",
+          "action_state": "dispatched",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-7.jpg"
+        },
+        {
+          "id": 8,
+          "parent_task_id": 7,
+          "depth": 7,
+          "status": "ready",
+          "action_state": "dispatched",
+          "capture_file": "sessions/sugar-rush-xmas-1/shots/task-8.jpg"
+        }
+      ],
+      "actions": [
+        {
+          "task_id": 1,
+          "ordinal": 1,
+          "x": 0.833,
+          "y": 0.6,
+          "kind": "navigate",
+          "label": "Intro play arrow"
+        },
+        {
+          "task_id": 2,
+          "ordinal": 1,
+          "x": 0.08,
+          "y": 0.245,
+          "kind": "buy",
+          "label": "BUY FREE SPINS $200.00 at $2.00 bet"
+        },
+        {
+          "task_id": 3,
+          "ordinal": 1,
+          "x": 0.674,
+          "y": 0.67,
+          "kind": "confirm",
+          "label": "Confirm BUY FREE SPINS $200.00 green check"
+        },
+        {
+          "task_id": 4,
+          "ordinal": 1,
+          "x": 0.5,
+          "y": 0.81,
+          "kind": "continue",
+          "label": "10 FREE SPINS press anywhere to continue"
+        },
+        {
+          "task_id": 5,
+          "ordinal": 1,
+          "x": 0.734,
+          "y": 0.982,
+          "kind": "navigate",
+          "label": "Free spins speed chevrons"
+        },
+        {
+          "task_id": 6,
+          "ordinal": 1,
+          "x": 0.5,
+          "y": 0.535,
+          "kind": "continue",
+          "label": "Advance visible MEGA award display"
+        },
+        {
+          "task_id": 7,
+          "ordinal": 1,
+          "x": 0.5,
+          "y": 0.81,
+          "kind": "continue",
+          "label": "Dismiss final $338.20 in10 free spins result"
+        }
+      ],
+      "network": [
+        {
+          "id": 2,
+          "task_id": 1,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doInit",
+          "http_status": 200,
+          "request": {
+            "action": "doInit"
+          },
+          "response": {
+            "balance": "100,000.00",
+            "na": "s",
+            "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+            "c": "0.10",
+            "l": "20",
+            "purInit": "[{bet:2000,type:\"default\"}]"
+          },
+          "observed_at": "2026-10-19T02:13:43.161Z"
+        },
+        {
+          "id": 4,
+          "task_id": 4,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20",
+            "pur": "0"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "0.00",
+            "fs": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:16:03.642Z"
+        },
+        {
+          "id": 5,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "0.50",
+            "rs_p": "0",
+            "fs": "2",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.50"
+          },
+          "observed_at": "2026-10-19T02:17:26.213Z"
+        },
+        {
+          "id": 7,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "1.30",
+            "rs_p": "1",
+            "fs": "2",
+            "rs_c": "2",
+            "rs_m": "2",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.80"
+          },
+          "observed_at": "2026-10-19T02:17:36.531Z"
+        },
+        {
+          "id": 8,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "9.30",
+            "rs_p": "2",
+            "fs": "2",
+            "rs_c": "3",
+            "rs_m": "3",
+            "c": "0.10",
+            "l": "20",
+            "w": "8.00"
+          },
+          "observed_at": "2026-10-19T02:17:45.983Z"
+        },
+        {
+          "id": 9,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "9.30",
+            "rs_t": "3",
+            "fs": "2",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:17:57.306Z"
+        },
+        {
+          "id": 10,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "9.30",
+            "fs": "3",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:18:03.291Z"
+        },
+        {
+          "id": 11,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "10.30",
+            "rs_p": "0",
+            "fs": "4",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "1.00"
+          },
+          "observed_at": "2026-10-19T02:18:08.975Z"
+        },
+        {
+          "id": 12,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "10.30",
+            "rs_t": "1",
+            "fs": "4",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:18:18.167Z"
+        },
+        {
+          "id": 13,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "26.30",
+            "rs_p": "0",
+            "fs": "5",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "16.00"
+          },
+          "observed_at": "2026-10-19T02:18:23.748Z"
+        },
+        {
+          "id": 14,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "26.30",
+            "rs_t": "1",
+            "fs": "5",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:18:35.198Z"
+        },
+        {
+          "id": 15,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "26.80",
+            "rs_p": "0",
+            "fs": "6",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.50"
+          },
+          "observed_at": "2026-10-19T02:18:45.439Z"
+        },
+        {
+          "id": 16,
+          "task_id": 5,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "26.80",
+            "rs_t": "1",
+            "fs": "6",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:19:00.222Z"
+        },
+        {
+          "id": 17,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "59.80",
+            "rs_p": "0",
+            "fs": "7",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "33.00"
+          },
+          "observed_at": "2026-10-19T02:22:05.264Z"
+        },
+        {
+          "id": 18,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "61.40",
+            "rs_p": "1",
+            "fs": "7",
+            "rs_c": "2",
+            "rs_m": "2",
+            "c": "0.10",
+            "l": "20",
+            "w": "1.60"
+          },
+          "observed_at": "2026-10-19T02:22:11.989Z"
+        },
+        {
+          "id": 19,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "71.40",
+            "rs_p": "2",
+            "fs": "7",
+            "rs_c": "3",
+            "rs_m": "3",
+            "c": "0.10",
+            "l": "20",
+            "w": "10.00"
+          },
+          "observed_at": "2026-10-19T02:22:22.263Z"
+        },
+        {
+          "id": 20,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "135.40",
+            "rs_p": "3",
+            "fs": "7",
+            "rs_c": "4",
+            "rs_m": "4",
+            "c": "0.10",
+            "l": "20",
+            "w": "64.00"
+          },
+          "observed_at": "2026-10-19T02:22:31.411Z"
+        },
+        {
+          "id": 21,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "161.00",
+            "rs_p": "4",
+            "fs": "7",
+            "rs_c": "5",
+            "rs_m": "5",
+            "c": "0.10",
+            "l": "20",
+            "w": "25.60"
+          },
+          "observed_at": "2026-10-19T02:22:41.411Z"
+        },
+        {
+          "id": 22,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "161.00",
+            "rs_t": "5",
+            "fs": "7",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:22:50.912Z"
+        },
+        {
+          "id": 24,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "161.00",
+            "fs": "8",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:24:51.615Z"
+        },
+        {
+          "id": 25,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "181.40",
+            "rs_p": "0",
+            "fs": "9",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "20.40"
+          },
+          "observed_at": "2026-10-19T02:24:55.288Z"
+        },
+        {
+          "id": 26,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "225.40",
+            "rs_p": "1",
+            "fs": "9",
+            "rs_c": "2",
+            "rs_m": "2",
+            "c": "0.10",
+            "l": "20",
+            "w": "44.00"
+          },
+          "observed_at": "2026-10-19T02:25:01.595Z"
+        },
+        {
+          "id": 27,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "225.40",
+            "rs_t": "2",
+            "fs": "9",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:25:10.586Z"
+        },
+        {
+          "id": 29,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "226.60",
+            "rs_p": "0",
+            "fs": "10",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "1.20"
+          },
+          "observed_at": "2026-10-19T02:26:07.671Z"
+        },
+        {
+          "id": 30,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fsmul": "1",
+            "balance": "99,800.00",
+            "fsmax": "10",
+            "na": "s",
+            "fswin": "226.60",
+            "rs_t": "1",
+            "fs": "10",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:26:11.612Z"
+        },
+        {
+          "id": 31,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fs_total": "10",
+            "balance": "99,800.00",
+            "na": "s",
+            "rs_p": "0",
+            "rs_c": "1",
+            "rs_m": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "111.60"
+          },
+          "observed_at": "2026-10-19T02:26:14.961Z"
+        },
+        {
+          "id": 32,
+          "task_id": 6,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doSpin",
+          "http_status": 200,
+          "request": {
+            "action": "doSpin",
+            "c": "0.1",
+            "l": "20"
+          },
+          "response": {
+            "fs_total": "10",
+            "balance": "99,800.00",
+            "na": "c",
+            "rs_t": "1",
+            "c": "0.10",
+            "l": "20",
+            "w": "0.00"
+          },
+          "observed_at": "2026-10-19T02:26:18.774Z"
+        },
+        {
+          "id": 33,
+          "task_id": 7,
+          "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+          "method": "POST",
+          "action": "doCollect",
+          "http_status": 200,
+          "request": {
+            "action": "doCollect"
+          },
+          "response": {
+            "balance": "100,138.20",
+            "na": "s"
+          },
+          "observed_at": "2026-10-19T02:27:04.614Z"
+        }
+      ],
+      "session_closed": true,
+      "export": "sessions/sugar-rush-xmas-1/trace.json",
+      "status": "purchase-and-bonus-completed",
+      "evidence_key_screenshots": {
+        "intro": "sessions/sugar-rush-xmas-1/shots/task-1.jpg",
+        "base_purchase_button": "sessions/sugar-rush-xmas-1/shots/task-2.jpg",
+        "purchase_confirmation": "sessions/sugar-rush-xmas-1/shots/task-3.jpg",
+        "bonus_award": "sessions/sugar-rush-xmas-1/shots/task-4.jpg",
+        "bonus_result": "sessions/sugar-rush-xmas-1/shots/task-7.jpg",
+        "returned_base": "sessions/sugar-rush-xmas-1/shots/task-8.jpg"
+      }
+    },
+    {
+      "slug": "lucky-tiger-gold",
+      "url": "https://www.pragmaticplay.fun/en/slots/lucky-tiger-gold/",
+      "game_symbol": "vs5luckytru",
+      "base_bet": {
+        "display": "$2.00",
+        "amount": 2,
+        "currency_display": "$"
+      },
+      "observed_purchase_option_count": 0,
+      "purchase_options": [],
+      "inspected_surfaces": [
+        {
+          "surface": "Base game",
+          "screenshot": "sessions/lucky-tiger-gold-2/shots/task-2.jpg",
+          "observation": "Spin, ordinary bet plus/minus, information, speed/autoplay controls and system-menu icons. No buy button or enhanced-wager toggle visible."
+        },
+        {
+          "surface": "System settings menu",
+          "screenshot": "sessions/lucky-tiger-gold-2/shots/task-3.jpg",
+          "observation": "Home/history, battery saver, sound, slot promotions, vibration and ordinary total bet. No feature purchase or enhanced-wager control visible."
+        },
+        {
+          "surface": "Game rules first visible panel",
+          "screenshot": "sessions/lucky-tiger-gold-2/shots/task-5.jpg",
+          "observation": "Symbol payouts, wild rules, full-screen multipliers and a RESPIN FEATURE section. No purchase instruction visible in the inspected portion."
+        },
+        {
+          "surface": "Respin feature rules, including trigger and upgrades",
+          "screenshots": [
+            "sessions/lucky-tiger-gold-1/shots/manual-scroll-10.jpg",
+            "sessions/lucky-tiger-gold-1/shots/manual-scroll-18.jpg",
+            "sessions/lucky-tiger-gold-1/shots/manual-scroll-26.jpg"
+          ],
+          "observation": "RESPIN FEATURE is randomly triggered at any spin. A symbol and full-screen multiplier are chosen before it starts; the COIN symbol randomly awards EXTRA LIFE, MULTIPLIER UPGRADER, or SYMBOL UPGRADER. These descriptions do not expose a feature-purchase instruction or enhanced-wager control."
+        }
+      ],
+      "purchase_requests_observed": 0,
+      "minimum_rules_route": [
+        {
+          "step": "Intro play arrow",
+          "x": 0.5,
+          "y": 0.884,
+          "kind": "navigate"
+        },
+        {
+          "step": "Open system-menu hamburger",
+          "x": 0.62,
+          "y": 0.934,
+          "kind": "navigate"
+        },
+        {
+          "step": "Close menu after visual inspection",
+          "x": 0.624,
+          "y": 0.101,
+          "kind": "navigate"
+        },
+        {
+          "step": "Open game information",
+          "x": 0.376,
+          "y": 0.933,
+          "kind": "navigate"
+        }
+      ],
+      "coverage": "No purchase or enhanced-wager control was observed in the default public demo base screen, system menu, or reviewed game-specific rules. The tested screens expose ordinary bet controls and a randomly triggered respin feature. This is a scoped negative result, not proof of absence across every jurisdiction, configuration, stake or hidden state.",
+      "unfinished": [],
+      "session_closed": true,
+      "sessions": [
+        {
+          "directory": "sessions/lucky-tiger-gold-2",
+          "session_closed": true,
+          "export": "sessions/lucky-tiger-gold-2/trace.json",
+          "tasks": [
+            {
+              "id": 1,
+              "parent_task_id": null,
+              "depth": 0,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-1.jpg"
+            },
+            {
+              "id": 2,
+              "parent_task_id": 1,
+              "depth": 1,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-2.jpg"
+            },
+            {
+              "id": 3,
+              "parent_task_id": 2,
+              "depth": 2,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-3.jpg"
+            },
+            {
+              "id": 4,
+              "parent_task_id": 3,
+              "depth": 3,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-4.jpg"
+            },
+            {
+              "id": 5,
+              "parent_task_id": 4,
+              "depth": 4,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-5.jpg"
+            },
+            {
+              "id": 6,
+              "parent_task_id": 5,
+              "depth": 5,
+              "status": "ready",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-2/shots/task-6.jpg"
+            }
+          ],
+          "actions": [
+            {
+              "task_id": 1,
+              "ordinal": 1,
+              "x": 0.5,
+              "y": 0.884,
+              "kind": "navigate",
+              "label": "Intro play arrow"
+            },
+            {
+              "task_id": 2,
+              "ordinal": 1,
+              "x": 0.62,
+              "y": 0.934,
+              "kind": "navigate",
+              "label": "Open hamburger game menu"
+            },
+            {
+              "task_id": 3,
+              "ordinal": 1,
+              "x": 0.624,
+              "y": 0.101,
+              "kind": "navigate",
+              "label": "Close system settings after visual inspection"
+            },
+            {
+              "task_id": 4,
+              "ordinal": 1,
+              "x": 0.376,
+              "y": 0.933,
+              "kind": "navigate",
+              "label": "Open game information and rules"
+            },
+            {
+              "task_id": 5,
+              "ordinal": 1,
+              "x": 0.631,
+              "y": 0.764,
+              "kind": "navigate",
+              "label": "Rules panel right edge scrollbar lower track"
+            }
+          ],
+          "network": [
+            {
+              "id": 2,
+              "task_id": 1,
+              "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+              "method": "POST",
+              "action": "doInit",
+              "http_status": 200,
+              "request": {
+                "action": "doInit"
+              },
+              "response": {
+                "balance": "100,000.00",
+                "na": "s",
+                "bl": "0",
+                "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+                "c": "0.40",
+                "l": "5"
+              },
+              "observed_at": "2026-10-19T02:14:27.591Z"
+            }
+          ]
+        },
+        {
+          "directory": "sessions/lucky-tiger-gold-1",
+          "session_closed": true,
+          "export": "sessions/lucky-tiger-gold-1/trace.json",
+          "tasks": [
+            {
+              "id": 1,
+              "parent_task_id": null,
+              "depth": 0,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-1/shots/task-1.jpg"
+            },
+            {
+              "id": 2,
+              "parent_task_id": 1,
+              "depth": 1,
+              "status": "annotated",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-1/shots/task-2.jpg"
+            },
+            {
+              "id": 3,
+              "parent_task_id": 2,
+              "depth": 2,
+              "status": "ready",
+              "action_state": "safe",
+              "capture_file": "sessions/lucky-tiger-gold-1/shots/task-3.jpg"
+            }
+          ],
+          "actions": [
+            {
+              "task_id": 1,
+              "ordinal": 1,
+              "x": 0.5,
+              "y": 0.884,
+              "kind": "navigate",
+              "label": "Intro play arrow for remaining rules inspection"
+            },
+            {
+              "task_id": 2,
+              "ordinal": 1,
+              "x": 0.376,
+              "y": 0.933,
+              "kind": "navigate",
+              "label": "Open game information and rules"
+            }
+          ],
+          "network": [
+            {
+              "id": 2,
+              "task_id": 1,
+              "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v5/gameService",
+              "method": "POST",
+              "action": "doInit",
+              "http_status": 200,
+              "request": {
+                "action": "doInit"
+              },
+              "response": {
+                "balance": "100,000.00",
+                "na": "s",
+                "bl": "0",
+                "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,15.00,20.00,25.00,40.00,50.00",
+                "c": "0.40",
+                "l": "5"
+              },
+              "observed_at": "2026-10-19T02:29:57.199Z"
+            }
+          ]
+        }
+      ],
+      "status": "no-purchases-observed-in-reviewed-surfaces",
+      "rules_review": {
+        "game_specific_rules_complete": true,
+        "scope": "Symbol/wild rules, complete RESPIN FEATURE and COIN upgrade descriptions, MAX WIN section, and beginning of general rules.",
+        "lower_generic_rules_inspected_to_bottom": false,
+        "reason_for_stop": "Task owner requested evidence freeze after the game-specific rules and no further unrelated spins or wager exploration.",
+        "manual_scroll_input": {
+          "x": 0.5,
+          "y": 0.55,
+          "total_wheel_events": 26,
+          "deltaY_by_event": [
+            320,
+            3200,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320,
+            320
+          ],
+          "note": "The game advances one small notch per wheel event. Longer manually requested scroll gestures were issued in groups of eight events, with all intermediate screenshots retained. No UI recognition selected an action."
+        },
+        "all_scroll_screenshots": [
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-1.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-2.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-3.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-4.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-5.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-6.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-7.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-8.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-9.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-10.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-11.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-12.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-13.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-14.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-15.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-16.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-17.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-18.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-19.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-20.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-21.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-22.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-23.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-24.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-25.jpg",
+          "sessions/lucky-tiger-gold-1/shots/manual-scroll-26.jpg"
+        ]
+      },
+      "spin_requests_observed": 0,
+      "evidence_key_screenshots": {
+        "base": "sessions/lucky-tiger-gold-2/shots/task-2.jpg",
+        "system_menu": "sessions/lucky-tiger-gold-2/shots/task-3.jpg",
+        "rules_top": "sessions/lucky-tiger-gold-2/shots/task-5.jpg",
+        "respin_trigger": "sessions/lucky-tiger-gold-1/shots/manual-scroll-10.jpg",
+        "respin_upgrades": "sessions/lucky-tiger-gold-1/shots/manual-scroll-18.jpg",
+        "rules_end_of_feature": "sessions/lucky-tiger-gold-1/shots/manual-scroll-26.jpg"
+      }
+    }
+  ],
+  "updated_utc": "2026-10-19T02:29:50.491273+00:00",
+  "status": "finished",
+  "finished_utc": "2026-10-19T02:37:25.334406+00:00",
+  "all_sessions_closed": true,
+  "temporary_consoles_exited": true
+}

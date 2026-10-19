@@ -5,3 +5,6 @@ data/
 playwright-report/
 test-results/
 .DS_Store
+
+.catalog-batch.generated.js
+.catalog-batch.generated.js.tmp

@@ -1,0 +1,549 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9059,
+      "sha256": "99f7762ebc951a9aed57ac4b2e32587a3c8aaa69a0c994a20ff325d73b74a41f"
+    },
+    {
+      "path": "operator-notes/pragmatic-five-manual-cheetah.json",
+      "bytes": 68451,
+      "sha256": "cdd0a76e62f75c1dc274703f3c6dbd72260b22b9378609ef65b49fc78a290662"
+    },
+    {
+      "path": "operator-notes/pragmatic-five-manual-floating.json",
+      "bytes": 12331,
+      "sha256": "a00f145609ef89bcfcfa0cc63fc4e34d366315bbdf699295f66511f083518ffb"
+    },
+    {
+      "path": "operator-notes/pragmatic-five-manual-sugar-lucky.json",
+      "bytes": 42612,
+      "sha256": "8a1da8e7514e7ba1652b6aa3bbc4e26d67ed77fc2dacc5f1fece6b6658b65f79"
+    },
+    {
+      "path": "operator-notes/pragmatic-five-operator.json",
+      "bytes": 10429,
+      "sha256": "a36ccaa45626086311ffd150b1421978a0c56676f899399416316ca8d17308c0"
+    },
+    {
+      "path": "results.json",
+      "bytes": 50965,
+      "sha256": "80d65731b6219fa83515cc8b69cccd2de24a47667bb8a7d7c994ac254cb85851"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-1.jpg",
+      "bytes": 127311,
+      "sha256": "b9af224218c5b9a94ea418384bb2ce8d1f982c879d83424c0942fe5930542eee"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-2.jpg",
+      "bytes": 126059,
+      "sha256": "a0396b0bb93f259467846b57bbdd9351b548252bec282ad486a089b85379a7da"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-3.jpg",
+      "bytes": 73508,
+      "sha256": "8681417e4b874a6b1b28d4b3eacd07a7e17dc664a063be555362e5e0d622e2cc"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-4.jpg",
+      "bytes": 67472,
+      "sha256": "6d120c9a459b6e04e67c681ccf78632c6c552dea286ad95ccc42764b4721ef2d"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-5.jpg",
+      "bytes": 104971,
+      "sha256": "dcbe83b8f213c224691a375ccfea51e6a93d03e7e37261aa45caae5c44880dbd"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/shots/task-6.jpg",
+      "bytes": 138359,
+      "sha256": "24ba22446ce7a1cc81dbd8cf69a259a83eda7c8b3111a23d386f823773739876"
+    },
+    {
+      "path": "sessions/cheetah-wild-1/trace.json",
+      "bytes": 12994,
+      "sha256": "c76a758bb79b0d6650dfeea2ee5c0c76af862c01c4cc10a140c84ef30a7353d7"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/super-retrigger-25.jpg",
+      "bytes": 101413,
+      "sha256": "6e98d1645a9dcb7f9bf1cd4bd2a26f2196b8845d6f515900fb03af30f767ea67"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-1.jpg",
+      "bytes": 115392,
+      "sha256": "c1aa90b5114919624c20fa54a2f592f884f1dad61460b58b70a1190fa0780b85"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-10.jpg",
+      "bytes": 88913,
+      "sha256": "eab3d70026c47e3e56c2f524504ae19198246c6290655d75de24193c28e90559"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-11.jpg",
+      "bytes": 128763,
+      "sha256": "475731f3c9701580cfbf2965a01eaf88725394bfd3eaab770fbe04e3422d8388"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-12.jpg",
+      "bytes": 108741,
+      "sha256": "ba0050ea1791e6c4b46d3c8300b321d92b8a2a11288ed50cd6ff827244621d02"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-13.jpg",
+      "bytes": 155761,
+      "sha256": "0ecbd8570d766d359d7df2e39a58496e6a7a82d74b6e0f9f6ab692c8581c2e95"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-2.jpg",
+      "bytes": 126941,
+      "sha256": "f15ac24cf82a79a29210d7336e6569c43986218e8d67da13e9656c21484941cc"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-3.jpg",
+      "bytes": 125728,
+      "sha256": "766d985f913a7f36c0558f37e5e71710f1e9adbf28c2f4efc3669c4d3ffaf150"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-4.jpg",
+      "bytes": 130449,
+      "sha256": "41c670b1d330a94fef1609248b05d407644c738176437552d31ca9572b68f0eb"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-5.jpg",
+      "bytes": 129769,
+      "sha256": "2086c8b350d63b838a6230f46f53a0607acc4e343ee6be3676f93519140c9812"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-6.jpg",
+      "bytes": 75268,
+      "sha256": "625e471673867cac9d96313a1e832c3164a006e56b4640fbe1955ed9018db98f"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-7.jpg",
+      "bytes": 71812,
+      "sha256": "f6c2aeaf30b094a72340b56f0923051263e0248780c9ef73417829f06c38aab0"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-8.jpg",
+      "bytes": 104447,
+      "sha256": "7dcd3a29642c5b4bebbb493372faf6c6a378d946224a9401408a2d9792fd2cb9"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/shots/task-9.jpg",
+      "bytes": 140487,
+      "sha256": "442ebdcba08b81a6d51618f5eee66800c308ef6d98af311a6d373d182bdc6104"
+    },
+    {
+      "path": "sessions/cheetah-wild-2/trace.json",
+      "bytes": 27023,
+      "sha256": "a43b581f6bcc3ea13a4f5d140ef37dce50a39d69f2fcc7cbab0d39fe16804454"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-1.jpg",
+      "bytes": 143118,
+      "sha256": "b234cb516ea160185d4e531d0343518c2ce967f27b44834266b0da13b9ea70d2"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-2.jpg",
+      "bytes": 126725,
+      "sha256": "b5bbf40fca7829138ee2df744821e57a6bc0f942fa9c5fffc51c7f9b9aa3dce8"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-3.jpg",
+      "bytes": 126810,
+      "sha256": "6dfd22e7aa2b9f334e296e470612203a55e79c509ec934a7a45f82738de50fd9"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-4.jpg",
+      "bytes": 73506,
+      "sha256": "13ea79ce85b1e797f730ccbea0722254eaee6166157f67608e39933e3a4381e0"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-5.jpg",
+      "bytes": 67598,
+      "sha256": "f4032bc4f497ec39b3041c3b79df78e347a73889f6498874e1a521e8adf002da"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-6.jpg",
+      "bytes": 103051,
+      "sha256": "e68931330ed8a8684860aa2d80852ce6047c8486adb3dd8a0cdf447e3e7ebb2f"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-7.jpg",
+      "bytes": 108962,
+      "sha256": "3b76d41152e7af840af8554922c5aa4931afec85e6fe411cade2c4e789737008"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/shots/task-8.jpg",
+      "bytes": 129895,
+      "sha256": "c8b9c7ada81ddccef88b64ab5a097ececf0b9df88497d94f6a51ae6aff807b71"
+    },
+    {
+      "path": "sessions/cheetah-wild-3/trace.json",
+      "bytes": 11673,
+      "sha256": "17ca16a005c68d612d52c9b93406c536d65c05bafe36f3c5997f14cab8b63839"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-1.jpg",
+      "bytes": 82808,
+      "sha256": "1c08b6c390a2c30cdeded5f9d04c0aeba0a06d9e123b3656348995664c18bcc9"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-10.jpg",
+      "bytes": 75510,
+      "sha256": "87ccf6c2ecbc331e4d68712146140496aa4d2804cb681647e511b8537750c97e"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-11.jpg",
+      "bytes": 76868,
+      "sha256": "b64df000513e00d97d9f83954b68ae0d006b208a85b184669a6f0fa8689293a5"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-2.jpg",
+      "bytes": 112165,
+      "sha256": "2e29f307aa7fcb24e0cb5b79f22e892a2f86b0b8ed5a2c43947214637a3bff9a"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-3.jpg",
+      "bytes": 110802,
+      "sha256": "73f8fb4ff620ec9dfc4ab2b703497fbbedf68d25f55d0aa49ba4270c333c2b6f"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-4.jpg",
+      "bytes": 116993,
+      "sha256": "cdab72810adaf21a7cbb79cba3ce78bd50a60d7bacbb2a474b2cd70e2c5f3061"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-5.jpg",
+      "bytes": 118927,
+      "sha256": "b5ed8dbbd6f2243cfe761a31e0008146179ac00f16e375b5c7954b9986cf77a6"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-6.jpg",
+      "bytes": 79618,
+      "sha256": "f0dd3bd416bd3e71c069eaa56f3ac5521ae78821fcd62b28a974606d63d982de"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-7.jpg",
+      "bytes": 118548,
+      "sha256": "9a5e467f27ab111a964e6c5784ca774525935fd7b9c486068f5795cb9e5d4145"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-8.jpg",
+      "bytes": 83844,
+      "sha256": "13598181cb98c64050bd35a70e69bf6b294abc47bb57c1fafd10111125af4286"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/shots/task-9.jpg",
+      "bytes": 72359,
+      "sha256": "b20ab25e9fe19e3110ed12edfd74a3f1c5627dd9d65bc02acc592e332bd2dfe4"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-1/trace.json",
+      "bytes": 19026,
+      "sha256": "ae0c96f4563b449af51aa9b65ff0f4fc0e7d617eb6fc25b0a98549c7efed54d6"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/bonus-start.jpg",
+      "bytes": 78868,
+      "sha256": "647db40e2c931b8f054ad6810daec87d8c55a8949065415f7ea6a5935af66c8c"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-1.jpg",
+      "bytes": 80532,
+      "sha256": "33b94a61d505637dcf90f25e31dbd4e94e5af7c87f1a84192584f60ffa9a80ee"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-2.jpg",
+      "bytes": 111271,
+      "sha256": "ce68d9bd423292de2bd8c25f4aabd8683cd0594a3738eb3fb58384d62391820f"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-3.jpg",
+      "bytes": 77582,
+      "sha256": "61fb7ddeed2b0f474e33a4390b8010e6401710f3badafbb359a198a5220f692e"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-4.jpg",
+      "bytes": 72560,
+      "sha256": "e95bb4f5dae7f55cac734c15f04e66089ab56702482d190ae9c74ea3722523a0"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-5.jpg",
+      "bytes": 73777,
+      "sha256": "69a0a134bbfba6e9be74589aaf6581696aba4247172c70a9d38a1b1e46ae38e7"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/shots/task-6.jpg",
+      "bytes": 110236,
+      "sha256": "5a367b1982139f4b44ea76fbe6add4131d019ec4ea4e954bc0a76b1600c96f42"
+    },
+    {
+      "path": "sessions/floating-dragon-wild-horses-2/trace.json",
+      "bytes": 15771,
+      "sha256": "911a106bd713029495c26204ff07a6c0353ffe4e83a9cb2025f1db4362c2a3c6"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/shots/task-1.jpg",
+      "bytes": 135190,
+      "sha256": "2debc4c4469429c1e7f4785d982e906284cc4268bba13b1c11bd85345321a88e"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/shots/task-2.jpg",
+      "bytes": 79418,
+      "sha256": "32ef8555a58ad54a34f591062e35156c84615827540c4fba3bdef09123f0a703"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/shots/task-3.jpg",
+      "bytes": 93292,
+      "sha256": "3fee72b50add239472685050afc978d9d6a6cd3342b9e49643960a5e99ed46b9"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/shots/task-4.jpg",
+      "bytes": 96428,
+      "sha256": "7472155fed0d7ba9ed28967ef344ff6e2fa813d6bbd6a007839eb8d444c3486a"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/shots/task-5.jpg",
+      "bytes": 135711,
+      "sha256": "aa0a74b35d9b4feb6078d4364cdcec766da11cedbb798658983ffef95bfaa6b3"
+    },
+    {
+      "path": "sessions/gates-of-valhalla-1/trace.json",
+      "bytes": 11882,
+      "sha256": "3caf6838f9aed4ea7c8a14ee875e5e277b51b21e105e50db65238c347e9e0255"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-1.jpg",
+      "bytes": 87343,
+      "sha256": "2c669c463a87922f68ec777a841c0cf9beb13bd2232ec2d07853abc4047eb44f"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-10.jpg",
+      "bytes": 90852,
+      "sha256": "ae4c44723e06235b50a14ee8f25b78cc08feec77156b799196c869e1cf04919c"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-11.jpg",
+      "bytes": 92414,
+      "sha256": "078a54f8bbce7083035739d382b9be72ce75f1ab0d183ccb24b8f542c0d23e98"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-12.jpg",
+      "bytes": 94543,
+      "sha256": "ee0ebb38381a4cf90b8ffe7ab500fbfe4e96f10f07c250caf9fe4181446c3ec8"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-13.jpg",
+      "bytes": 95234,
+      "sha256": "b1687b1e7c9143be17621c5f76ee94dc4c91b020e9ef33e42e3cde825bdac30d"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-14.jpg",
+      "bytes": 95853,
+      "sha256": "80dc180578680ee6f101c921990ae0d8d2af7a97d5f8ccf2c328d6884a12fe5b"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-15.jpg",
+      "bytes": 95223,
+      "sha256": "ddf4af8ea7a1e6128304c5053a2a14fedf23c0f4c6a5775658a6547eb796b0e9"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-16.jpg",
+      "bytes": 95364,
+      "sha256": "85d1b4f065203122ec5868417e3dbb48a611e80088727b3d7cc1da5ca47bb335"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-17.jpg",
+      "bytes": 96126,
+      "sha256": "f63c6ddad216126aec3bec1b61fe0a9efbaadf678b3c974cf15a8072d64f4fe6"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-18.jpg",
+      "bytes": 97405,
+      "sha256": "605af37761b857c7047238ea2d55b100b236f3709fd8f71713572a02987851e3"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-19.jpg",
+      "bytes": 96961,
+      "sha256": "f13917b8db81f6f0556bb608f3416883e10b1e16b09a5b42e955871fe611a765"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-2.jpg",
+      "bytes": 88492,
+      "sha256": "948378948f456c3410540539d5d8a3c201abb714a071551399b0ad6411078d13"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-20.jpg",
+      "bytes": 95400,
+      "sha256": "dd6db9dcfe6c9415d497a1f2ff987585a1706b941d3c0ce0d5f7e64cb741e5a3"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-21.jpg",
+      "bytes": 95169,
+      "sha256": "5240e5fc5a29532284e05f2b3a77057bd07afaa80da7ba22e43d382e733cc336"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-22.jpg",
+      "bytes": 95900,
+      "sha256": "c7830692dc3676848e19762002a89e2bc1ef0869c6934c531646287598579d0d"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-23.jpg",
+      "bytes": 96495,
+      "sha256": "f459196613e448e196373182392e3878cb2208beb958383de4ee8322f727c9c5"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-24.jpg",
+      "bytes": 97200,
+      "sha256": "fa574e7c7c25369677eb979d145e172737f149b83dcfe490208a011fe5aeca4f"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-25.jpg",
+      "bytes": 96995,
+      "sha256": "33ec0464ef5c02b87d0a616394c1ffd423971b8b157263b51777c3730a34e581"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-26.jpg",
+      "bytes": 96130,
+      "sha256": "d876c5bdbb9790954bb3a1fd81918b925f300fee558d3fb7f871e3022aab83c7"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-3.jpg",
+      "bytes": 88848,
+      "sha256": "29444df9213092dad84e1f1e3cfde5482ef1372583b61bf6c6e84b457b3ceb7e"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-4.jpg",
+      "bytes": 88497,
+      "sha256": "2a1827a969671b151c04dabf571b4a5fbfbd47203a1c86c48c9de216d1fd7a95"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-5.jpg",
+      "bytes": 88154,
+      "sha256": "3fec29633ad2499d1862a538cffafb99799b3bceba09746897b0fb29d3543c6f"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-6.jpg",
+      "bytes": 87354,
+      "sha256": "02595819260140c6aa72615bdf3803b297fbcbf6c1e4279c89d75b48ae402517"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-7.jpg",
+      "bytes": 87869,
+      "sha256": "c9dd4d084651272d682530d48d5d52014b09cc43c7d71e44d75c7a635aaa9b6a"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-8.jpg",
+      "bytes": 87384,
+      "sha256": "81e25e31a224f7592c7786cf2fe6d64f309205d6a89ab4de463dd08fe9a779f3"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/manual-scroll-9.jpg",
+      "bytes": 89375,
+      "sha256": "2f83d274bc8438d5a22a61dea199feef94d986244f9003669ba3025f652aeffa"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/task-1.jpg",
+      "bytes": 88667,
+      "sha256": "465ada7b8f1e2fa55e0a558776e3ee1b316c3a945b52b65f26e7934f11a82ffe"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/task-2.jpg",
+      "bytes": 89080,
+      "sha256": "2a3982938f14f8f7c229531014138b6183fb98fe108d5c57e0322e730a534ee4"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/shots/task-3.jpg",
+      "bytes": 96130,
+      "sha256": "d876c5bdbb9790954bb3a1fd81918b925f300fee558d3fb7f871e3022aab83c7"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-1/trace.json",
+      "bytes": 2186,
+      "sha256": "a4b7bb22ce820580b31add4f3a57ed1d61f54194ba29caf54ab9f2bee5b1be3e"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-1.jpg",
+      "bytes": 88662,
+      "sha256": "d9834e91235e4b5b42829c1cc51dcedcac2e25c7e2ed70135657e99757349350"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-2.jpg",
+      "bytes": 88893,
+      "sha256": "03e0ecce50b21bb6681c98032010de303df814fb34b961df7e2321b65165f12e"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-3.jpg",
+      "bytes": 71574,
+      "sha256": "947f5abdd1350ce81f54c7c238255110e31b18291359b80f15eb3562bb180558"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-4.jpg",
+      "bytes": 89212,
+      "sha256": "0d2eb5c08de45f8c60bc25f1ec63b69924eb364744f7d21d41c4070587d143c6"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-5.jpg",
+      "bytes": 85584,
+      "sha256": "80dabd2e93ac4752ec1462e9f67f007639b26b85dc77eff563df95c37b03d281"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/shots/task-6.jpg",
+      "bytes": 87346,
+      "sha256": "ab43017ad76fc62c26ed6d0267a5e9f9356732e4d0e0d2edd70cb3d6302a36b6"
+    },
+    {
+      "path": "sessions/lucky-tiger-gold-2/trace.json",
+      "bytes": 3707,
+      "sha256": "d86fc1d0d08f35835eaf0ac20ee0b917a0cdf12dc26bddf673ac69def4d50c9f"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-1.jpg",
+      "bytes": 106061,
+      "sha256": "562f1ebc5d77dbc793c2c4cba18801ba33b019873ebd34099d26a038bb738550"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-2.jpg",
+      "bytes": 119258,
+      "sha256": "5ac93215b084e84c810f0f343f709ce966034ae56fc4af371d1232b1edea14d2"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-3.jpg",
+      "bytes": 76478,
+      "sha256": "ec96bb454ae3bda28522ab208ade9c14b7a2c58208e9623ada8767e3c33eb568"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-4.jpg",
+      "bytes": 85523,
+      "sha256": "96ad5ded059b029087940862b21cb9ea816ef935fb6bef3186e851d8ec9b0cc9"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-5.jpg",
+      "bytes": 106675,
+      "sha256": "6758d0269b829751ae65fc94e23b8d14295fcbdc1cf11b26aee13913ca92a336"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-6.jpg",
+      "bytes": 80354,
+      "sha256": "992e85668bd8a62dc67ee96c96de2674651cdb15c9e9e86e4a904f1ce26c2557"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-7.jpg",
+      "bytes": 91555,
+      "sha256": "147011df2121414bfdcc9d3bd135982f389e44d5e8eb978eb7920b7e170a6685"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/shots/task-8.jpg",
+      "bytes": 142064,
+      "sha256": "b0f51c359e8b2f7bd4bb02d1f90ab706f26956d4a3e2b407180c05f438535369"
+    },
+    {
+      "path": "sessions/sugar-rush-xmas-1/trace.json",
+      "bytes": 23711,
+      "sha256": "cb14197a93e6bcdfdcaa60ee0368349d928279c42ea396dda254d8d266933bd1"
+    }
+  ]
+}
