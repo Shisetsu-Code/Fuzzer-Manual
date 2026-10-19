@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "anime-mecha-megaways",
+    "taskId": 34
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/anime-mecha-megaways.jpg",
+    "imageGitBlobSha": "7933d66534fd7aa7d36bb2d31c422c632a5bcd60",
+    "metadataGitBlobSha": "33692e850dc6a2b695b8522b5e06284482dc746b"
+  },
+  "status": "marked",
+  "warning": "La captura muestra Gates of Olympus 2500, aunque la URL/slug es anime-mecha-megaways. Verificar asociación antes de ejecutar.",
+  "marks": [
+    {
+      "x": 0.075079,
+      "y": 0.219786,
+      "kind": "navigate",
+      "label": "BUY FEATURE — 4 opciones"
+    },
+    {
+      "x": 0.075079,
+      "y": 0.469923,
+      "kind": "navigate",
+      "label": "SPECIAL BETS — 5 opciones"
+    }
+  ]
+}
