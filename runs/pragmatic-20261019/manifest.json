@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T10:55:56.306Z",
+  "updatedAt": "2026-10-19T10:58:06.167Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -3445,6 +3445,84 @@
       "attempts": 1,
       "error": null,
       "capturedAt": "2026-10-19T10:55:56.298Z"
+    },
+    "frozen-tropics": {
+      "slug": "frozen-tropics",
+      "url": "https://www.pragmaticplay.fun/en/slots/frozen-tropics/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/frozen-tropics.jpg",
+      "metadata": "metadata/frozen-tropics.json",
+      "taskId": 264,
+      "gameSymbol": "vswaysftropics",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:56:20.819Z"
+    },
+    "fruit-party-2": {
+      "slug": "fruit-party-2",
+      "url": "https://www.pragmaticplay.fun/en/slots/fruit-party-2/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/fruit-party-2.jpg",
+      "metadata": "metadata/fruit-party-2.json",
+      "taskId": 265,
+      "gameSymbol": "vs20fparty2",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:56:42.094Z"
+    },
+    "fruit-party": {
+      "slug": "fruit-party",
+      "url": "https://www.pragmaticplay.fun/en/slots/fruit-party/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/fruit-party.jpg",
+      "metadata": "metadata/fruit-party.json",
+      "taskId": 266,
+      "gameSymbol": "vs20fruitparty",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:57:02.543Z"
+    },
+    "fruit-rainbow": {
+      "slug": "fruit-rainbow",
+      "url": "https://www.pragmaticplay.fun/en/slots/fruit-rainbow/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/fruit-rainbow.jpg",
+      "metadata": "metadata/fruit-rainbow.json",
+      "taskId": 267,
+      "gameSymbol": "vs40frrainbow",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:57:21.237Z"
+    },
+    "fruits-of-the-amazon": {
+      "slug": "fruits-of-the-amazon",
+      "url": "https://www.pragmaticplay.fun/en/slots/fruits-of-the-amazon/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/fruits-of-the-amazon.jpg",
+      "metadata": "metadata/fruits-of-the-amazon.json",
+      "taskId": 268,
+      "gameSymbol": "vs20olympmmd",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:57:46.407Z"
+    },
+    "fruity-treats": {
+      "slug": "fruity-treats",
+      "url": "https://www.pragmaticplay.fun/en/slots/fruity-treats/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/fruity-treats.jpg",
+      "metadata": "metadata/fruity-treats.json",
+      "taskId": 269,
+      "gameSymbol": "vs20fortbon",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T10:58:06.156Z"
     }
   },
   "sheets": [
@@ -3456,7 +3534,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -3466,7 +3544,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -3476,7 +3554,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -3486,7 +3564,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -3496,7 +3574,7 @@
         "777-wheel-blitz",
         "8-dragons"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
@@ -3506,7 +3584,7 @@
         "888-dragons",
         "888-gold-excluding-korea"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0007.jpg",
@@ -3516,7 +3594,7 @@
         "alien-invaders",
         "amazing-money-machine"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0008.jpg",
@@ -3526,7 +3604,7 @@
         "ancient-egypt-classic",
         "ancient-island-megaways"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0009.jpg",
@@ -3536,7 +3614,7 @@
         "argonauts",
         "asgard"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0010.jpg",
@@ -3546,7 +3624,7 @@
         "aztec-gems",
         "aztec-gems-deluxe"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0011.jpg",
@@ -3556,7 +3634,7 @@
         "aztec-king-megaways",
         "aztec-powernudge"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0012.jpg",
@@ -3566,7 +3644,7 @@
         "badge-blitz",
         "bali-dragon-excluding-indonesia"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0013.jpg",
@@ -3576,7 +3654,7 @@
         "barnyard-megahays-megaways",
         "bear-crazy"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0014.jpg",
@@ -3586,7 +3664,7 @@
         "beware-the-deep-megaways",
         "big-bass-amazon-xtreme"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0015.jpg",
@@ -3596,7 +3674,7 @@
         "big-bass-bonanza-1000",
         "big-bass-bonanza-3-reeler"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0016.jpg",
@@ -3606,7 +3684,7 @@
         "big-bass-boxing-bonus-round",
         "big-bass-christmas-bash"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0017.jpg",
@@ -3616,7 +3694,7 @@
         "big-bass-floats-my-boat",
         "big-bass-football-bonanza"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0018.jpg",
@@ -3626,7 +3704,7 @@
         "big-bass-halloween-3",
         "big-bass-halloween-splash-1000"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0019.jpg",
@@ -3636,7 +3714,7 @@
         "big-bass-keeping-it-reel",
         "big-bass-mission-fishin"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0020.jpg",
@@ -3646,7 +3724,7 @@
         "big-bass-return-to-the-races",
         "big-bass-secrets-of-the-golden-lake"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0021.jpg",
@@ -3656,7 +3734,7 @@
         "big-bass-trophy-catch",
         "big-bass-vegas-1000"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0022.jpg",
@@ -3666,7 +3744,7 @@
         "big-burger-load-it-up-with-xtra-cheese",
         "big-juan"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0023.jpg",
@@ -3676,7 +3754,7 @@
         "bigger-bass-bonanza",
         "bigger-bass-splash"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0024.jpg",
@@ -3686,7 +3764,7 @@
         "blade-fangs",
         "blazing-wilds-megaways"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0025.jpg",
@@ -3696,7 +3774,7 @@
         "bomb-bonanza",
         "bonanza-gold"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0026.jpg",
@@ -3706,7 +3784,7 @@
         "book-of-kingdoms",
         "book-of-monsters"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0027.jpg",
@@ -3716,7 +3794,7 @@
         "bounty-gold",
         "bounty-hunter"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0028.jpg",
@@ -3726,7 +3804,7 @@
         "bubble-pop",
         "bubble-up"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0029.jpg",
@@ -3736,7 +3814,7 @@
         "buffalo-king-megaways",
         "buffalo-king-untamed-megaways"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0030.jpg",
@@ -3746,7 +3824,7 @@
         "caishen-s-cash",
         "caishen-s-cash-pots"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0031.jpg",
@@ -3756,7 +3834,7 @@
         "candy-blitz-bombs",
         "candy-corner"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0032.jpg",
@@ -3766,7 +3844,7 @@
         "candy-stars",
         "candy-village"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0033.jpg",
@@ -3776,7 +3854,7 @@
         "cash-box",
         "cash-chips"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0034.jpg",
@@ -3786,7 +3864,7 @@
         "cash-surge",
         "casino-heist-megaways-excluding-indonesia"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0035.jpg",
@@ -3796,7 +3874,7 @@
         "cheeky-emperor",
         "cheetah-wild"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0036.jpg",
@@ -3806,7 +3884,7 @@
         "chicken-chase-caccia-alla-gallina",
         "chicken-drop"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0037.jpg",
@@ -3816,7 +3894,7 @@
         "chilli-heat-spicy-spins",
         "christmas-big-bass-bonanza"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0038.jpg",
@@ -3826,7 +3904,7 @@
         "clover-gold",
         "club-tropicana"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0039.jpg",
@@ -3836,7 +3914,7 @@
         "coffee-wild",
         "colossal-cash-zone"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0040.jpg",
@@ -3846,7 +3924,7 @@
         "cosmic-cash",
         "cosmic-clusters"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0041.jpg",
@@ -3856,7 +3934,7 @@
         "cowboy-coins",
         "cowboys-gold"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0042.jpg",
@@ -3866,7 +3944,7 @@
         "crystal-caverns-megaways",
         "cult"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0043.jpg",
@@ -3876,7 +3954,7 @@
         "cyber-pup-megaways",
         "cyberheist-city"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0044.jpg",
@@ -3886,7 +3964,7 @@
         "day-of-dead",
         "death-dominion"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0045.jpg",
@@ -3896,7 +3974,7 @@
         "devil-s-13",
         "devilicious"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0046.jpg",
@@ -3906,7 +3984,7 @@
         "diamonds-are-forever-3-lines",
         "diamonds-of-egypt"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0047.jpg",
@@ -3916,7 +3994,7 @@
         "disco-lady",
         "dj-neko"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0048.jpg",
@@ -3926,7 +4004,7 @@
         "dragon-gold-88",
         "dragon-hero"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0049.jpg",
@@ -3936,7 +4014,7 @@
         "dragon-kingdom",
         "dragon-kingdom-eyes-of-fire"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0050.jpg",
@@ -3946,7 +4024,7 @@
         "dragon-tiger-fortunes",
         "drill-that-gold"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0051.jpg",
@@ -3956,7 +4034,7 @@
         "dwarven-gold-deluxe",
         "dynamite-diggin-doug"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0052.jpg",
@@ -3966,7 +4044,7 @@
         "elemental-gems-megaways",
         "emerald-king"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0053.jpg",
@@ -3976,7 +4054,7 @@
         "emotiwins",
         "emperor-caishen"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0054.jpg",
@@ -3986,7 +4064,7 @@
         "eternal-diamonds",
         "eternal-empress-freeze-time"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0055.jpg",
@@ -3996,7 +4074,7 @@
         "extra-juicy-megaways",
         "eye-of-cleopatra"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0056.jpg",
@@ -4006,7 +4084,7 @@
         "fairytale-fortune",
         "fangtastic-freespins"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0057.jpg",
@@ -4016,7 +4094,7 @@
         "finger-lick-n-free-spins",
         "fire-88"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0058.jpg",
@@ -4026,7 +4104,7 @@
         "fire-hot-20",
         "fire-hot-40"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0059.jpg",
@@ -4036,7 +4114,7 @@
         "fire-stampede",
         "fire-stampede-2"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0060.jpg",
@@ -4046,7 +4124,7 @@
         "fire-strike-2",
         "firebird-spirit"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0061.jpg",
@@ -4056,7 +4134,7 @@
         "floating-dragon",
         "floating-dragon-dragon-boat-festival"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0062.jpg",
@@ -4066,7 +4144,7 @@
         "floating-dragon-wild-horses",
         "floating-dragon-year-of-the-snake"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0063.jpg",
@@ -4076,7 +4154,7 @@
         "forge-of-olympus",
         "forging-wilds"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0064.jpg",
@@ -4086,7 +4164,7 @@
         "fortune-dragon",
         "fortune-hit-n-roll"
       ],
-      "publishedAt": "2026-10-19T10:53:42.785Z"
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0065.jpg",
@@ -4095,14 +4173,31 @@
         "fortune-of-giza",
         "fortune-of-olympus",
         "fortunes-of-aztec"
-      ]
+      ],
+      "publishedAt": "2026-10-19T10:56:09.487Z"
     },
     {
       "file": "sheets/sheet-0066.jpg",
       "slugs": [
         "freya-1000",
         "frightening-frankie",
-        "frogs-bugs"
+        "frogs-bugs",
+        "frozen-tropics"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0067.jpg",
+      "slugs": [
+        "fruit-party",
+        "fruit-party-2",
+        "fruit-rainbow",
+        "fruits-of-the-amazon"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0068.jpg",
+      "slugs": [
+        "fruity-treats"
       ]
     }
   ]
