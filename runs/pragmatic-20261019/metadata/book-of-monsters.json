@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "slug": "book-of-monsters",
+  "taskId": 104,
+  "url": "https://www.pragmaticplay.fun/en/slots/book-of-monsters/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vs20fatbook",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "ananas",
+        "ananas_circle",
+        "spin",
+        "generic_roundButtonBkg"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_Spin"
+      ],
+      "hit": {
+        "x": 0.750563045629178,
+        "y": 0.8621921918300001,
+        "w": 0.04504504499999995,
+        "h": 0.08008007999999991
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+      "name": "BetUp_Button",
+      "texts": [
+        "Increment"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.8412162158750001,
+        "y": 0.889389389,
+        "w": 0.016891891875000065,
+        "h": 0.030030030000000114
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+      "name": "BetDown_Button",
+      "texts": [
+        "Decrement"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.688063062875,
+        "y": 0.889389389,
+        "w": 0.016891891875000065,
+        "h": 0.030030030000000114
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/SoundButtons/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Sound"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.10135135174999998,
+        "y": 0.9369369365,
+        "w": 0.019144144124999984,
+        "h": 0.04504504499999998
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/Content/Option_0/Button/Scale/Active/Colliders",
+      "name": "Colliders",
+      "texts": [
+        "BUY\nFREE\nSPINS",
+        "$200.00",
+        "buy",
+        "buy_add"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.1773375918186128,
+        "y": 0.3776053726497499,
+        "w": 0.0005629352239125973,
+        "h": 0.0010007737314002717
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/Content/Option_0/Button/Scale/Active/Colliders/C_0",
+      "name": "C_0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.11006683256105249,
+        "y": 0.23849782398511576,
+        "w": 0.13510445373903324,
+        "h": 0.27921587106066853
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/Content/Option_0/Button/Scale/Active/Colliders/C_1",
+      "name": "C_1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.11344444390452835,
+        "y": 0.1814537212953017,
+        "w": 0.03546491910649624,
+        "h": 0.057044102689814004
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyBetFeatures/BetLevel/Content/Levels/Buttons/Levels/Level_0/C_0",
+      "name": "C_0",
+      "texts": [
+        "BET",
+        "$4.00",
+        "SEVEN TIMES HIGHER CHANCE TO WIN FEATURE",
+        "OFF",
+        "bet",
+        "bet_add",
+        "button",
+        "arrow",
+        "check"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.11079864835213898,
+        "y": 0.5156120702098438,
+        "w": 0.13510445373903318,
+        "h": 0.3122414041968767
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyBetFeatures/BetLevel/Content/Levels/Buttons/Levels/Level_0/C_1",
+      "name": "C_1",
+      "texts": [
+        "BET",
+        "$4.00",
+        "SEVEN TIMES HIGHER CHANCE TO WIN FEATURE",
+        "OFF",
+        "bet",
+        "bet_add",
+        "button",
+        "arrow",
+        "check"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.13731289739842428,
+        "y": 0.8278534744067206,
+        "w": 0.0827514779151578,
+        "h": 0.02101624835940521
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Information/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "DynamicCollider"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.19730897782733042,
+        "y": 0.8693696282490397,
+        "w": 0.14076576562500004,
+        "h": 0.1301301299999999
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton",
+      "name": "AutoplayOpenButton",
+      "texts": [
+        "CombinedMiddle",
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9599599595,
+        "w": 0.11148648637500003,
+        "h": 0.04004004000000015
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Paytable/Paytable_Button_Open",
+      "name": "Paytable_Button_Open",
+      "texts": [
+        "Paytable"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.13326295081718748,
+        "y": 0.917092091675,
+        "w": 0.019510135115624994,
+        "h": 0.03468468464999989
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/Settings/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.10135135174999998,
+        "y": 0.8878878875,
+        "w": 0.019144144124999984,
+        "h": 0.04504504500000017
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton/HiperPlayDisabled",
+      "name": "HiperPlayDisabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "name": "Disabled",
+      "texts": [
+        "CombinedRightEmpty"
+      ],
+      "handlers": [],
+      "hit": null
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "CombinedLeft1"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.7224099096875,
+        "y": 0.9594594590000001,
+        "w": 0.022522522500000086,
+        "h": 0.04004003999999996
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "485a75aa-3461-456b-8560-4b02ce027f1c",
+  "capturedAt": "2026-10-19T09:44:20.792Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T09:44:03.589Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:2000,type:\"fs\"}]"
+      },
+      "at": "2026-10-19T09:44:07.255Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T09:44:07.595Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
