@@ -12,7 +12,7 @@
   "sourceCapturedAt": "2026-10-19T01:54:28.063985+00:00",
   "total": 733,
   "createdAt": "2026-10-19T08:40:36.356Z",
-  "updatedAt": "2026-10-19T08:59:47.993Z",
+  "updatedAt": "2026-10-19T09:02:58.019Z",
   "entries": {
     "3-buzzing-wilds": {
       "slug": "3-buzzing-wilds",
@@ -312,6 +312,84 @@
       "attempts": 1,
       "error": null,
       "capturedAt": "2026-10-19T08:59:47.988Z"
+    },
+    "888-gold-excluding-korea": {
+      "slug": "888-gold-excluding-korea",
+      "url": "https://www.pragmaticplay.fun/en/slots/888-gold-excluding-korea/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/888-gold-excluding-korea.jpg",
+      "metadata": "metadata/888-gold-excluding-korea.json",
+      "taskId": 24,
+      "gameSymbol": "vs5triple8gold",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:00:16.918Z"
+    },
+    "african-elephant": {
+      "slug": "african-elephant",
+      "url": "https://www.pragmaticplay.fun/en/slots/african-elephant/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/african-elephant.jpg",
+      "metadata": "metadata/african-elephant.json",
+      "taskId": 25,
+      "gameSymbol": "vs20hotzone",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:00:31.552Z"
+    },
+    "aladdin-and-the-sorcerer": {
+      "slug": "aladdin-and-the-sorcerer",
+      "url": "https://www.pragmaticplay.fun/en/slots/aladdin-and-the-sorcerer/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/aladdin-and-the-sorcerer.jpg",
+      "metadata": "metadata/aladdin-and-the-sorcerer.json",
+      "taskId": 26,
+      "gameSymbol": "vs20aladdinsorc",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:01:18.163Z"
+    },
+    "alien-invaders": {
+      "slug": "alien-invaders",
+      "url": "https://www.pragmaticplay.fun/en/slots/alien-invaders/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/alien-invaders.jpg",
+      "metadata": "metadata/alien-invaders.json",
+      "taskId": 27,
+      "gameSymbol": "vs20alieninv",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:01:57.159Z"
+    },
+    "amazing-money-machine": {
+      "slug": "amazing-money-machine",
+      "url": "https://www.pragmaticplay.fun/en/slots/amazing-money-machine/",
+      "status": "review",
+      "state": "INTRO",
+      "image": "review/amazing-money-machine.jpg",
+      "metadata": "metadata/amazing-money-machine.json",
+      "taskId": 28,
+      "gameSymbol": "vs10amm",
+      "attempts": 1,
+      "error": "INTRO_NEEDS_MANUAL_CLICK",
+      "capturedAt": "2026-10-19T09:02:37.297Z"
+    },
+    "anaconda-gold": {
+      "slug": "anaconda-gold",
+      "url": "https://www.pragmaticplay.fun/en/slots/anaconda-gold/",
+      "status": "ready",
+      "state": "BASE",
+      "image": "shots/anaconda-gold.jpg",
+      "metadata": "metadata/anaconda-gold.json",
+      "taskId": 29,
+      "gameSymbol": "vswaysacnd",
+      "attempts": 1,
+      "error": null,
+      "capturedAt": "2026-10-19T09:02:58.009Z"
     }
   },
   "sheets": [
@@ -323,7 +401,7 @@
         "3-genie-wishes",
         "3-kingdoms-battle-of-red-cliffs"
       ],
-      "publishedAt": "2026-10-19T08:57:39.347Z"
+      "publishedAt": "2026-10-19T09:00:01.339Z"
     },
     {
       "file": "sheets/sheet-0002.jpg",
@@ -333,7 +411,7 @@
         "5-lions",
         "5-lions-dance"
       ],
-      "publishedAt": "2026-10-19T08:57:39.347Z"
+      "publishedAt": "2026-10-19T09:00:01.339Z"
     },
     {
       "file": "sheets/sheet-0003.jpg",
@@ -343,7 +421,7 @@
         "5-lions-megaways-2",
         "5-lions-reborn"
       ],
-      "publishedAt": "2026-10-19T08:57:39.347Z"
+      "publishedAt": "2026-10-19T09:00:01.339Z"
     },
     {
       "file": "sheets/sheet-0004.jpg",
@@ -353,7 +431,7 @@
         "7-clovers-of-fortune",
         "7-monkeys"
       ],
-      "publishedAt": "2026-10-19T08:57:39.347Z"
+      "publishedAt": "2026-10-19T09:00:01.339Z"
     },
     {
       "file": "sheets/sheet-0005.jpg",
@@ -362,14 +440,31 @@
         "777-rush",
         "777-wheel-blitz",
         "8-dragons"
-      ]
+      ],
+      "publishedAt": "2026-10-19T09:00:01.339Z"
     },
     {
       "file": "sheets/sheet-0006.jpg",
       "slugs": [
         "8-golden-dragon-challenge",
         "888-bonanza",
-        "888-dragons"
+        "888-dragons",
+        "888-gold-excluding-korea"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0007.jpg",
+      "slugs": [
+        "african-elephant",
+        "aladdin-and-the-sorcerer",
+        "alien-invaders",
+        "amazing-money-machine"
+      ]
+    },
+    {
+      "file": "sheets/sheet-0008.jpg",
+      "slugs": [
+        "anaconda-gold"
       ]
     }
   ]
