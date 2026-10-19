@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 1,
+  "slug": "fortune-of-aztec",
+  "taskId": 257,
+  "url": "https://www.pragmaticplay.fun/en/slots/fortune-of-aztec/",
+  "provider": "pragmatic",
+  "state": "BASE",
+  "gameSymbol": "vswaysaztecgm",
+  "controls": [
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetPlus",
+      "name": "SmartBetPlus",
+      "texts": [
+        "Increment",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartIncreaseBet"
+      ],
+      "hit": {
+        "x": 0.5331099423142178,
+        "y": 0.8171021377672211,
+        "w": 0.025080590430946792,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button/Buttons/SmartBetMinus",
+      "name": "SmartBetMinus",
+      "texts": [
+        "Decrement",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_SmartDecreaseBet"
+      ],
+      "hit": {
+        "x": 0.4418094672548354,
+        "y": 0.8171021377672211,
+        "w": 0.02508059043094668,
+        "h": 0.044587716321682985
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/SoundButtonsLand/SoundOn/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "SoundON",
+        "ButtonBkg",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [
+        "Evt_DataToCode_Pressed_SoundBtn"
+      ],
+      "hit": {
+        "x": 0.02595860196810318,
+        "y": 0.9105870376654224,
+        "w": 0.0435188327112318,
+        "h": 0.044791313199864485
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/SpinFx/SpinBtnFX/InterfaceArrPort/SpinBtnFXGO/ContentScale/Spin_button",
+      "name": "Spin_button",
+      "texts": [
+        "spin_button"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4580501357312521,
+        "y": 0.771537156430268,
+        "w": 0.08389972853749578,
+        "h": 0.14915507295554806
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel0/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.3638318629114353,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel0/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.3638318629114353,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel0/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.3638318629114353,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel0/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.3638318629114353,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel0/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.3638318629114353,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel1/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel1/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel1/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel1/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel1/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel2/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.45461062097047844,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel2/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.45461062097047844,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel2/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.45461062097047844,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel2/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.45461062097047844,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel2/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.45461062097047844,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel3/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel3/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel3/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel3/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel3/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel4/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5453893790295216,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel4/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5453893790295216,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel4/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5453893790295216,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel4/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5453893790295216,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel4/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5453893790295216,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel5/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5907787580590431,
+        "y": 0.23119273837801155,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel5/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5907787580590431,
+        "y": 0.3222175093315236,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel5/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5907787580590431,
+        "y": 0.4132422802850356,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351204
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel5/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5907787580590431,
+        "y": 0.5042670512385476,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/Reel5/Pos4",
+      "name": "Pos4",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5907787580590431,
+        "y": 0.5952918221920598,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351198
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/TopReel/Pos0",
+      "name": "Pos0",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5456661435357991,
+        "y": 0.13327960637936886,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/TopReel/Pos1",
+      "name": "Pos1",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.5001383822531388,
+        "y": 0.13327960637936886,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/TopReel/Pos2",
+      "name": "Pos2",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4547490032236172,
+        "y": 0.13327960637936886,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ReelsPivot/OverlayPaytable/OvelayPaytable/OverlayPTReels/TopReel/Pos3",
+      "name": "Pos3",
+      "texts": [],
+      "handlers": [],
+      "hit": {
+        "x": 0.4092212419409569,
+        "y": 0.13327960637936886,
+        "w": 0.04538937902952156,
+        "h": 0.09102477095351208
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+      "name": "Level0Button",
+      "texts": [
+        "BET",
+        "X2 CHANCE TO WIN\nA FEATURE",
+        "$2.50",
+        "OFF",
+        "button",
+        "ante_feature_slide",
+        "ante_feature_button",
+        "button_base"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.3692526297930098,
+        "y": 0.7658635900916188,
+        "w": 0.07825755005089924,
+        "h": 0.07295554801493045
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/DynamicContent/ContentScale/Normal/SpinButtons/StartSpin_Button",
+      "name": "StartSpin_Button",
+      "texts": [
+        "HOLD FOR TURBO SPIN",
+        "Increment",
+        "BlobGlowInvisible",
+        "Decrement",
+        "spin",
+        "circle",
+        "spinGlow"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.4874024431625381,
+        "y": 0.8170003393281302,
+        "w": 0.025195113674923608,
+        "h": 0.04479131319986429
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/MoneyAndCoinsSwitcher",
+      "name": "MoneyAndCoinsSwitcher",
+      "texts": [
+        "CREDIT",
+        "$100,000.00",
+        "BET",
+        "$2.00",
+        "PRAGMATIC PLAY • 7:53",
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible",
+        "LeftArrow",
+        "MiddleArrowSmall"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.3304101628775026,
+        "y": 0.9550390227349848,
+        "w": 0.33917967424499484,
+        "h": 0.044960977265015245
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/AutoplayButton/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "autoplay",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.43128605361384453,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredLeft/PaytableButton/PaytableButtonOpen",
+      "name": "PaytableButtonOpen",
+      "texts": [
+        "Info"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.36208061163895483,
+        "y": 0.9056667797760435,
+        "w": 0.03149389209365455,
+        "h": 0.05598914149983022
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredRight/MenuButton/MenuOpenClose/ButtonOpen/ButtonOpen",
+      "name": "ButtonOpen",
+      "texts": [
+        "Menu",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.6056381489650493,
+        "y": 0.9035883949779439,
+        "w": 0.03306858669833723,
+        "h": 0.05878859857482155
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/GameSpeed/Normal",
+      "name": "Normal",
+      "texts": [
+        "ButtonBkg",
+        "LeftArrow",
+        "MiddleArrowSmall",
+        "RightArrowSmall",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.49026552426196135,
+        "y": 0.9156769596199525,
+        "w": 0.019468951476077356,
+        "h": 0.03461146929080409
+      }
+    },
+    {
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI_mobile/Interface_Portrait/ContentInterface/BottomBar/AnchoredMiddle/ButtonGroup/BetButtons/Buttons/Open",
+      "name": "Open",
+      "texts": [
+        "ButtonBkg",
+        "bets",
+        "BlobGlowInvisible"
+      ],
+      "handlers": [],
+      "hit": {
+        "x": 0.5267220902612827,
+        "y": 0.9117746861214795,
+        "w": 0.04199185612487277,
+        "h": 0.042416016287750345
+      }
+    }
+  ],
+  "clip": {
+    "x": 128,
+    "y": 72,
+    "width": 1024,
+    "height": 576
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 576
+  },
+  "sessionId": "0f93eb87-de92-4f07-a2c6-9ef78e7e4a03",
+  "capturedAt": "2026-10-19T10:53:28.958Z",
+  "network": [
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do",
+      "method": "GET",
+      "action": null,
+      "status": 302,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:53:12.529Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/hub-demo/ge/v4/gameService",
+      "method": "POST",
+      "action": "doInit",
+      "status": 200,
+      "request": {
+        "action": "doInit"
+      },
+      "response": {
+        "balance": "100,000.00",
+        "na": "s",
+        "bl": "0",
+        "sc": "0.01,0.02,0.03,0.04,0.05,0.10,0.20,0.30,0.40,0.50,0.75,1.00,2.00,3.00,4.00,5.00,6.00,7.00,8.00,9.00,10.00,11.00,12.00",
+        "c": "0.10",
+        "l": "20",
+        "purInit": "[{bet:1000,type:\"default\"},{bet:2000,type:\"default\"}]"
+      },
+      "at": "2026-10-19T10:53:20.025Z"
+    },
+    {
+      "endpoint": "https://demogamesfree.pragmaticplay.net/gs2c/announcements/unread/",
+      "method": "GET",
+      "action": null,
+      "status": 200,
+      "request": {},
+      "response": {},
+      "at": "2026-10-19T10:53:20.422Z"
+    }
+  ],
+  "review": false,
+  "manualClassification": {
+    "state": "pending",
+    "marks": []
+  }
+}
