@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "3-buzzing-wilds",
+    "url": "https://www.pragmaticplay.fun/en/slots/3-buzzing-wilds/",
+    "symbol": "vs20wildparty",
+    "taskId": 1
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/3-buzzing-wilds.jpg",
+    "imageGitBlobSha": "c6e41e4b81844491d79aba1bf32b201787b44318",
+    "metadata": "runs/pragmatic-20261019/metadata/3-buzzing-wilds.json",
+    "metadataGitBlobSha": "ba7fc2278a1410052497c678cecbcd67859cfc05",
+    "capturedAt": "2026-10-19T08:58:04.148Z",
+    "viewport": {
+      "width": 1024,
+      "height": 576
+    }
+  },
+  "review": {
+    "method": "manual_visual_classification_by_assistant",
+    "sourceState": "BASE",
+    "scope": "BASE screenshot only",
+    "category": "purchase_button",
+    "observation": "Visible BUY FREE SPINS at $200 demo credits, base bet $2.00.",
+    "needsFurtherNavigation": true,
+    "followup": "Capture result of click; identify confirmation and final purchase request.",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.076272,
+      "y": 0.42915,
+      "kind": "buy",
+      "label": "BUY FREE SPINS — $200",
+      "purpose": "purchase_entry",
+      "visualLabel": [
+        "BUY\nFREE\nSPINS",
+        "$200",
+        "shadow"
+      ],
+      "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/Button/Holder/Collider",
+      "controlRectNormalized": {
+        "x": 0.008442344060682838,
+        "y": 0.27353936670616635,
+        "w": 0.13565872558946235,
+        "h": 0.3112207554325332
+      },
+      "pixel": {
+        "x": 78,
+        "y": 247
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.076272,
+      "y": 0.42915,
+      "kind": "buy",
+      "label": "BUY FREE SPINS — $200"
+    }
+  ]
+}

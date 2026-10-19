@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "batchId": "base-0001",
+  "reviewedAt": "2026-10-19",
+  "status": "classified_base_only",
+  "tally": {
+    "games": 5,
+    "purchaseEntryGames": 3,
+    "observedPurchaseButtons": 3,
+    "anteBetControls": 1,
+    "needsDescendantScreenshots": [
+      "3-buzzing-wilds",
+      "3-dancing-monkeys",
+      "3-magic-eggs"
+    ]
+  },
+  "games": [
+    {
+      "schemaVersion": 1,
+      "provider": "pragmatic",
+      "runId": "pragmatic-20261019",
+      "game": {
+        "slug": "3-buzzing-wilds",
+        "url": "https://www.pragmaticplay.fun/en/slots/3-buzzing-wilds/",
+        "symbol": "vs20wildparty",
+        "taskId": 1
+      },
+      "source": {
+        "screenshot": "runs/pragmatic-20261019/shots/3-buzzing-wilds.jpg",
+        "imageGitBlobSha": "c6e41e4b81844491d79aba1bf32b201787b44318",
+        "metadata": "runs/pragmatic-20261019/metadata/3-buzzing-wilds.json",
+        "metadataGitBlobSha": "ba7fc2278a1410052497c678cecbcd67859cfc05",
+        "capturedAt": "2026-10-19T08:58:04.148Z",
+        "viewport": {
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "review": {
+        "method": "manual_visual_classification_by_assistant",
+        "sourceState": "BASE",
+        "scope": "BASE screenshot only",
+        "category": "purchase_button",
+        "observation": "Visible BUY FREE SPINS at $200 demo credits, base bet $2.00.",
+        "needsFurtherNavigation": true,
+        "followup": "Capture result of click; identify confirmation and final purchase request.",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.076272,
+          "y": 0.42915,
+          "kind": "buy",
+          "label": "BUY FREE SPINS — $200",
+          "purpose": "purchase_entry",
+          "visualLabel": [
+            "BUY\nFREE\nSPINS",
+            "$200",
+            "shadow"
+          ],
+          "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/Button/Holder/Collider",
+          "controlRectNormalized": {
+            "x": 0.008442344060682838,
+            "y": 0.27353936670616635,
+            "w": 0.13565872558946235,
+            "h": 0.3112207554325332
+          },
+          "pixel": {
+            "x": 78,
+            "y": 247
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.076272,
+          "y": 0.42915,
+          "kind": "buy",
+          "label": "BUY FREE SPINS — $200"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "provider": "pragmatic",
+      "runId": "pragmatic-20261019",
+      "game": {
+        "slug": "3-dancing-monkeys",
+        "url": "https://www.pragmaticplay.fun/en/slots/3-dancing-monkeys/",
+        "symbol": "vswaysmonkey",
+        "taskId": 2
+      },
+      "source": {
+        "screenshot": "runs/pragmatic-20261019/shots/3-dancing-monkeys.jpg",
+        "imageGitBlobSha": "89d5c57187ac6df15e9025296a502020bd0f1a59",
+        "metadata": "runs/pragmatic-20261019/metadata/3-dancing-monkeys.json",
+        "metadataGitBlobSha": "f8236335fb701696bc0ba762d06f0d050d530d4c",
+        "capturedAt": "2026-10-19T08:58:16.492Z",
+        "viewport": {
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "review": {
+        "method": "manual_visual_classification_by_assistant",
+        "sourceState": "BASE",
+        "scope": "BASE screenshot only",
+        "category": "purchase_button",
+        "observation": "Visible BUY FREE SPINS at $180 demo credits, base bet $1.80.",
+        "needsFurtherNavigation": true,
+        "followup": "Capture result of click; identify confirmation and final purchase request.",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.634009,
+          "y": 0.08959,
+          "kind": "buy",
+          "label": "BUY FREE SPINS — $180",
+          "purpose": "purchase_entry",
+          "visualLabel": [
+            "BUY FREE SPINS",
+            "$180",
+            "BuyBonus"
+          ],
+          "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/BuyFeature/ContentBuyFeature/Button/ButtonCollider",
+          "controlRectNormalized": {
+            "x": 0.5439189189189189,
+            "y": 0.03103103103103096,
+            "w": 0.18018018018018023,
+            "h": 0.11711711711711716
+          },
+          "pixel": {
+            "x": 649,
+            "y": 52
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.634009,
+          "y": 0.08959,
+          "kind": "buy",
+          "label": "BUY FREE SPINS — $180"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "provider": "pragmatic",
+      "runId": "pragmatic-20261019",
+      "game": {
+        "slug": "3-genie-wishes",
+        "url": "https://www.pragmaticplay.fun/en/slots/3-genie-wishes/",
+        "symbol": "vs50aladdin",
+        "taskId": 3
+      },
+      "source": {
+        "screenshot": "runs/pragmatic-20261019/shots/3-genie-wishes.jpg",
+        "imageGitBlobSha": "ed2aa0ea174422442ed706984566617517c0a705",
+        "metadata": "runs/pragmatic-20261019/metadata/3-genie-wishes.json",
+        "metadataGitBlobSha": "155af0a71a235c5c8132e56aa80ba29e73872f39",
+        "capturedAt": "2026-10-19T08:58:40.291Z",
+        "viewport": {
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "review": {
+        "method": "manual_visual_classification_by_assistant",
+        "sourceState": "BASE",
+        "scope": "BASE screenshot only",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No purchase button or Ante Bet visible in the supplied BASE screenshot; this does not prove absence in other interfaces or configurations.",
+        "needsFurtherNavigation": false,
+        "followup": "No purchase action from BASE; revisit only if extra menus/rules or a different configuration show buy options.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": []
+    },
+    {
+      "schemaVersion": 1,
+      "provider": "pragmatic",
+      "runId": "pragmatic-20261019",
+      "game": {
+        "slug": "3-kingdoms-battle-of-red-cliffs",
+        "url": "https://www.pragmaticplay.fun/en/slots/3-kingdoms-battle-of-red-cliffs/",
+        "symbol": "vs25kingdoms",
+        "taskId": 4
+      },
+      "source": {
+        "screenshot": "runs/pragmatic-20261019/shots/3-kingdoms-battle-of-red-cliffs.jpg",
+        "imageGitBlobSha": "58a96f9d6cf62792f1524b0c0d9396de42b584b6",
+        "metadata": "runs/pragmatic-20261019/metadata/3-kingdoms-battle-of-red-cliffs.json",
+        "metadataGitBlobSha": "8a4b548aa97cda1e527e1fd2b403842e728e292d",
+        "capturedAt": "2026-10-19T08:59:02.195Z",
+        "viewport": {
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "review": {
+        "method": "manual_visual_classification_by_assistant",
+        "sourceState": "BASE",
+        "scope": "BASE screenshot only",
+        "category": "no_purchase_visible_on_base",
+        "observation": "No purchase or Ante Bet button on BASE. The top 0/40 progress area is a feature/tutorial display, not a visible purchase.",
+        "needsFurtherNavigation": false,
+        "followup": "No purchase action from BASE; verify alternative menus/configurations only if evidence arises.",
+        "purchaseExecuted": false
+      },
+      "marks": [],
+      "machineReadableMarks": []
+    },
+    {
+      "schemaVersion": 1,
+      "provider": "pragmatic",
+      "runId": "pragmatic-20261019",
+      "game": {
+        "slug": "3-magic-eggs",
+        "url": "https://www.pragmaticplay.fun/en/slots/3-magic-eggs/",
+        "symbol": "vs25wolfgmm",
+        "taskId": 5
+      },
+      "source": {
+        "screenshot": "runs/pragmatic-20261019/shots/3-magic-eggs.jpg",
+        "imageGitBlobSha": "acedb734fa2bb5a3931a9047f36d3f64f5b805c2",
+        "metadata": "runs/pragmatic-20261019/metadata/3-magic-eggs.json",
+        "metadataGitBlobSha": "c1ce292ff04229e9ea052482c0ad9b48794eb11c",
+        "capturedAt": "2026-10-19T08:59:43.178Z",
+        "viewport": {
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "review": {
+        "method": "manual_visual_classification_by_assistant",
+        "sourceState": "BASE",
+        "scope": "BASE screenshot only",
+        "category": "purchase_menu_and_ante",
+        "observation": "BUY RESPINS FEATURE with 4 OPTIONS opens a menu whose four purchases are not visible yet. Separate DOUBLE CHANCE TO WIN FEATURE (Ante Bet) shows $3.20 vs $2.00 base bet.",
+        "needsFurtherNavigation": true,
+        "followup": "Capture all four buy options and annotate each as a separate branch; Ante Bet is a wager modifier, not a feature purchase.",
+        "purchaseExecuted": false
+      },
+      "marks": [
+        {
+          "x": 0.101571,
+          "y": 0.444975,
+          "kind": "navigate",
+          "label": "Open BUY RESPINS FEATURE — 4 options",
+          "purpose": "open_purchase_menu",
+          "visualLabel": [
+            "BUY RESPINS\nFEATURE",
+            "4",
+            "OPTIONS"
+          ],
+          "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/GameFeatures/FeaturePurchase/MainButton/content/ColliderHolder/ColliderBuy",
+          "controlRectNormalized": {
+            "x": 0.026176802275624966,
+            "y": 0.32743743760999994,
+            "w": 0.1507882881375,
+            "h": 0.23507507483999998
+          },
+          "pixel": {
+            "x": 104,
+            "y": 256
+          }
+        },
+        {
+          "x": 0.101571,
+          "y": 0.713043,
+          "kind": "other",
+          "label": "Toggle DOUBLE CHANCE Ante Bet — $3.20",
+          "purpose": "toggle_ante_bet",
+          "visualLabel": [
+            "DOUBLE CHANCE TO WIN FEATURE",
+            "$3.20",
+            "button_ante_bg"
+          ],
+          "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/GameFeatures/AnteBet/MainButton/content/Colliders/Collider0",
+          "controlRectNormalized": {
+            "x": 0.026176802275624966,
+            "y": 0.59550550541,
+            "w": 0.1507882881375,
+            "h": 0.23507507483999993
+          },
+          "pixel": {
+            "x": 104,
+            "y": 411
+          }
+        }
+      ],
+      "machineReadableMarks": [
+        {
+          "x": 0.101571,
+          "y": 0.444975,
+          "kind": "navigate",
+          "label": "Open BUY RESPINS FEATURE — 4 options"
+        },
+        {
+          "x": 0.101571,
+          "y": 0.713043,
+          "kind": "other",
+          "label": "Toggle DOUBLE CHANCE Ante Bet — $3.20"
+        }
+      ]
+    }
+  ]
+}

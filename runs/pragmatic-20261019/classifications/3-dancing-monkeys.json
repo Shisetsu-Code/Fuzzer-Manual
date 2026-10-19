@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "3-dancing-monkeys",
+    "url": "https://www.pragmaticplay.fun/en/slots/3-dancing-monkeys/",
+    "symbol": "vswaysmonkey",
+    "taskId": 2
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/3-dancing-monkeys.jpg",
+    "imageGitBlobSha": "89d5c57187ac6df15e9025296a502020bd0f1a59",
+    "metadata": "runs/pragmatic-20261019/metadata/3-dancing-monkeys.json",
+    "metadataGitBlobSha": "f8236335fb701696bc0ba762d06f0d050d530d4c",
+    "capturedAt": "2026-10-19T08:58:16.492Z",
+    "viewport": {
+      "width": 1024,
+      "height": 576
+    }
+  },
+  "review": {
+    "method": "manual_visual_classification_by_assistant",
+    "sourceState": "BASE",
+    "scope": "BASE screenshot only",
+    "category": "purchase_button",
+    "observation": "Visible BUY FREE SPINS at $180 demo credits, base bet $1.80.",
+    "needsFurtherNavigation": true,
+    "followup": "Capture result of click; identify confirmation and final purchase request.",
+    "purchaseExecuted": false
+  },
+  "marks": [
+    {
+      "x": 0.634009,
+      "y": 0.08959,
+      "kind": "buy",
+      "label": "BUY FREE SPINS — $180",
+      "purpose": "purchase_entry",
+      "visualLabel": [
+        "BUY FREE SPINS",
+        "$180",
+        "BuyBonus"
+      ],
+      "targetControlPath": "GameRoot/UI Root/XTRoot/Root/Game/BuyFeature/ContentBuyFeature/Button/ButtonCollider",
+      "controlRectNormalized": {
+        "x": 0.5439189189189189,
+        "y": 0.03103103103103096,
+        "w": 0.18018018018018023,
+        "h": 0.11711711711711716
+      },
+      "pixel": {
+        "x": 649,
+        "y": 52
+      }
+    }
+  ],
+  "machineReadableMarks": [
+    {
+      "x": 0.634009,
+      "y": 0.08959,
+      "kind": "buy",
+      "label": "BUY FREE SPINS — $180"
+    }
+  ]
+}

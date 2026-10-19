@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "3-kingdoms-battle-of-red-cliffs",
+    "url": "https://www.pragmaticplay.fun/en/slots/3-kingdoms-battle-of-red-cliffs/",
+    "symbol": "vs25kingdoms",
+    "taskId": 4
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/3-kingdoms-battle-of-red-cliffs.jpg",
+    "imageGitBlobSha": "58a96f9d6cf62792f1524b0c0d9396de42b584b6",
+    "metadata": "runs/pragmatic-20261019/metadata/3-kingdoms-battle-of-red-cliffs.json",
+    "metadataGitBlobSha": "8a4b548aa97cda1e527e1fd2b403842e728e292d",
+    "capturedAt": "2026-10-19T08:59:02.195Z",
+    "viewport": {
+      "width": 1024,
+      "height": 576
+    }
+  },
+  "review": {
+    "method": "manual_visual_classification_by_assistant",
+    "sourceState": "BASE",
+    "scope": "BASE screenshot only",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No purchase or Ante Bet button on BASE. The top 0/40 progress area is a feature/tutorial display, not a visible purchase.",
+    "needsFurtherNavigation": false,
+    "followup": "No purchase action from BASE; verify alternative menus/configurations only if evidence arises.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": []
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "provider": "pragmatic",
+  "runId": "pragmatic-20261019",
+  "game": {
+    "slug": "3-genie-wishes",
+    "url": "https://www.pragmaticplay.fun/en/slots/3-genie-wishes/",
+    "symbol": "vs50aladdin",
+    "taskId": 3
+  },
+  "source": {
+    "screenshot": "runs/pragmatic-20261019/shots/3-genie-wishes.jpg",
+    "imageGitBlobSha": "ed2aa0ea174422442ed706984566617517c0a705",
+    "metadata": "runs/pragmatic-20261019/metadata/3-genie-wishes.json",
+    "metadataGitBlobSha": "155af0a71a235c5c8132e56aa80ba29e73872f39",
+    "capturedAt": "2026-10-19T08:58:40.291Z",
+    "viewport": {
+      "width": 1024,
+      "height": 576
+    }
+  },
+  "review": {
+    "method": "manual_visual_classification_by_assistant",
+    "sourceState": "BASE",
+    "scope": "BASE screenshot only",
+    "category": "no_purchase_visible_on_base",
+    "observation": "No purchase button or Ante Bet visible in the supplied BASE screenshot; this does not prove absence in other interfaces or configurations.",
+    "needsFurtherNavigation": false,
+    "followup": "No purchase action from BASE; revisit only if extra menus/rules or a different configuration show buy options.",
+    "purchaseExecuted": false
+  },
+  "marks": [],
+  "machineReadableMarks": []
+}
